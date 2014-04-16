@@ -26,8 +26,7 @@ public class Fight
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		Hero.generatePlayerHitPoints();
-		Monster.generateMonsterHitPoints();
+		System.out.println("Enemy HP = " + Monster.monsterHitPoints + " 												Player HP = " + Hero.playerHitPoints + ".");
 		System.out.println("Would you like to use a 1)" + Hero.weaponName + ", 2)Fireball Spell, 3)" + Hero.healingTypeName + ",");
 		System.out.println("4) Lightning Blast?(do not try unless Level 20) or 5)to " + Hero.dodgeTypeName + " the next Atack."); 
 		Scanner userInput1 = new Scanner(System.in);
@@ -49,7 +48,7 @@ public class Fight
 				diceRollOne = 1 + randomNumber.nextInt(3);
 				diceRollTwo = 1 + randomNumber.nextInt(3);
 				diceRollThree = 1 + randomNumber.nextInt(15);
-				totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.fireballBonus + Hero.classFireballBonus);
+				totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.fireballBonus + Hero.classFireballBonus + Hero.raceFireballBonus);
 				Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);				
 				System.out.println("You blast the enemy with flames and do " + totalDice + " damage!");
 				System.out.println();
@@ -66,7 +65,7 @@ public class Fight
 					diceRollTwo = 1 + randomNumber.nextInt(Hero.healingName);
 					diceRollThree = 1 + randomNumber.nextInt(Hero.healingName);
 					totalDice = diceRollOne + diceRollTwo + diceRollThree + Loot.healingSpellBonus;
-					Hero.playerHitPoints = (Hero.playerHitPoints + totalDice + Hero.classHealingBonus);
+					Hero.playerHitPoints = (Hero.playerHitPoints + totalDice + Hero.classHealingBonus + Hero.raceHealingBonus);
 					System.out.println("You heal yourself " + totalDice + Hero.classHealingBonus + " points of health with your " + Hero.healingTypeName + "!");
 					if (Hero.healingName == 3)
 						{
@@ -131,7 +130,7 @@ public class Fight
 				resetDiceForRoll();
 				Random randomNumber = new Random();
 				diceRollOne = 1 + randomNumber.nextInt(10);
-				dodgeAffect = diceRollOne + Hero.classDodgeBonus + Loot.dodgeBonus;
+				dodgeAffect = diceRollOne + Hero.classDodgeBonus + Loot.dodgeBonus + Hero.raceDodgeBonus;
 				System.out.println("You prepare to " + Hero.dodgeTypeName + " the enemie's next blow.");
 				System.out.println();
 				System.out.println("You will " + Hero.dodgeTypeName + " " + dodgeAffect + " points of damage.");
@@ -206,20 +205,25 @@ public class Fight
 				if(numberOfSlainEnemies > 5)
 					{
 					System.out.println();
-					System.out.println("You are a master at COMBAT.");
+					System.out.println("You are a Warrior of COMBAT.");
 					}
 				else if (numberOfSlainEnemies > 10)
 					{
 					System.out.println();
-					System.out.println("You are a Legend of COMBAT.");
+					System.out.println("You are a Hero of COMBAT.");
 					}
 				else if (numberOfSlainEnemies > 15)
+					{
+					System.out.println();
+					System.out.println("You are a Legend of COMBAT.");
+					}
+				else if (numberOfSlainEnemies > 20)
 					{
 					System.out.println();
 					System.out.println("You spend too much time on this game.");
 					}
 				}
-			System.out.println("Let Everyone know that you were a Level " + Hero.levelOfPlayer + " " + Hero.jobOfPlayer + " and you fought "
+			System.out.println("Let Everyone know that you were a Level " + Hero.levelOfPlayer + " " + Hero.raceOfPlayer + " " + Hero.jobOfPlayer + " and you fought "
 					+ "valiantly, defeating " + pluralVariable + "");
 			System.out.println();
 			System.out.println("Best of luck to you.");

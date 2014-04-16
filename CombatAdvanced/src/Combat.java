@@ -5,6 +5,8 @@ public class Combat
 		{
 		Hero.askName();
 		Hero.generateCharacter();
+		Hero.generatePlayerHitPoints();
+		Monster.generateMonsterHitPoints();
 		while (Fight.playAgainChoice == 1)
 			{
 			Fight.chooseAction();

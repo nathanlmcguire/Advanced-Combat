@@ -33,8 +33,6 @@ public class Monster
 		{
 		Random randomNumber = new Random(); 
 		monsterHitPoints = (10 * Hero.levelOfPlayer) + randomNumber.nextInt(Hero.difficultyHealth);
-		System.out.println("Enemy HP = " + monsterHitPoints + " 												Player HP = " + Hero.playerHitPoints + ".");
-		System.out.println();
 		return monsterHitPoints;
 		}
 	}

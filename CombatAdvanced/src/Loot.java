@@ -127,35 +127,35 @@ public class Loot
 			case 30:
 			case 31:
 				{
-				System.out.println("You have found Weak Boots of Dodging!");
+				System.out.println("You have found Weak Boots of " + Hero.dodgeTypeName + "ing!");
 				System.out.println();
 				System.out.println("Level 1 Item.");
 				System.out.println();
 				dodgeBonus = dodgeBonus + 2;
-				System.out.println("You dodge 2 more points of damage now!");
+				System.out.println("You " + Hero.dodgeTypeName + " 2 more points of damage now!");
 				break;
 				}
 			case 32:
 			case 33:
 			case 34:
 				{
-				System.out.println("You have found Average Boots of Dodging!");
+				System.out.println("You have found Average Boots of " + Hero.dodgeTypeName + "ing!");
 				System.out.println();
 				System.out.println("Level 2 Item.");
 				System.out.println();
 				dodgeBonus = dodgeBonus + 4;
-				System.out.println("You dodge 4 more points of damage now!");
+				System.out.println("You " + Hero.dodgeTypeName + " 4 more points of damage now!");
 				break;
 				}
 			case 35:
 			case 36:
 				{
-				System.out.println("You have found Legendary Boots of Dodging!");
+				System.out.println("You have found Legendary Boots of " + Hero.dodgeTypeName + "ing!");
 				System.out.println();
 				System.out.println("Level 3 Item.");
 				System.out.println();
 				dodgeBonus = dodgeBonus + 6;
-				System.out.println("You dodge 6 more points of damage now!");
+				System.out.println("You " + Hero.dodgeTypeName + " 6 more points of damage now!");
 				break;
 				}
 			case 37:
@@ -165,7 +165,7 @@ public class Loot
 				System.out.println("Level 4 Item.");
 				System.out.println();
 				weaponBonus = weaponBonus + 8;
-				System.out.println("You do 8 more points of damage with your sword now!");
+				System.out.println("You do 8 more points of damage with your " + Hero.weaponName + " now!");
 				break;	
 				}
 			case 38:
@@ -195,7 +195,7 @@ public class Loot
 				System.out.println("Level 4 Item.");
 				System.out.println();
 				dodgeBonus = dodgeBonus + 8;
-				System.out.println("You dodge 8 more points of damage now!");
+				System.out.println("You " + Hero.dodgeTypeName + " 8 more points of damage now!");
 				break;		
 				}
 			case 41:

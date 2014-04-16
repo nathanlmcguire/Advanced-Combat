@@ -9,8 +9,8 @@ public class Hero
 	static int difficultyHealth, difficultyDamage, difficultyLevel;
 	static int actionChoice;
 	static int dodgeAffect = 0; 
-	static int classWeaponBonus = 0, classFireballBonus = 0, classHealingBonus = 0, classDodgeBonus = 0;
-	static String nameOfPlayer, jobOfPlayer, homeLand;
+	static int classWeaponBonus = 0, classFireballBonus = 0, classHealingBonus = 0, classDodgeBonus = 0, raceWeaponBonus = 0, raceFireballBonus = 0, raceHealingBonus = 0, raceDodgeBonus = 0;
+	static String nameOfPlayer, jobOfPlayer, homeLand, raceOfPlayer;
 	static String weaponName, healingTypeName, dodgeTypeName;	
 	static int classDamage, classHealth, healingName, numberOfPotions = 3;
 	
@@ -48,11 +48,9 @@ public class Hero
 		diceRollOne = 2 + randomNumber.nextInt(classDamage);
 		diceRollTwo = 2 + randomNumber.nextInt(classDamage);
 		diceRollThree = 2 + randomNumber.nextInt(classDamage);
-		totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.weaponBonus + classWeaponBonus);
+		totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.weaponBonus + classWeaponBonus + raceWeaponBonus);
 		Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);
-		System.out.println(diceRollOne + " " + diceRollTwo + " " + diceRollThree);
 		System.out.println("You swing your " + weaponName + " and do " + totalDice + " damage!");
-		System.out.println();
 		return totalDice;
 		}
 	
@@ -199,7 +197,46 @@ public class Hero
 			classDamage = 6;
 			classHealth = 14;
 			}
-		
+		System.out.println();
+		System.out.println("Choose your race. Elf, Human, Dwarf, or Hobbit.");
+		switch (raceOfPlayer)
+			{
+			case "Human":
+				{
+				raceWeaponBonus = 2; 
+				raceFireballBonus = 0;
+				raceHealingBonus = 0;
+				raceDodgeBonus = 0;	
+				}
+			case "Elf":
+				{
+				raceWeaponBonus = 0; 
+				raceFireballBonus = 0;
+				raceHealingBonus = 2;
+				raceDodgeBonus = 0;		
+				}
+			case "Dwarf":
+				{
+				raceWeaponBonus = 0; 
+				raceFireballBonus = 2;
+				raceHealingBonus = 0;
+				raceDodgeBonus = 0;		
+				}
+			case "Hobbit":
+				{
+				raceWeaponBonus = 0; 
+				raceFireballBonus = 0;
+				raceHealingBonus = 0;
+				raceDodgeBonus = 2;		
+				}
+			case "Undead":
+				{
+				raceWeaponBonus = 0; 
+				raceFireballBonus = 0;
+				raceHealingBonus = 0;
+				raceDodgeBonus = 0;		
+				}
+			}
 		System.out.println();	
 		System.out.println("You will awake soon " + nameOfPlayer + " of " + homeLand + ".");
 		System.out.println(" ");
