@@ -4,22 +4,20 @@ import java.util.Scanner;
 
 public class Hero 
 	{
-	static int playerHitPoints, monsterHitPoints, godHealth, levelOfPlayer = 1;
+	static int playerHitPoints, godHealth, levelOfPlayer = 1;
 	static int diceRollOne, diceRollTwo, diceRollThree, totalDice;
 	static int difficultyHealth, difficultyDamage, difficultyLevel;
-	static int playAgainChoice = 1, actionChoice;
-	static int lootNumber, findingLuck, playerLuck, dodgeAffect = 0; 
-	static int armorBonus = 0, weaponBonus = 0, fireballBonus = 0, healingSpellBonus = 0, dodgeBonus = 0, classWeaponBonus = 1, classFireballBonus = 1, classHealingBonus = 1, classDodgeBonus = 1;
-	static int numberOfSlainEnemies;
+	static int actionChoice;
+	static int dodgeAffect = 0; 
+	static int classWeaponBonus = 0, classFireballBonus = 0, classHealingBonus = 0, classDodgeBonus = 0;
 	static String nameOfPlayer, jobOfPlayer, homeLand;
-	static String pluralVariable;
 	static String weaponName, healingTypeName, dodgeTypeName;	
 	static int classDamage, classHealth, healingName, numberOfPotions = 3;
 	
 	public static int generatePlayerHitPoints()//Generates the monster's hit points and tell you what they are.
 		{
 	    Random randomNumber = new Random();
-	    playerHitPoints = 5 + randomNumber.nextInt(godHealth + (levelOfPlayer * 10) + armorBonus + classHealth);
+	    playerHitPoints = 5 + randomNumber.nextInt(godHealth + (levelOfPlayer * 10) + Loot.armorBonus + classHealth);
 		System.out.println();
 	    return playerHitPoints;
 	    }
@@ -44,11 +42,15 @@ public class Hero
 	
 	public static int playerAttackRoll()//Rolls dice for the damage done by the player's sword.
 		{
+		dodgeAffect = 0;
+		Fight.resetDiceForRoll();
 		Random randomNumber = new Random();
 		diceRollOne = 2 + randomNumber.nextInt(classDamage);
 		diceRollTwo = 2 + randomNumber.nextInt(classDamage);
 		diceRollThree = 2 + randomNumber.nextInt(classDamage);
-		totalDice = (diceRollOne + diceRollTwo + diceRollThree + weaponBonus) * classWeaponBonus;
+		totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.weaponBonus + classWeaponBonus);
+		Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);
+		System.out.println(diceRollOne + " " + diceRollTwo + " " + diceRollThree);
 		System.out.println("You swing your " + weaponName + " and do " + totalDice + " damage!");
 		System.out.println();
 		return totalDice;

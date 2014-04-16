@@ -3,17 +3,9 @@ import java.util.Random;
 
 public class Loot 
 	{
-	static int playerHitPoints, monsterHitPoints, godHealth, levelOfPlayer = 1;
-	static int diceRollOne, diceRollTwo, diceRollThree, totalDice;
-	static int difficultyHealth, difficultyDamage, difficultyLevel;
-	static int playAgainChoice = 1, actionChoice;
 	static int lootNumber, findingLuck, playerLuck, dodgeAffect = 0; 
-	static int armorBonus = 0, weaponBonus = 0, fireballBonus = 0, healingSpellBonus = 0, dodgeBonus = 0, classWeaponBonus = 1, classFireballBonus = 1, classHealingBonus = 1, classDodgeBonus = 1;
-	static int numberOfSlainEnemies;
-	static String nameOfPlayer, jobOfPlayer, homeLand;
-	static String pluralVariable;
-	static String weaponName, healingTypeName, dodgeTypeName;	
-	static int classDamage, classHealth, healingName, numberOfPotions = 3;
+	static int armorBonus = 0, weaponBonus = 0, fireballBonus = 0, healingSpellBonus = 0, dodgeBonus = 0;
+	static int numberOfPotions = 3;
 	
 	public static int lootBeast()//Randomly generates loot from the dead beast.(Only if you killed it.)
 		{
@@ -75,35 +67,35 @@ public class Loot
 			case 15:
 			case 16:
 				{
-				System.out.println("You have found an Iron " + weaponName + "!");
+				System.out.println("You have found an Iron " + Hero.weaponName + "!");
 				System.out.println();
 				System.out.println("Level 1 Item.");
 				System.out.println();
 				weaponBonus = weaponBonus + 2;
-				System.out.println("You now do 2 more damage with your " + weaponName + "!");
+				System.out.println("You now do 2 more damage with your " + Hero.weaponName + "!");
 				break;
 				}
 			case 17:
 			case 18:
 			case 19:
 				{
-				System.out.println("You have found a Steel " + weaponName + "!");
+				System.out.println("You have found a Steel " + Hero.weaponName + "!");
 				System.out.println();
 				System.out.println("Level 2 Item.");
 				System.out.println();
 				weaponBonus = weaponBonus + 4;
-				System.out.println("You now do 4 more damage with your " + weaponName + "!");
+				System.out.println("You now do 4 more damage with your " + Hero.weaponName + "!");
 				break;
 				}
 			case 20:
 			case 21:
 				{
-				System.out.println("You have found a Titanium " + weaponName + "!");
+				System.out.println("You have found a Titanium " + Hero.weaponName + "!");
 				System.out.println();
 				System.out.println("Level 3 Item.");
 				System.out.println();
 				weaponBonus = weaponBonus + 6;
-				System.out.println("You now do 6 more damage with your " + weaponName + "!");
+				System.out.println("You now do 6 more damage with your " + Hero.weaponName + "!");
 				break;
 				}
 			case 22:
