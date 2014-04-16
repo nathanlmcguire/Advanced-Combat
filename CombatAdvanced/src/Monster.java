@@ -13,9 +13,9 @@ public class Monster
 		System.out.println();
 		Fight.resetDiceForRoll();
 		Random randomNumber = new Random();
-		diceRollOne = 1 + randomNumber.nextInt(Hero.difficultyDamage);
-		diceRollTwo = 1 + randomNumber.nextInt(Hero.difficultyDamage);
-		diceRollThree = 1 + randomNumber.nextInt(Hero.difficultyDamage);
+		diceRollOne = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
+		diceRollTwo = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
+		diceRollThree = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
 		totalDice = diceRollOne + diceRollTwo + diceRollThree;
 		for (Fight.dodgeAffect = Fight.dodgeAffect; Fight.dodgeAffect > totalDice; Fight.dodgeAffect++)
 			{
@@ -32,7 +32,7 @@ public class Monster
 	public static int generateMonsterHitPoints()//Generates the player's hit points and tell you what they are.
 		{
 		Random randomNumber = new Random(); 
-		monsterHitPoints = (10 * Hero.levelOfPlayer) + randomNumber.nextInt(Hero.difficultyHealth);
+		monsterHitPoints = (10 * Hero.levelOfPlayer) + randomNumber.nextInt(Hero.difficultyHealth + MonsterGenerator.monsterHealth);
 		return monsterHitPoints;
 		}
 	}

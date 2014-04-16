@@ -70,32 +70,32 @@ public class Hero
 				{
 				System.out.println("The easiest of the levels.  A novice player I see.");
 				difficultyHealth = 20;
-				difficultyDamage = 4;
+				difficultyDamage = 2;
 				}
 			if (2 == difficultyLevel)
 				{
 				System.out.println("The normal level. A smart choice " + nameOfPlayer + "." );
 				difficultyHealth = 40;
-				difficultyDamage = 6;
+				difficultyDamage = 4;
 				}
 			if (3 == difficultyLevel)
 				{
 				System.out.println("This level is difficult but not immposible.");
 				System.out.println("Maybe soon you can try the Master level.");		
 				difficultyHealth = 80;
-				difficultyDamage = 8;
+				difficultyDamage = 6;
 				}
 			if (4 == difficultyLevel)
 				{
 				System.out.println("I bow in respect to a Master of COMBAT.");
 				difficultyHealth = 100;
-				difficultyDamage = 10;
+				difficultyDamage = 8;
 				}
 			if (5 == difficultyLevel)
 				{
 				System.out.println("I will attend your funeral.");
 				difficultyHealth = 1000;
-				difficultyDamage = 20;
+				difficultyDamage = 15;
 				}
 		System.out.println(" ");	
 		System.out.println("Choose your class "
