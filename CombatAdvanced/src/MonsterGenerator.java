@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MonsterGenerator 
 	{
-	static String currentKildarinMonster, monsterAttackName, monsterName;
+	static String currentKildarinMonster, monsterAttackName, monsterName, areaOfBoss;
 	static int randomMonsterNumber, monsterHealth = 0, monsterDamage = 0, areaChoiceOne, areaChoiceTwo, areaChoiceThree, bossFight;
 	
 	
@@ -294,7 +294,7 @@ public class MonsterGenerator
 				case 3:
 					{
 					generateMonsterNumber();
-					serebisMonsterArray()
+					serebisMonsterArray();
 					break;
 					}
 				}
@@ -428,5 +428,66 @@ public class MonsterGenerator
 		return randomMonsterNumber;
 		}
 	
+	public static String loreShardReveal()
+		{
+		if(bossFight == 1)
+			{
+			if("Kildarin".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Gormar".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Kildarin".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Kildarin".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Kildarin".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Gormar".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Kildarin".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Kildarin".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Kildarin".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Gormar".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Kildarin".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			if("Kildarin".equals (areaOfBoss))
+				{
+				System.out.println();
+				}
+			}
+		}
 	}
+
+
+
+
+
+
+
 

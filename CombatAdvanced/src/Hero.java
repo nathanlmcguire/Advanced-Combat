@@ -199,6 +199,8 @@ public class Hero
 			}
 		System.out.println();
 		System.out.println("Choose your race. Elf, Human, Dwarf, or Hobbit.");
+		raceOfPlayer = userInput1.nextLine();
+		
 			if("Human".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 2; 
@@ -232,8 +234,7 @@ public class Hero
 		System.out.println(" ");
 		System.out.println("Good luck.");
 		System.out.println();
-		System.out.println("You awake in an areana with a vicious beast in front of you.");
-		System.out.println();
+		System.out.println("You awake in a cave with a vicious beast in front of you.");
 		System.out.println();
 		return difficultyLevel;	
 		}

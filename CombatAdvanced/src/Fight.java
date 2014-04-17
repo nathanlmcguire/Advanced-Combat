@@ -27,7 +27,7 @@ public class Fight
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println(MonsterGenerator.monsterName + "'s HP = " + Monster.monsterHitPoints +  												Hero.nameOfPlayer + "'s HP = " + Hero.playerHitPoints + ".");
+		System.out.println(MonsterGenerator.monsterName + "'s HP = " + Monster.monsterHitPoints + " 											" + Hero.nameOfPlayer + "'s HP = " + Hero.playerHitPoints + ".");
 		System.out.println("Would you like to use a 1)" + Hero.weaponName + ", 2)Fireball Spell, 3)" + Hero.healingTypeName + ",");
 		System.out.println("4) Lightning Blast?(do not try unless Level 20) or 5)to " + Hero.dodgeTypeName + " the next Atack."); 
 		Scanner userInput1 = new Scanner(System.in);
