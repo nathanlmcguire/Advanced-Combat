@@ -12,7 +12,6 @@ public class Fight
 	
 	public static int chooseAction()//Lets the player choose their action.
 		{
-		MonsterGenerator.areaChange();
 		System.out.println();
 		System.out.println();
 		System.out.println();
@@ -27,7 +26,7 @@ public class Fight
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println(MonsterGenerator.monsterName + "'s HP = " + Monster.monsterHitPoints + " 											" + Hero.nameOfPlayer + "'s HP = " + Hero.playerHitPoints + ".");
+		System.out.println(MonsterGenerator.monsterName + "'s HP = " + Monster.monsterHitPoints + " 									" + Hero.nameOfPlayer + "'s HP = " + Hero.playerHitPoints + ".");
 		System.out.println("Would you like to use a 1)" + Hero.weaponName + ", 2)Fireball Spell, 3)" + Hero.healingTypeName + ",");
 		System.out.println("4) Lightning Blast?(do not try unless Level 20) or 5)to " + Hero.dodgeTypeName + " the next Atack."); 
 		Scanner userInput1 = new Scanner(System.in);
@@ -65,9 +64,9 @@ public class Fight
 					diceRollOne = 1 + randomNumber.nextInt(Hero.healingName);
 					diceRollTwo = 1 + randomNumber.nextInt(Hero.healingName);
 					diceRollThree = 1 + randomNumber.nextInt(Hero.healingName);
-					totalDice = diceRollOne + diceRollTwo + diceRollThree + Loot.healingSpellBonus;
-					Hero.playerHitPoints = (Hero.playerHitPoints + totalDice + Hero.classHealingBonus + Hero.raceHealingBonus);
-					System.out.println("You heal yourself " + totalDice + Hero.classHealingBonus + " points of health with your " + Hero.healingTypeName + "!");
+					totalDice = diceRollOne + diceRollTwo + diceRollThree + Loot.healingSpellBonus + Hero.classHealingBonus + Hero.raceHealingBonus;
+					Hero.playerHitPoints = (Hero.playerHitPoints + totalDice);
+					System.out.println("You heal yourself " + totalDice + " points of health with your " + Hero.healingTypeName + "!");
 					if (Hero.healingName == 3)
 						{
 						Hero.numberOfPotions--;
@@ -161,17 +160,13 @@ public class Fight
 	
 		if (Monster.monsterHitPoints <= 0)
 			{
-			System.out.println("YOU HAVE SLAIN THE BEAST!");
+			System.out.println();
+			System.out.println("YOU HAVE SLAIN THE CREATURE!");
 			System.out.println();
 			System.out.println("You find some treasure on the body of the beast.");
 			System.out.println();
 			numberOfSlainEnemies++;
 			Loot.lootBeast();
-			System.out.println();
-			System.out.println("LEVEL UP!");
-			Hero.levelOfPlayer++;
-			System.out.println();
-			System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
 			Fight.askPlayerIfTheyWantToPlayAgain();
 			}	
 		return Monster.monsterHitPoints;
@@ -180,6 +175,17 @@ public class Fight
 	public static int askPlayerIfTheyWantToPlayAgain()//Asks the player if they want to play again or if they want to stop playing.
 		{
 		Hero.playerHitPoints = Hero.playerHitPoints + Monster.playerHealthResetCounter;
+		if (MonsterGenerator.bossFight == 1)
+			{
+			System.out.println("LEVEL UP!");
+			Hero.levelOfPlayer++;
+			System.out.println();
+			System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
+			System.out.println();
+			System.out.println("YOU HAVE FOUND A LORE SHARD!");
+			System.out.println();
+			MonsterGenerator.loreShardReveal();
+			}
 		System.out.println();
 		System.out.println("Would you like to play again/continue " + Hero.nameOfPlayer + "?");
 		System.out.println();

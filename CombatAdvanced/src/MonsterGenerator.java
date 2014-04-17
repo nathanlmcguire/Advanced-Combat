@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class MonsterGenerator 
 	{
 	static String currentKildarinMonster, monsterAttackName, monsterName, areaOfBoss;
-	static int randomMonsterNumber, monsterHealth = 0, monsterDamage = 0, areaChoiceOne, areaChoiceTwo, areaChoiceThree, bossFight;
+	static int randomMonsterNumber, monsterHealth = 0, monsterDamage = 0, areaChoiceOne, areaChoiceTwo, areaChoiceThree, bossFight = 0;
 	
 	
 	public static int kildarinMonsterArray()
 		{
+		Monster.generateMonsterHitPoints();
 		String[] listOfKildarinMonsters = {"Hunter Goblin", "Warrior Goblin", "Shaman Goblin", "Weak Goblin", "Giant Rat", "Rat Rider Goblin"};	
 		switch (randomMonsterNumber)
 			{
@@ -73,6 +74,9 @@ public class MonsterGenerator
 		
 	public static int gormarMonsterArray()
 		{
+		Monster.generateMonsterHitPoints();
+		System.out.println();
+		System.out.println("Before is the might Plain Gormar.");
 		String[] listOfGormarMonsters = {"Nightmare", "Wandering Zombie", "Hunter Zombie", "Zombie Nightmare Rider", "Ice Nightmare", "Nightmare Stallion"};	
 		switch (randomMonsterNumber)
 			{
@@ -136,6 +140,9 @@ public class MonsterGenerator
 
 	public static int farstarnMonsterArray()
 		{
+		Monster.generateMonsterHitPoints();
+		System.out.println();
+		System.out.println("Before you is the strange swamp Farstarn.");
 		String[] listOfFarstarnMonsters = {"Fading Ghost", "Vengful Ghost", "Ghost Sailor", "Poisonous Mushroom", "Giant Toad", "Ghost Thief"};	
 		switch (randomMonsterNumber)
 			{
@@ -199,6 +206,9 @@ public class MonsterGenerator
 	
 	public static int serebisMonsterArray()
 		{
+		Monster.generateMonsterHitPoints();
+		System.out.println();
+		System.out.println("Before you is the mysterious forest Serebis.");
 		String[] listOfFarstarnMonsters = {"Giant Spider", "Two-Headed Spider", "Spider Swarm", "Giant Venus Fly Trap", "Giant Daddy Long Legs"};	
 		switch (randomMonsterNumber)
 			{
@@ -269,6 +279,7 @@ public class MonsterGenerator
 			monsterDamage = 10;
 			monsterAttackName = " swings his scepter at you";
 			bossFight = 1;
+			areaOfBoss = "Kildarin";
 			}
 		 else if (Fight.numberOfSlainEnemies < 10)
 			{
@@ -305,15 +316,15 @@ public class MonsterGenerator
 				{
 				case 1:
 					{
-						
+					areaOfBoss = "Gormar";	
 					}
 				case 2:
 					{
-						
+					areaOfBoss = "Farstarn";	
 					}
 				case 3:
 					{
-						
+					areaOfBoss = "Serebis";	
 					}
 				}			 
 			}
@@ -347,15 +358,15 @@ public class MonsterGenerator
 				{
 				case 1:
 					{
-						
+					areaOfBoss = "Darktarn";	
 					}
 				case 2:
 					{
-						
+					areaOfBoss = "Deepstain";	
 					}
 				case 3:
 					{
-						
+					areaOfBoss = "Vortonsin";	
 					}
 				}
 			}
@@ -389,15 +400,15 @@ public class MonsterGenerator
 				{
 				case 1:
 					{
-						
+					areaOfBoss = "Terik";	
 					}
 				case 2:
 					{
-						
+					areaOfBoss = "Sorthus";	
 					}
 				case 3:
 					{
-						
+					areaOfBoss = "Partok";	
 					}
 				}
 			}
@@ -407,7 +418,7 @@ public class MonsterGenerator
 			}
 		 else if (Fight.numberOfSlainEnemies == 30)
 			{
-			
+			 areaOfBoss = "Doomkeep";
 			}
 		 else if (Fight.numberOfSlainEnemies < 40)
 			{
@@ -415,7 +426,7 @@ public class MonsterGenerator
 			}
 		 else if (Fight.numberOfSlainEnemies == 40)
 			{
-			
+			 areaOfBoss = "Vale";
 			}	
 		return areaChoiceThree;
 		}	
@@ -434,49 +445,49 @@ public class MonsterGenerator
 			{
 			if("Kildarin".equals (areaOfBoss))
 				{
-				System.out.println();
+				System.out.println("Kildarin:The land farthest away from the Vale is mostly comprised of huge cave systems.  These caves were once a rich mining facility owned by the dwarves.  Iron, Steel, and Precious Gems littered these caves, and riches flowed from Kildarin.  Most common materials were mined from this place.  Now it is derelict, barren rock, and overrun by goblins.  Wether the goblins overthrew the few dwarfs who did not retreat to the Vale, or they are what the dwarfs became, is lost in The Shadow.");
 				}
 			if("Gormar".equals (areaOfBoss))
 				{
 				System.out.println();
 				}
-			if("Kildarin".equals (areaOfBoss))
+			if("Farstarn".equals (areaOfBoss))
 				{
 				System.out.println();
 				}
-			if("Kildarin".equals (areaOfBoss))
+			if("Serebis".equals (areaOfBoss))
 				{
 				System.out.println();
 				}
-			if("Kildarin".equals (areaOfBoss))
+			if("Darktarn".equals (areaOfBoss))
 				{
 				System.out.println();
 				}
-			if("Gormar".equals (areaOfBoss))
+			if("Deepstain".equals (areaOfBoss))
 				{
 				System.out.println();
 				}
-			if("Kildarin".equals (areaOfBoss))
+			if("Vortonsin".equals (areaOfBoss))
 				{
 				System.out.println();
 				}
-			if("Kildarin".equals (areaOfBoss))
+			if("Terik".equals (areaOfBoss))
 				{
 				System.out.println();
 				}
-			if("Kildarin".equals (areaOfBoss))
+			if("Sorthus".equals (areaOfBoss))
 				{
 				System.out.println();
 				}
-			if("Gormar".equals (areaOfBoss))
+			if("Partok".equals (areaOfBoss))
 				{
 				System.out.println();
 				}
-			if("Kildarin".equals (areaOfBoss))
+			if("Doomkeep".equals (areaOfBoss))
 				{
 				System.out.println();
 				}
-			if("Kildarin".equals (areaOfBoss))
+			if("Vale".equals (areaOfBoss))
 				{
 				System.out.println();
 				}

@@ -24,7 +24,7 @@ public class Hero
 	
 	public static String askName() //Asks the name of the player.
 		{
-		System.out.println("Hello, and welcomd to COMBAT. What is your name?");
+		System.out.println("Hello, and welcome to COMBAT. What is your name?");
 		Scanner userInput1 = new Scanner(System.in);        
 	    nameOfPlayer = userInput1.nextLine();        
 	    System.out.println("Nice to meet you " + nameOfPlayer + ".");
@@ -105,7 +105,6 @@ public class Hero
 		System.out.println();
 		System.out.println("You could also be a Paladin(Healer+Fighter) a Battlemage(Fighter+Mage) a Nightblade(Thief+Mage) or a Swordsman(Fighter+Thief).");
 		jobOfPlayer = userInput1.nextLine();
-		System.out.println("An interesting choice.  Hail " + nameOfPlayer + " the "+ jobOfPlayer + "!");
 		if ("Fighter".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 3;

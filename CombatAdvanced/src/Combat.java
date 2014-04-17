@@ -6,11 +6,12 @@ public class Combat
 		Hero.askName();
 		Hero.generateCharacter();
 		Hero.generatePlayerHitPoints();
-		Monster.generateMonsterHitPoints();
+		MonsterGenerator.areaChange();
 		while (Fight.playAgainChoice == 1)
 			{
 			Fight.chooseAction();
 			Fight.simulateCombat();
+			MonsterGenerator.areaChange();
 			}
 		}		
 	}
