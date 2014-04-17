@@ -199,44 +199,34 @@ public class Hero
 			}
 		System.out.println();
 		System.out.println("Choose your race. Elf, Human, Dwarf, or Hobbit.");
-		switch (raceOfPlayer)
-			{
-			case "Human":
+			if("Human".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 2; 
 				raceFireballBonus = 0;
 				raceHealingBonus = 0;
 				raceDodgeBonus = 0;	
 				}
-			case "Elf":
+			if("Elf".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
 				raceFireballBonus = 0;
 				raceHealingBonus = 2;
 				raceDodgeBonus = 0;		
 				}
-			case "Dwarf":
+			if("Dwarf".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
 				raceFireballBonus = 2;
 				raceHealingBonus = 0;
 				raceDodgeBonus = 0;		
 				}
-			case "Hobbit":
+			if("Hobbit".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
 				raceFireballBonus = 0;
 				raceHealingBonus = 0;
 				raceDodgeBonus = 2;		
 				}
-			case "Undead":
-				{
-				raceWeaponBonus = 0; 
-				raceFireballBonus = 0;
-				raceHealingBonus = 0;
-				raceDodgeBonus = 0;		
-				}
-			}
 		System.out.println();	
 		System.out.println("You will awake soon " + nameOfPlayer + " of " + homeLand + ".");
 		System.out.println(" ");

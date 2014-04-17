@@ -7,11 +7,12 @@ public class Fight
 	static int diceRollOne, diceRollTwo, diceRollThree, totalDice;
 	static int playAgainChoice = 1, actionChoice;
 	static int dodgeAffect = 0; 
-	static int numberOfSlainEnemies;
+	static int numberOfSlainEnemies = 0;
 	static String pluralVariable;
 	
 	public static int chooseAction()//Lets the player choose their action.
-		{		
+		{
+		MonsterGenerator.areaChange();
 		System.out.println();
 		System.out.println();
 		System.out.println();
@@ -26,7 +27,7 @@ public class Fight
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("Enemy HP = " + Monster.monsterHitPoints + " 												Player HP = " + Hero.playerHitPoints + ".");
+		System.out.println(MonsterGenerator.monsterName + "'s HP = " + Monster.monsterHitPoints +  												Hero.nameOfPlayer + "'s HP = " + Hero.playerHitPoints + ".");
 		System.out.println("Would you like to use a 1)" + Hero.weaponName + ", 2)Fireball Spell, 3)" + Hero.healingTypeName + ",");
 		System.out.println("4) Lightning Blast?(do not try unless Level 20) or 5)to " + Hero.dodgeTypeName + " the next Atack."); 
 		Scanner userInput1 = new Scanner(System.in);
@@ -180,11 +181,11 @@ public class Fight
 		{
 		Hero.playerHitPoints = Hero.playerHitPoints + Monster.playerHealthResetCounter;
 		System.out.println();
-		System.out.println("Would you like to play again " + Hero.nameOfPlayer + "?");
+		System.out.println("Would you like to play again/continue " + Hero.nameOfPlayer + "?");
 		System.out.println();
 		System.out.println("Or does " + Hero.homeLand + " need you?");
 		System.out.println();
-		System.out.println("Press 1 to play again and press 2 to exit the game.");
+		System.out.println("Press 1 to play again/continue and press 2 to exit the game.");
 		Scanner userInput1 = new Scanner(System.in);
 		playAgainChoice = userInput1.nextInt();
 		if (playAgainChoice == 2)
