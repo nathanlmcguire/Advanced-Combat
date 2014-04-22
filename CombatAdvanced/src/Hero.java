@@ -108,7 +108,7 @@ public class Hero
 		if ("Fighter".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 3;
-			classFireballBonus = -3;
+			classFireballBonus = -10;
 			classHealingBonus = -1;
 			classDodgeBonus = -3;
 			weaponName = "Sword";
@@ -120,7 +120,7 @@ public class Hero
 			}
 		if ("Mage".equals(jobOfPlayer))
 			{
-			classWeaponBonus = -3;
+			classWeaponBonus = -10;
 			classFireballBonus = 3;
 			classHealingBonus = 2;
 			classDodgeBonus = -1;
@@ -147,7 +147,7 @@ public class Hero
 		if ("Thief".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 1;
-			classFireballBonus = -3;
+			classFireballBonus = -10;
 			classHealingBonus = -1;
 			classDodgeBonus = 3;
 			dodgeTypeName = "Dodge";
@@ -160,7 +160,7 @@ public class Hero
 		if ("Paladin".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 2;
-			classFireballBonus = -3;
+			classFireballBonus = -10;
 			classHealingBonus = 2;
 			classDodgeBonus = -3;
 			dodgeTypeName = "Block";

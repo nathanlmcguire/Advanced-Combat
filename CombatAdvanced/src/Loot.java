@@ -102,7 +102,7 @@ public class Loot
 			case 23:
 			case 24:
 				{
-				System.out.println("You have found a Fireball Scroll!");
+				System.out.println("You have found a Moderate Fireball Scroll!");
 				System.out.println();
 				System.out.println("Level 2 Item.");
 				System.out.println();
@@ -119,7 +119,7 @@ public class Loot
 				System.out.println("Level 2 Item.");
 				System.out.println();
 				healingSpellBonus = healingSpellBonus + 4;
-				System.out.println("Your Healing Spell heals you up 4 more now.");
+				System.out.println("Your Healing Spell/Healing Potions heals you up 4 more now.");
 				break;
 				}	
 			case 28:
@@ -207,6 +207,76 @@ public class Loot
 				armorBonus = armorBonus + 8;
 				System.out.println("Your max health is 8 more points now!");
 				}
+			case 42:
+			case 43:
+			case 44:
+			case 45:
+				{
+				System.out.println("You have found a Weak Fireball Scroll!");
+				System.out.println();
+				System.out.println("Level 1 Item.");
+				System.out.println();
+				fireballBonus = fireballBonus + 2;
+				System.out.println("Your Fireball Spell does 2 more damage now.");
+				break;	
+				}
+			case 46:
+			case 47:
+				{
+				System.out.println("You have found an Advanced Fireball Scroll!");
+				System.out.println();
+				System.out.println("Level 3 Item.");
+				System.out.println();
+				fireballBonus = fireballBonus + 6;
+				System.out.println("Your Fireball Spell does 6 more damage now.");
+				break;	
+				}
+			case 48:
+				{
+				System.out.println("You have found 20 Healing Potions!");
+				System.out.println();
+				System.out.println("Level 4 Item.");
+				System.out.println();
+				Hero.numberOfPotions = Hero.numberOfPotions + 20;
+				System.out.println("YOu have " + Hero.numberOfPotions + " now.");
+				break;		
+				}
+			case 49:
+			case 50:
+				{
+				System.out.println("You have found 15 Healing Potions!");
+				System.out.println();
+				System.out.println("Level 3 Item.");
+				System.out.println();
+				Hero.numberOfPotions = Hero.numberOfPotions + 15;
+				System.out.println("YOu have " + Hero.numberOfPotions + " now.");
+				break;
+				}
+			case 51:
+			case 52:
+			case 53:
+				{
+				System.out.println("You have found 10 Healing Potions!");
+				System.out.println();
+				System.out.println("Level 2 Item.");
+				System.out.println();
+				Hero.numberOfPotions = Hero.numberOfPotions + 10;
+				System.out.println("YOu have " + Hero.numberOfPotions + " now.");
+				break;
+				}
+			case 54:
+			case 55:
+			case 56:
+			case 57:
+				{
+				System.out.println("You have found 5 Healing Potions!");
+				System.out.println();
+				System.out.println("Level 1 Item.");
+				System.out.println();
+				Hero.numberOfPotions = Hero.numberOfPotions + 5;
+				System.out.println("YOu have " + Hero.numberOfPotions + " now.");
+				break;
+				}				
 			}
 		return lootNumber;
 		}
@@ -214,7 +284,7 @@ public class Loot
 	public static int generateNumber()//Generates the random number for the lootBeast method.
 		{
 		Random randomNumber = new Random();
-		lootNumber = 1 + randomNumber.nextInt(40);
+		lootNumber = 1 + randomNumber.nextInt(57);
 		return lootNumber;
 		}
 	}
