@@ -6,10 +6,10 @@ public class MonsterGenerator
 	{
 	static String currentKildarinMonster, monsterAttackName, monsterName, areaOfBoss;
 	static int randomMonsterNumber, monsterHealth = 0, monsterDamage = 0, areaChoiceOne, areaChoiceTwo, areaChoiceThree, bossFight = 0;
-	
-	
+		
 	public static int kildarinMonsterArray()
 		{
+		Intros.startKildarinIntro();
 		Monster.generateMonsterHitPoints();
 		String[] listOfKildarinMonsters = {"Hunter Goblin", "Warrior Goblin", "Shaman Goblin", "Weak Goblin", "Giant Rat", "Rat Rider Goblin"};	
 		switch (randomMonsterNumber)
@@ -77,6 +77,8 @@ public class MonsterGenerator
 		Monster.generateMonsterHitPoints();
 		System.out.println();
 		System.out.println("Before is the might Plain Gormar.");
+		System.out.println();
+		Intros.startGormarIntro();
 		String[] listOfGormarMonsters = {"Nightmare", "Wandering Zombie", "Hunter Zombie", "Zombie Nightmare Rider", "Ice Nightmare", "Nightmare Stallion"};	
 		switch (randomMonsterNumber)
 			{
@@ -480,7 +482,11 @@ public class MonsterGenerator
 			Monster.generateMonsterHitPoints();
 			System.out.println("You walk into a large cavern where the Goblin Chief awaits you.");
 			System.out.println();
-			System.out.println("Kill him.");
+			System.out.println("You can see that his throne is nade up of bones, but you can't tell what or who they are from.");
+			System.out.println();
+			System.out.println("This Chief screams a challenge to you, and you know that he will not let you pass from these cave to journey on to the Vale.");
+			System.out.println();
+			System.out.println("You must slay him.");
 			System.out.println();
 			monsterName = "Goblin Chief";
 			monsterHealth = 10;
@@ -527,7 +533,11 @@ public class MonsterGenerator
 					Monster.generateMonsterHitPoints();	
 					System.out.println("You see a Nightmare coming towards you being ridden by a zombie wearing heavy armor.");
 					System.out.println();
-					System.out.println("Kill him.");
+					System.out.println("The zombie is wearing the armor of a Captain, and it clutches a hardy steel lance.");
+					System.out.println();
+					System.out.println("He believes that you the one who destroyed all of the troops under him.  You con not continue to the Vale unless he is dead.");
+					System.out.println();
+					System.out.println("Slay him.");
 					System.out.println();
 					monsterName = "Captain Morthusk";
 					monsterHealth = 10;
@@ -540,9 +550,11 @@ public class MonsterGenerator
 				case 2:
 					{
 					Monster.generateMonsterHitPoints();	
-					System.out.println("You walk onto a boat floating on murky water.  Here the Ghost Captain waits for you.");
+					System.out.println("You walk onto a boat floating on murky water.");
 					System.out.println();
-					System.out.println("Kill him.");
+					System.out.println("This boat is the only way out of Farstarn that eventually leads to the Vale.");
+					System.out.println();
+					System.out.println("A Ghostly Captain materializes, intent on keeping you off his ship.  Kill him.");
 					System.out.println();
 					monsterName = "Ghost Captain";
 					monsterHealth = 10;
@@ -555,10 +567,13 @@ public class MonsterGenerator
 				case 3:
 					{
 					Monster.generateMonsterHitPoints();	
-					System.out.println("You walk into a large clearing where overhanging trees block out the moon.  Here the Spider Queen waits for you.");
+					System.out.println("You walk into a large clearing where overhanging trees block out the moon.");
 					System.out.println();
-					System.out.println("Kill her.");
+					System.out.println("A throne of silver stands before, it would have been beutiful if not for the thousands of webs covering it.");
 					System.out.println();
+					System.out.println("You hear a sound a look up to see a massive spider attached to the trees.  She leaps down in front of the exit to Serebis");
+					System.out.println();
+					System.out.println("You must slay her to leave the forest.");
 					monsterName = "Spider Queen";
 					monsterHealth = 10;
 					monsterDamage = 10;
@@ -606,9 +621,11 @@ public class MonsterGenerator
 				case 1:
 					{
 					Monster.generateMonsterHitPoints();	
-					System.out.println("You walk to the edge of the fiery volcano, and see a massive rusty Automaton in the lava.");
+					System.out.println("You walk to the edge of the fiery volcano, and see a massive rusty suit of armor in the lava.");
 					System.out.println();
-					System.out.println("Destroy it.");
+					System.out.println("Without anyone wearing it, it begins to move, and with a massive gauntlet it attacks you.");
+					System.out.println();
+					System.out.println("You must sdestroy it before you proceed to the Vale.");
 					System.out.println();
 					monsterName = "Ancient Pierced Armor";
 					monsterHealth = 10;
@@ -623,7 +640,9 @@ public class MonsterGenerator
 					Monster.generateMonsterHitPoints();	
 					System.out.println("You walk into a massive throne room littered with millions of bones.  The Liche Emperor is sitting at his throne, waiting for you.");
 					System.out.println();
-					System.out.println("Kill him.");
+					System.out.println("You sense that he wants your body for some dark purpose.");
+					System.out.println();
+					System.out.println("He will not let you pass alive, you must kill him.");
 					System.out.println();
 					monsterName = "Liche Emperor";
 					monsterHealth = 10;
@@ -636,9 +655,11 @@ public class MonsterGenerator
 				case 3:
 					{
 					Monster.generateMonsterHitPoints();	
-					System.out.println("You see a wolf coming towards you.  Or is it a man?  Hard to tell for it continually morphs between woldf and man every few seconds.");
+					System.out.println("You see a wolf coming towards you.  Or is it a man?");
 					System.out.println();
-					System.out.println("Kill it.");
+					System.out.println("The being morphs continously between a hideous beast and a rabid man.");
+					System.out.println();
+					System.out.println("This creature will not let you trespass its territory on your quest to get to the Vale.  Slay it.");
 					System.out.println();
 					monsterName = "Mutant Elder";
 					monsterHealth = 10;
@@ -686,14 +707,50 @@ public class MonsterGenerator
 				{
 				case 1:
 					{
+					Monster.generateMonsterHitPoints();	
+					System.out.println("You see a wolf coming towards you.  Or is it a man?");
+					System.out.println();
+					System.out.println("The being morphs continously between a hideous beast and a rabid man.");
+					System.out.println();
+					System.out.println("This creature will not let you trespass its territory on your quest to get to the Vale.  Slay it.");
+					System.out.println();
+					monsterName = "Mutant Elder";
+					monsterHealth = 10;
+					monsterDamage = 10;
+					monsterAttackName = " claws and bites at you";
+					bossFight = 1;			
 					areaOfBoss = "Terik";	
 					}
 				case 2:
 					{
+					Monster.generateMonsterHitPoints();	
+					System.out.println("You see a wolf coming towards you.  Or is it a man?");
+					System.out.println();
+					System.out.println("The being morphs continously between a hideous beast and a rabid man.");
+					System.out.println();
+					System.out.println("This creature will not let you trespass its territory on your quest to get to the Vale.  Slay it.");
+					System.out.println();
+					monsterName = "Mutant Elder";
+					monsterHealth = 10;
+					monsterDamage = 10;
+					monsterAttackName = " claws and bites at you";
+					bossFight = 1;			
 					areaOfBoss = "Sorthus";	
 					}
 				case 3:
 					{
+					Monster.generateMonsterHitPoints();	
+					System.out.println("You see a wolf coming towards you.  Or is it a man?");
+					System.out.println();
+					System.out.println("The being morphs continously between a hideous beast and a rabid man.");
+					System.out.println();
+					System.out.println("This creature will not let you trespass its territory on your quest to get to the Vale.  Slay it.");
+					System.out.println();
+					monsterName = "Frozen Adventurer";
+					monsterHealth = 10;
+					monsterDamage = 10;
+					monsterAttackName = " claws and bites at you";
+					bossFight = 1;			
 					areaOfBoss = "Partok";	
 					}
 				}

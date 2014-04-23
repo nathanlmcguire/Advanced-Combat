@@ -12,6 +12,7 @@ public class Fight
 	
 	public static int chooseAction()//Lets the player choose their action.
 		{
+		System.out.println("You here a sound, something is coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision.");
 		System.out.println("_________________________________________________________________________________________________");
 		System.out.println("|                                                                                                |");
 		System.out.println("|                                                                                                |");
@@ -23,7 +24,7 @@ public class Fight
 		System.out.println("|                                                                                                |");
 		System.out.println("|                                                                                                |");
 		System.out.println("|                                                o                                               |");
-		System.out.println("|                                               ~0~" + Hero.weaponSymbol + "                                              |");
+		System.out.println("|                                               ~0~" + Hero.weaponSymbol + "                                            |");
 		System.out.println("|                                                A                                               |");
 		System.out.println("|________________________________________________________________________________________________|");
 		System.out.println(MonsterGenerator.monsterName + "'s HP = " + Monster.monsterHitPoints + " 									" + Hero.nameOfPlayer + "'s HP = " + Hero.playerHitPoints + ".");

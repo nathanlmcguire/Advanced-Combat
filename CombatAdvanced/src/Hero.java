@@ -25,11 +25,10 @@ public class Hero
 	
 	public static String askName() //Asks the name of the player.
 		{
-		System.out.println(weaponSymbol);
-		System.out.println("Hello, and welcome to COMBAT. What is your name?");
+		System.out.println("Name:");
 		Scanner userInput1 = new Scanner(System.in);        
 	    nameOfPlayer = userInput1.nextLine();        
-	    System.out.println("Nice to meet you " + nameOfPlayer + ".");
+	    System.out.println("You recall your name.  It is " + nameOfPlayer + ".");
 	    if ("TGM".equals(nameOfPlayer))
 	    	{
 	    	godHealth = 300;
@@ -58,10 +57,10 @@ public class Hero
 	
 	public static int generateCharacter() //Asks the player where he/she is from, what they want the difficulty level to be, and what they want their class to be.
 		{
-		System.out.println("Where are you from " + nameOfPlayer + "?"); 
+		System.out.println("But where are you from?"); 
 		Scanner userInput1 = new Scanner(System.in);
 		homeLand = userInput1.nextLine();
-		System.out.println("So you are from " + homeLand + "?!  Interesting.");
+		System.out.println("You think bakc and remember that you are from " + homeLand + ".");
 		System.out.println(" ");
 		System.out.println("Choose the difficulty level.");
 		System.out.println(" ");
@@ -70,44 +69,38 @@ public class Hero
 		difficultyLevel = userInput2.nextInt();
 			if (1 == difficultyLevel)
 				{
-				System.out.println("The easiest of the levels.  A novice player I see.");
 				difficultyHealth = 20;
 				difficultyDamage = 2;
 				}
 			if (2 == difficultyLevel)
 				{
-				System.out.println("The normal level. A smart choice " + nameOfPlayer + "." );
 				difficultyHealth = 40;
 				difficultyDamage = 4;
 				}
 			if (3 == difficultyLevel)
-				{
-				System.out.println("This level is difficult but not immposible.");
-				System.out.println("Maybe soon you can try the Master level.");		
+				{	
 				difficultyHealth = 80;
 				difficultyDamage = 6;
 				}
 			if (4 == difficultyLevel)
 				{
-				System.out.println("I bow in respect to a Master of COMBAT.");
 				difficultyHealth = 100;
 				difficultyDamage = 8;
 				}
 			if (5 == difficultyLevel)
 				{
-				System.out.println("I will attend your funeral.");
 				difficultyHealth = 1000;
 				difficultyDamage = 15;
 				}
 		System.out.println(" ");	
-		System.out.println("Choose your class "
-				+ "" + nameOfPlayer + " of " + homeLand + ".");	
+		System.out.println("You remember your fighting style.");	
 		System.out.println(" ");
-		System.out.println("You can be an Fighter, Healer, Thief or a Mage.");
+		System.out.println("Fighter, Healer, Thief,Mage.");
+		System.out.println("Paladin(Healer+Fighter), Battlemage(Fighter+Mage), Nightblade(Thief+Mage) or Swordsman(Fighter+Thief).");
 		System.out.println();
-		System.out.println("You could also be a Paladin(Healer+Fighter) a Battlemage(Fighter+Mage) a Nightblade(Thief+Mage) or a Swordsman(Fighter+Thief).");
+		System.out.println("Type what you remember your stlye to be in all caps.");
 		jobOfPlayer = userInput1.nextLine();
-		if ("Fighter".equals(jobOfPlayer))
+		if ("FIGHTER".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 3;
 			classFireballBonus = -10;
@@ -119,9 +112,9 @@ public class Hero
 			healingName = 3;
 			classDamage = 8;
 			classHealth = 16;
-			weaponSymbol = "___";
+			weaponSymbol = "t";
 			}
-		if ("Mage".equals(jobOfPlayer))
+		if ("MAGE".equals(jobOfPlayer))
 			{
 			classWeaponBonus = -10;
 			classFireballBonus = 3;
@@ -135,7 +128,7 @@ public class Hero
 			classHealth = 13;
 			weaponSymbol = "*";
 			}
-		if ("Healer".equals(jobOfPlayer))
+		if ("HEALER".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = 0;
@@ -149,7 +142,7 @@ public class Hero
 			classHealth = 15;
 			weaponSymbol = "i";
 			}
-		if ("Thief".equals(jobOfPlayer))
+		if ("THIEF".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 1;
 			classFireballBonus = -10;
@@ -161,9 +154,9 @@ public class Hero
 			weaponName = "Dagger";
 			classDamage = 5;
 			classHealth = 14;
-			weaponSymbol = "_";
+			weaponSymbol = "-";
 			}
-		if ("Paladin".equals(jobOfPlayer))
+		if ("PALADIN".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = -10;
@@ -175,9 +168,9 @@ public class Hero
 			weaponName = "Hammer";
 			classDamage = 7;
 			classHealth = 15;
-			weaponSymbol = "_#";
+			weaponSymbol = "--#";
 			}
-		if ("Nightblade".equals(jobOfPlayer))
+		if ("NIGHTBLADE".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 0;
 			classFireballBonus = 3;
@@ -189,9 +182,9 @@ public class Hero
 			weaponName = "Spear";
 			classDamage = 5;
 			classHealth = 13;
-			weaponSymbol = "_";
+			weaponSymbol = "-";
 			}
-		if ("Battlemage".equals(jobOfPlayer))
+		if ("BATTLEMAGE".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 1;
 			classFireballBonus = 3;
@@ -206,31 +199,31 @@ public class Hero
 			weaponSymbol = "I";
 			}
 		System.out.println();
-		System.out.println("Choose your race. Elf, Human, Dwarf, or Hobbit.");
+		System.out.println("You see your reflection in a pool of water and realize your race. (Type in all caps: Elf, Human, Dwarf, or Hobbit)");
 		raceOfPlayer = userInput1.nextLine();
 		
-			if("Human".equals(raceOfPlayer))
+			if("HUMAN".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 2; 
 				raceFireballBonus = 0;
 				raceHealingBonus = 0;
 				raceDodgeBonus = 0;	
 				}
-			if("Elf".equals(raceOfPlayer))
+			if("ELF".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
 				raceFireballBonus = 0;
 				raceHealingBonus = 2;
 				raceDodgeBonus = 0;		
 				}
-			if("Dwarf".equals(raceOfPlayer))
+			if("DWARF".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
 				raceFireballBonus = 2;
 				raceHealingBonus = 0;
 				raceDodgeBonus = 0;		
 				}
-			if("Hobbit".equals(raceOfPlayer))
+			if("HOBBIT".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
 				raceFireballBonus = 0;
@@ -238,11 +231,9 @@ public class Hero
 				raceDodgeBonus = 2;		
 				}
 		System.out.println();	
-		System.out.println("You will awake soon " + nameOfPlayer + " of " + homeLand + ".");
+		System.out.println("You try hard, but you can't remember anything else about yourself.");
 		System.out.println(" ");
-		System.out.println("Good luck.");
-		System.out.println();
-		System.out.println("You awake in a cave with a vicious beast in front of you.");
+		System.out.println("You raise up a torch to see your surroundings");
 		System.out.println();
 		return difficultyLevel;	
 		}
