@@ -11,7 +11,8 @@ public class Hero
 	static int dodgeAffect = 0; 
 	static int classWeaponBonus = 0, classFireballBonus = 0, classHealingBonus = 0, classDodgeBonus = 0, raceWeaponBonus = 0, raceFireballBonus = 0, raceHealingBonus = 0, raceDodgeBonus = 0;
 	static String nameOfPlayer, jobOfPlayer, homeLand, raceOfPlayer;
-	static String weaponName, healingTypeName, dodgeTypeName;	
+	static String weaponName, healingTypeName, dodgeTypeName; 
+	static String weaponSymbol;	
 	static int classDamage, classHealth, healingName, numberOfPotions = 3;
 	
 	public static int generatePlayerHitPoints()//Generates the monster's hit points and tell you what they are.
@@ -24,6 +25,7 @@ public class Hero
 	
 	public static String askName() //Asks the name of the player.
 		{
+		System.out.println(weaponSymbol);
 		System.out.println("Hello, and welcome to COMBAT. What is your name?");
 		Scanner userInput1 = new Scanner(System.in);        
 	    nameOfPlayer = userInput1.nextLine();        
@@ -117,6 +119,7 @@ public class Hero
 			healingName = 3;
 			classDamage = 8;
 			classHealth = 16;
+			weaponSymbol = "___";
 			}
 		if ("Mage".equals(jobOfPlayer))
 			{
@@ -130,6 +133,7 @@ public class Hero
 			weaponName = "Staff";
 			classDamage = 4;
 			classHealth = 13;
+			weaponSymbol = "*";
 			}
 		if ("Healer".equals(jobOfPlayer))
 			{
@@ -143,6 +147,7 @@ public class Hero
 			weaponName = "Mace";
 			classDamage = 7;
 			classHealth = 15;
+			weaponSymbol = "i";
 			}
 		if ("Thief".equals(jobOfPlayer))
 			{
@@ -156,6 +161,7 @@ public class Hero
 			weaponName = "Dagger";
 			classDamage = 5;
 			classHealth = 14;
+			weaponSymbol = "_";
 			}
 		if ("Paladin".equals(jobOfPlayer))
 			{
@@ -169,6 +175,7 @@ public class Hero
 			weaponName = "Hammer";
 			classDamage = 7;
 			classHealth = 15;
+			weaponSymbol = "_#";
 			}
 		if ("Nightblade".equals(jobOfPlayer))
 			{
@@ -182,6 +189,7 @@ public class Hero
 			weaponName = "Spear";
 			classDamage = 5;
 			classHealth = 13;
+			weaponSymbol = "_";
 			}
 		if ("Battlemage".equals(jobOfPlayer))
 			{
@@ -195,6 +203,7 @@ public class Hero
 			weaponName = "Battle Staff";
 			classDamage = 6;
 			classHealth = 14;
+			weaponSymbol = "I";
 			}
 		System.out.println();
 		System.out.println("Choose your race. Elf, Human, Dwarf, or Hobbit.");

@@ -1,16 +1,17 @@
 
-public class Equipment 
+public class Intros 
 	{
-	static int playerHitPoints, monsterHitPoints, godHealth, levelOfPlayer = 1;
-	static int diceRollOne, diceRollTwo, diceRollThree, totalDice;
-	static int difficultyHealth, difficultyDamage, difficultyLevel;
-	static int playAgainChoice = 1, actionChoice;
-	static int lootNumber, findingLuck, playerLuck, dodgeAffect = 0; 
-	static int armorBonus = 0, weaponBonus = 0, fireballBonus = 0, healingSpellBonus = 0, dodgeBonus = 0, classWeaponBonus = 1, classFireballBonus = 1, classHealingBonus = 1, classDodgeBonus = 1;
-	static int numberOfSlainEnemies;
-	static String nameOfPlayer, jobOfPlayer, homeLand;
-	static String pluralVariable;
-	static String weaponName, healingTypeName, dodgeTypeName;	
-	static int classDamage, classHealth, healingName, numberOfPotions = 3;
+	public static void startGameIntro()
+		{
+		System.out.println("The moon shines bright in the sky as you sit on your porch.");
+		System.out.println("");
+		System.out.println("Your neighborhood stands silent all around you, lights off, cars asleep, everyone is dreaming.");
+		System.out.println("");
+		System.out.println("You adjust your telescope to focus in on your favorite");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		}
 	
 	}
