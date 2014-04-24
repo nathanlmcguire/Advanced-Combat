@@ -60,7 +60,7 @@ public class Hero
 		System.out.println("But where are you from?"); 
 		Scanner userInput1 = new Scanner(System.in);
 		homeLand = userInput1.nextLine();
-		System.out.println("You think bakc and remember that you are from " + homeLand + ".");
+		System.out.println("You think back and remember that you are from " + homeLand + ".");
 		System.out.println(" ");
 		System.out.println("Choose the difficulty level.");
 		System.out.println(" ");
@@ -92,7 +92,6 @@ public class Hero
 				difficultyHealth = 1000;
 				difficultyDamage = 15;
 				}
-		System.out.println(" ");	
 		System.out.println("You remember your fighting style.");	
 		System.out.println(" ");
 		System.out.println("Fighter, Healer, Thief,Mage.");
@@ -131,7 +130,7 @@ public class Hero
 		if ("HEALER".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 2;
-			classFireballBonus = 0;
+			classFireballBonus = -2;
 			classHealingBonus = 3;
 			classDodgeBonus = -2;
 			dodgeTypeName = "Block";
@@ -146,7 +145,7 @@ public class Hero
 			{
 			classWeaponBonus = 1;
 			classFireballBonus = -10;
-			classHealingBonus = -1;
+			classHealingBonus = -2;
 			classDodgeBonus = 3;
 			dodgeTypeName = "Dodge";
 			healingTypeName = "Healing Potion";
@@ -174,7 +173,7 @@ public class Hero
 			{
 			classWeaponBonus = 0;
 			classFireballBonus = 3;
-			classHealingBonus = -3;
+			classHealingBonus = -5;
 			classDodgeBonus = 3;
 			dodgeTypeName = "Dodge";
 			healingTypeName = "Healing Spell";
@@ -198,7 +197,6 @@ public class Hero
 			classHealth = 14;
 			weaponSymbol = "I";
 			}
-		System.out.println();
 		System.out.println("You see your reflection in a pool of water and realize your race. (Type in all caps: Elf, Human, Dwarf, or Hobbit)");
 		raceOfPlayer = userInput1.nextLine();
 		
@@ -229,12 +227,12 @@ public class Hero
 				raceFireballBonus = 0;
 				raceHealingBonus = 0;
 				raceDodgeBonus = 2;		
-				}
-		System.out.println();	
+				}	
 		System.out.println("You try hard, but you can't remember anything else about yourself.");
 		System.out.println(" ");
 		System.out.println("You raise up a torch to see your surroundings");
 		System.out.println();
+		Intros.startKildarinIntro();
 		return difficultyLevel;	
 		}
 	}

@@ -9,6 +9,7 @@ public class Monster
 	
 	public static int monsterAttackRoll()//Rolls dice for the damage done by the monster's claws.
 		{
+		System.out.println();
 		System.out.println("The " + MonsterGenerator.monsterName + MonsterGenerator.
 				monsterAttackName + "!");
 		System.out.println();
@@ -24,7 +25,6 @@ public class Monster
 			}
 		totalDice = totalDice - Hero.dodgeAffect;	
 		System.out.println("The " + MonsterGenerator.monsterName + " does " + totalDice + " damage!");
-		System.out.println();
 		Hero.playerHitPoints = (Hero.playerHitPoints - totalDice);
 		playerHealthResetCounter = playerHealthResetCounter + totalDice;
 		return totalDice;

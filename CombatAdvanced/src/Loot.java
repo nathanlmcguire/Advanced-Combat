@@ -238,7 +238,7 @@ public class Loot
 				System.out.println("Level 4 Item.");
 				System.out.println();
 				Hero.numberOfPotions = Hero.numberOfPotions + 20;
-				System.out.println("YOu have " + Hero.numberOfPotions + " now.");
+				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
 				break;		
 				}
 			case 49:
@@ -249,7 +249,7 @@ public class Loot
 				System.out.println("Level 3 Item.");
 				System.out.println();
 				Hero.numberOfPotions = Hero.numberOfPotions + 15;
-				System.out.println("YOu have " + Hero.numberOfPotions + " now.");
+				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
 				break;
 				}
 			case 51:
@@ -261,7 +261,7 @@ public class Loot
 				System.out.println("Level 2 Item.");
 				System.out.println();
 				Hero.numberOfPotions = Hero.numberOfPotions + 10;
-				System.out.println("YOu have " + Hero.numberOfPotions + " now.");
+				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
 				break;
 				}
 			case 54:
@@ -274,7 +274,7 @@ public class Loot
 				System.out.println("Level 1 Item.");
 				System.out.println();
 				Hero.numberOfPotions = Hero.numberOfPotions + 5;
-				System.out.println("YOu have " + Hero.numberOfPotions + " now.");
+				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
 				break;
 				}				
 			}

@@ -9,7 +9,7 @@ public class Intros
 		System.out.println("");
 		System.out.println("You adjust your telescope to focus in on a large red planet: Mars.");
 		System.out.println("");
-		System.out.println("While you admire the beuty of this planet you ponder the classic question.");
+		System.out.println("While you admire the beauty of this planet you ponder the classic question.");
 		System.out.println("");
 		System.out.println("Is there alien life out there?  Somewhere out there in the great expanse of space?");
 		System.out.println("");
@@ -62,10 +62,9 @@ public class Intros
 		System.out.println("");
 		System.out.println("Every action you take sends an echo into the darkness of the seemingly unending cave.");
 		System.out.println("");
-		System.out.println("You hear scuttling sounds, but those could be echos from miles down this cave.");
+		System.out.println("You hear scuttling sounds, but those could be echoes from miles down this cave.");
 		System.out.println("");
 		System.out.println("Who knows what could be lurking in the depths of Kildarin?");
-		System.out.println("");
 		}
 	
 	public static void startGormarIntro()
@@ -77,6 +76,30 @@ public class Intros
 		System.out.println("You can see jet black horses with flaming manes and tails covering this plains, cantering over hundreds of corpses.");
 		System.out.println("");
 		System.out.println("Zombies also walk this area, adorned in the armor of Human soldiers.");
+		System.out.println("");
+		}
+	
+	public static void startFarstarnIntro()
+		{
+		System.out.println("You crest a hill to see the huge marsh of Farstarn.");
+		System.out.println("");
+		System.out.println("The marsh is grey, decaying, languid, unmoving, dead.");
+		System.out.println("");
+		System.out.println("You see a boat on the poison choked river that leads out of this place.");
+		System.out.println("");
+		System.out.println("You know that you must get to it, so you begin to walk there, your boots sqeulching in the mud.");
+		System.out.println("");
+		}
+	
+	public static void startSerebisIntro()
+		{
+		System.out.println("You crest a hill to the the ancient forest Serebis, Capital of the Elves.");
+		System.out.println("");
+		System.out.println("The outermost trees are entwined together to act as a wall against foes.");
+		System.out.println("");
+		System.out.println("You can imagine the forest would look beutiful in its prime, but the forest is old, withered, abd covered in webs.");
+		System.out.println("");
+		System.out.println("Thousands and thousands of webs.  Spider webs.");
 		System.out.println("");
 		}
 	}

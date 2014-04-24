@@ -9,7 +9,6 @@ public class MonsterGenerator
 		
 	public static int kildarinMonsterArray()
 		{
-		Intros.startKildarinIntro();
 		Monster.generateMonsterHitPoints();
 		String[] listOfKildarinMonsters = {"Hunter Goblin", "Warrior Goblin", "Shaman Goblin", "Weak Goblin", "Giant Rat", "Rat Rider Goblin"};	
 		switch (randomMonsterNumber)
@@ -73,7 +72,7 @@ public class MonsterGenerator
 		}
 		
 	public static int gormarMonsterArray()
-		{
+		{		
 		Monster.generateMonsterHitPoints();
 		System.out.println();
 		System.out.println("Before is the might Plain Gormar.");
@@ -209,7 +208,6 @@ public class MonsterGenerator
 	public static int serebisMonsterArray()
 		{
 		Monster.generateMonsterHitPoints();
-		System.out.println();
 		System.out.println("Before you is the mysterious forest Serebis.");
 		String[] listOfFarstarnMonsters = {"Giant Spider", "Two-Headed Spider", "Spider Swarm", "Giant Venus Fly Trap", "Giant Daddy Long Legs", "Hardened Spider"};	
 		switch (randomMonsterNumber)
@@ -476,13 +474,14 @@ public class MonsterGenerator
 			{
 			generateMonsterNumber();
 			kildarinMonsterArray();
+			System.out.println("You here a sound, something is coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision.");
 			}
 		 else if (Fight.numberOfSlainEnemies == 5)
 			{
 			Monster.generateMonsterHitPoints();
 			System.out.println("You walk into a large cavern where the Goblin Chief awaits you.");
 			System.out.println();
-			System.out.println("You can see that his throne is nade up of bones, but you can't tell what or who they are from.");
+			System.out.println("You can see that his throne is made up of bones, but you can't tell what or who they are from.");
 			System.out.println();
 			System.out.println("This Chief screams a challenge to you, and you know that he will not let you pass from these cave to journey on to the Vale.");
 			System.out.println();
@@ -495,13 +494,36 @@ public class MonsterGenerator
 			bossFight = 1;
 			areaOfBoss = "Kildarin";
 			}
-		 else if (Fight.numberOfSlainEnemies < 10)
+		 else if (Fight.numberOfSlainEnemies == 6)
 			{
 			 System.out.println("Three lands stretch out before you.");
 			 System.out.println();
 			 System.out.println("Do you wish to go to 1)Gormar, 2)Farstarn, or 3)Serebis?");
 			 Scanner userInput1 = new Scanner(System.in);
 			 areaChoiceOne = userInput1.nextInt();
+			 switch(areaChoiceOne)
+			 	{
+			 	case 1:
+			 		{
+			 		Intros.startGormarIntro();	
+			 		break;
+			 		}
+				 
+			 	case 2:
+			 		{
+			 		Intros.startFarstarnIntro();	
+			 		break;
+			 		}
+				 
+			 	case 3:	
+			 		{
+			 		Intros.startSerebisIntro();	
+			 		break;
+			 		}
+			 	}
+			}
+		 else if (Fight.numberOfSlainEnemies < 10)
+		 	{
 			 switch(areaChoiceOne)
 				{
 				case 1:
@@ -584,7 +606,7 @@ public class MonsterGenerator
 					}
 				}			 
 			}
-		 else if (Fight.numberOfSlainEnemies < 15)
+		 else if (Fight.numberOfSlainEnemies == 11)
 			{
 			 generateMonsterNumber();
 			 System.out.println("Three lands stretch out before you.");
@@ -592,6 +614,9 @@ public class MonsterGenerator
 			 System.out.println("Do you wish to go to 1)Darktarn, 2)Deepstain, or 3)Vortonsin?");
 			 Scanner userInput1 = new Scanner(System.in);
 			 areaChoiceTwo = userInput1.nextInt();
+			}
+		 else if (Fight.numberOfSlainEnemies < 15)
+		 	{
 			 switch(areaChoiceTwo)
 				{
 				case 1:
@@ -671,7 +696,7 @@ public class MonsterGenerator
 					}
 				}
 			}
-		 else if (Fight.numberOfSlainEnemies < 20)
+		 else if (Fight.numberOfSlainEnemies == 16)
 			{
 			 generateMonsterNumber();
 			 System.out.println("Three lands stretch out before you.");
@@ -679,6 +704,9 @@ public class MonsterGenerator
 			 System.out.println("Do you wish to go to 1)Terik, 2)Sorthus, or 3)Partok?");
 			 Scanner userInput1 = new Scanner(System.in);
 			 areaChoiceThree = userInput1.nextInt();
+			}
+		else if (Fight.numberOfSlainEnemies < 20)
+			{
 			 switch(areaChoiceThree)
 				{
 				case 1:
@@ -708,29 +736,29 @@ public class MonsterGenerator
 				case 1:
 					{
 					Monster.generateMonsterHitPoints();	
-					System.out.println("You see a wolf coming towards you.  Or is it a man?");
+					System.out.println("You walk all the way up the trunk of the Great Tree. At the top is a throne made of charred Elf bones.");
 					System.out.println();
-					System.out.println("The being morphs continously between a hideous beast and a rabid man.");
+					System.out.println("The Chief Barbarian sits on the throne, and he stands, brandishing a mace and screaming war cries.");
 					System.out.println();
-					System.out.println("This creature will not let you trespass its territory on your quest to get to the Vale.  Slay it.");
+					System.out.println("This Barbarian is challenging you for the Throne of Terik.  Slay it to continue to the Vale.");
 					System.out.println();
-					monsterName = "Mutant Elder";
+					monsterName = "Barbarian Chieftan";
 					monsterHealth = 10;
 					monsterDamage = 10;
-					monsterAttackName = " claws and bites at you";
+					monsterAttackName = " swings his mace of bone at you";
 					bossFight = 1;			
 					areaOfBoss = "Terik";	
 					}
 				case 2:
 					{
 					Monster.generateMonsterHitPoints();	
-					System.out.println("You see a wolf coming towards you.  Or is it a man?");
+					System.out.println("In front of you is a path that slopes up and out of the canyon.");
 					System.out.println();
-					System.out.println("The being morphs continously between a hideous beast and a rabid man.");
+					System.out.println("You walk towards it, but a half man half scorpion scuttles out from a hole in the ");
 					System.out.println();
-					System.out.println("This creature will not let you trespass its territory on your quest to get to the Vale.  Slay it.");
+					System.out.println("This creature will not let you continue on the the Vale.  Slay it.");
 					System.out.println();
-					monsterName = "Mutant Elder";
+					monsterName = "Mutant Scorpion";
 					monsterHealth = 10;
 					monsterDamage = 10;
 					monsterAttackName = " claws and bites at you";
@@ -740,16 +768,18 @@ public class MonsterGenerator
 				case 3:
 					{
 					Monster.generateMonsterHitPoints();	
-					System.out.println("You see a wolf coming towards you.  Or is it a man?");
+					System.out.println("You find yourself at a tower of solid ice.");
 					System.out.println();
-					System.out.println("The being morphs continously between a hideous beast and a rabid man.");
+					System.out.println("You rap on it, and it feels solid as granite.  Then it moves.");
 					System.out.println();
-					System.out.println("This creature will not let you trespass its territory on your quest to get to the Vale.  Slay it.");
+					System.out.println("The ice being turns to face you and you can see a frozen corpse.");
+					System.out.println();
+					System.out.println("You know you must slay this ice giant and free the poor explorer from his endless torture.");
 					System.out.println();
 					monsterName = "Frozen Adventurer";
 					monsterHealth = 10;
 					monsterDamage = 10;
-					monsterAttackName = " claws and bites at you";
+					monsterAttackName = " swings a massive arm of jagged ice at you";
 					bossFight = 1;			
 					areaOfBoss = "Partok";	
 					}
@@ -761,7 +791,21 @@ public class MonsterGenerator
 			}
 		 else if (Fight.numberOfSlainEnemies == 30)
 			{
-			 areaOfBoss = "Doomkeep";
+			 Monster.generateMonsterHitPoints();	
+			System.out.println("You open the door to the Throne Room.");
+			System.out.println();
+			System.out.println("Where the Throne should be instead there is the door to the Vale.");
+			System.out.println();
+			System.out.println("You go forward to finally be safe, but before you materializes a great shadow.");
+			System.out.println();
+			System.out.println("You shudder in fear of this being you have heard so much about, but you know that you must kill it to enter the Vale, and be saved.");
+			System.out.println();
+			monsterName = "-";
+			monsterHealth = 15;
+			monsterDamage = 15;
+			monsterAttackName = " swings a blade of Shadow at you";
+			bossFight = 1;			
+			areaOfBoss = "Doomkeep";
 			}
 		 else if (Fight.numberOfSlainEnemies < 40)
 			{
@@ -769,7 +813,29 @@ public class MonsterGenerator
 			}
 		 else if (Fight.numberOfSlainEnemies == 40)
 			{
-			 areaOfBoss = "Vale";
+			 Monster.generateMonsterHitPoints();	
+			System.out.println("You enter the massive white tent that is marked as King Thornwir's, hoping to save him.");
+			System.out.println();
+			System.out.println("As you enter you see the King, his skin made of shadow, his armor pierced and battered.");
+			System.out.println();
+			System.out.println("Thornwir turns.  'HELLO MORTAL.  I HAVE WAITED LONG FOR THIS MOMENT.'");
+			System.out.println();
+			System.out.println("'YOU WISH TO KNOW HOW I CAME HERE? LET ME TELL YOU.'");
+			System.out.println();
+			System.out.println("'IT WAS YOU.  YOU BROUGHT ME HERE.  I COULD NOT ENTER THE VALE WITHOUT A HUMAN HOST TO WILLINGLY CARRY ME THERE.'");
+			System.out.println();
+			System.out.println("YOU WERE MY HOST, MY PARASITE, NOW I HAVE A TRUE HOST.  I GUIDED YOU TOWARDS MY GOAL.");
+			System.out.println();
+			System.out.println("ALL HAVE FALLEN TO ME, BECAUSE OF YOU.  THANK YOU, BUT I HAVE ONE FOE LEFT... YOU.");
+			System.out.println();
+			System.out.println("The Shadow draws the Kingblade of THornwir.  'NOW DIE AT THE HANDS OF YOUR OWN KING!'");
+			System.out.println();
+			monsterName = "The Shadow";
+			monsterHealth = 20;
+			monsterDamage = 20;
+			monsterAttackName = " swings the Kingblade at you";
+			bossFight = 1;				
+			areaOfBoss = "Vale";
 			}	
 		return areaChoiceThree;
 		}	

@@ -12,7 +12,6 @@ public class Fight
 	
 	public static int chooseAction()//Lets the player choose their action.
 		{
-		System.out.println("You here a sound, something is coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision.");
 		System.out.println("_________________________________________________________________________________________________");
 		System.out.println("|                                                                                                |");
 		System.out.println("|                                                                                                |");
@@ -24,7 +23,7 @@ public class Fight
 		System.out.println("|                                                                                                |");
 		System.out.println("|                                                                                                |");
 		System.out.println("|                                                o                                               |");
-		System.out.println("|                                               ~0~" + Hero.weaponSymbol + "                                            |");
+		System.out.println("|                                               ~0~" + Hero.weaponSymbol + "                                           |");
 		System.out.println("|                                                A                                               |");
 		System.out.println("|________________________________________________________________________________________________|");
 		System.out.println(MonsterGenerator.monsterName + "'s HP = " + Monster.monsterHitPoints + " 									" + Hero.nameOfPlayer + "'s HP = " + Hero.playerHitPoints + ".");
@@ -52,13 +51,10 @@ public class Fight
 				totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.fireballBonus + Hero.classFireballBonus + Hero.raceFireballBonus);
 				Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);				
 				System.out.println("You blast the enemy with flames and do " + totalDice + " damage!");
-				System.out.println();
 				break;
 				}
 			case 3:	
 				{
-				if(Hero.numberOfPotions == 3)
-					{
 					dodgeAffect = 0;
 					resetDiceForRoll();
 					Random randomNumber = new Random();
@@ -68,18 +64,17 @@ public class Fight
 					totalDice = diceRollOne + diceRollTwo + diceRollThree + Loot.healingSpellBonus + Hero.classHealingBonus + Hero.raceHealingBonus;
 					Hero.playerHitPoints = (Hero.playerHitPoints + totalDice);
 					System.out.println("You heal yourself " + totalDice + " points of health with your " + Hero.healingTypeName + "!");
+					Monster.playerHealthResetCounter = Monster.playerHealthResetCounter - totalDice;
 					if (Hero.healingName == 3)
 						{
 						Hero.numberOfPotions--;
 						System.out.println();
 						System.out.println(Hero.numberOfPotions + " potions left.");
 						}
-					}
 				else if (Hero.numberOfPotions == 0)
 					{
 					System.out.println("You have no potions left.");
 					}
-				System.out.println();
 				break;	
 				}
 			case 4:
@@ -95,7 +90,6 @@ public class Fight
 					totalDice = diceRollOne + diceRollTwo + diceRollThree;
 					Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);
 					System.out.println("Lightning archs towards the beast doing " + totalDice + " damage");
-					System.out.println();
 					}
 				if(Hero.levelOfPlayer >= 20)
 					{
@@ -108,7 +102,6 @@ public class Fight
 					totalDice = diceRollOne + diceRollTwo + diceRollThree;
 					Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);
 					System.out.println("Lightning archs towards the beast doing " + totalDice + " damage");
-					System.out.println();
 					}
 				else
 					{
@@ -121,7 +114,6 @@ public class Fight
 					totalDice = diceRollOne + diceRollTwo + diceRollThree;
 					Hero.playerHitPoints = (Hero.playerHitPoints - totalDice);
 					System.out.println("The spell backfires doing " + totalDice + " damage to yourself.");
-					System.out.println();
 					}
 				break;
 				}
@@ -135,7 +127,6 @@ public class Fight
 				System.out.println("You prepare to " + Hero.dodgeTypeName + " the enemie's next blow.");
 				System.out.println();
 				System.out.println("You will " + Hero.dodgeTypeName + " " + dodgeAffect + " points of damage.");
-				System.out.println();
 				break;
 				}
 			}
@@ -178,10 +169,12 @@ public class Fight
 		Hero.playerHitPoints = Hero.playerHitPoints + Monster.playerHealthResetCounter;
 		if (MonsterGenerator.bossFight == 1)
 			{
+			System.out.println();
 			System.out.println("LEVEL UP!");
 			Hero.levelOfPlayer++;
 			System.out.println();
 			System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
+			Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 10);
 			System.out.println();
 			System.out.println("YOU HAVE FOUND A LORE SHARD!");
 			System.out.println();
