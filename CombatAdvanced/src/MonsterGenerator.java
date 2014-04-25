@@ -74,10 +74,6 @@ public class MonsterGenerator
 	public static int gormarMonsterArray()
 		{		
 		Monster.generateMonsterHitPoints();
-		System.out.println();
-		System.out.println("Before is the might Plain Gormar.");
-		System.out.println();
-		Intros.startGormarIntro();
 		String[] listOfGormarMonsters = {"Nightmare", "Wandering Zombie", "Hunter Zombie", "Zombie Nightmare Rider", "Ice Nightmare", "Nightmare Stallion"};	
 		switch (randomMonsterNumber)
 			{
@@ -142,8 +138,6 @@ public class MonsterGenerator
 	public static int farstarnMonsterArray()
 		{
 		Monster.generateMonsterHitPoints();
-		System.out.println();
-		System.out.println("Before you is the strange swamp Farstarn.");
 		String[] listOfFarstarnMonsters = {"Fading Ghost", "Vengful Ghost", "Ghost Sailor", "Poisonous Mushroom", "Giant Toad", "Ghost Thief"};	
 		switch (randomMonsterNumber)
 			{
@@ -208,7 +202,6 @@ public class MonsterGenerator
 	public static int serebisMonsterArray()
 		{
 		Monster.generateMonsterHitPoints();
-		System.out.println("Before you is the mysterious forest Serebis.");
 		String[] listOfFarstarnMonsters = {"Giant Spider", "Two-Headed Spider", "Spider Swarm", "Giant Venus Fly Trap", "Giant Daddy Long Legs", "Hardened Spider"};	
 		switch (randomMonsterNumber)
 			{
@@ -273,8 +266,6 @@ public class MonsterGenerator
 	public static int darktarnMonsterArray()
 		{
 		Monster.generateMonsterHitPoints();
-		System.out.println();
-		System.out.println("Before you is the fiery volcano Darktarn.");
 		String[] listOfDarktarnMonsters = {"Lava Elemental", "Troll Worker", "Troll Fighter", "Rusty Automaton", "Troll Crossbowman", "Crazed Troll"};	
 		switch (randomMonsterNumber)
 			{
@@ -339,8 +330,6 @@ public class MonsterGenerator
 	public static int deepstainMonsterArray()
 		{
 		Monster.generateMonsterHitPoints();
-		System.out.println();
-		System.out.println("Before you is the fiery volcano Darktarn.");
 		String[] listOfDeepstainMonsters = {"Ancient Skeleton", "Vengful Skeleton", "Wraith", "Dark Automotan", "Necromancer", "Corrupted Soul"};	
 		switch (randomMonsterNumber)
 			{
@@ -406,7 +395,6 @@ public class MonsterGenerator
 		{
 		Monster.generateMonsterHitPoints();
 		System.out.println();
-		System.out.println("Before you is the fiery volcano Darktarn.");
 		String[] listOfVortonsinMonsters = {"Wolf", "Ferocious Man", "Snow Leopard", "Dark Druid", "Werewolf", "Alpha Wolf"};	
 		switch (randomMonsterNumber)
 			{
@@ -496,9 +484,9 @@ public class MonsterGenerator
 			}
 		 else if (Fight.numberOfSlainEnemies == 6)
 			{
-			 System.out.println("Three lands stretch out before you.");
+			 System.out.println("Three paths are before you.");
 			 System.out.println();
-			 System.out.println("Do you wish to go to 1)Gormar, 2)Farstarn, or 3)Serebis?");
+			 System.out.println("Do you wish to go to 1, 2, or 3?");
 			 Scanner userInput1 = new Scanner(System.in);
 			 areaChoiceOne = userInput1.nextInt();
 			 switch(areaChoiceOne)
@@ -609,11 +597,29 @@ public class MonsterGenerator
 		 else if (Fight.numberOfSlainEnemies == 11)
 			{
 			 generateMonsterNumber();
-			 System.out.println("Three lands stretch out before you.");
+			 System.out.println("Three paths are before you.");
 			 System.out.println();
-			 System.out.println("Do you wish to go to 1)Darktarn, 2)Deepstain, or 3)Vortonsin?");
+			 System.out.println("Do you wish to go to 1, 2, or 3?");
 			 Scanner userInput1 = new Scanner(System.in);
 			 areaChoiceTwo = userInput1.nextInt();
+			 switch(areaChoiceTwo)
+			 	{
+			 	case 1:
+			 		{
+			 		Intros.startDarktarnIntro();	
+			 		break;
+			 		}
+			 	case 2:
+			 		{
+			 		Intros.startDeepstainIntro();	
+			 		break;	
+			 		}
+			 	case 3:
+			 		{
+			 		Intros.startVortonsinIntro();	
+			 		break;
+			 		}
+			 	}
 			}
 		 else if (Fight.numberOfSlainEnemies < 15)
 		 	{
@@ -699,11 +705,29 @@ public class MonsterGenerator
 		 else if (Fight.numberOfSlainEnemies == 16)
 			{
 			 generateMonsterNumber();
-			 System.out.println("Three lands stretch out before you.");
+			 System.out.println("Three paths are before you.");
 			 System.out.println();
-			 System.out.println("Do you wish to go to 1)Terik, 2)Sorthus, or 3)Partok?");
+			 System.out.println("Do you wish to go to 1, 2, or 3?");
 			 Scanner userInput1 = new Scanner(System.in);
 			 areaChoiceThree = userInput1.nextInt();
+			 switch(areaChoiceThree)
+			 	{
+			 	case 1:
+			 		{
+			 		Intros.startTerikIntro();
+			 		break;	
+			 		}
+			 	case 2:
+			 		{
+			 		Intros.startPartokIntro();
+			 		break;	
+			 		}
+			 	case 3:
+			 		{
+			 		Intros.startSorthusIntro();
+			 		break;	
+			 		}
+			 	}
 			}
 		else if (Fight.numberOfSlainEnemies < 20)
 			{
@@ -712,19 +736,19 @@ public class MonsterGenerator
 				case 1:
 					{
 					generateMonsterNumber();	
-						
+					terikMonsterArray();	
 					break;	
 					}
 				case 2:
 					{
 					generateMonsterNumber();	
-						
+					sorthusMonsterArray();	
 					break;	
 					}
 				case 3:
 					{
 					generateMonsterNumber();	
-						
+					partokMonsterArray();	
 					break;	
 					}
 				}
@@ -785,9 +809,11 @@ public class MonsterGenerator
 					}
 				}
 			}
-		 else if (Fight.numberOfSlainEnemies < 30)
+		 //Intros.startDoomkeepIntro();
+		 if (Fight.numberOfSlainEnemies < 30)
 			{
 			 generateMonsterNumber();
+			 doomkeepMonsterArray();
 			}
 		 else if (Fight.numberOfSlainEnemies == 30)
 			{
@@ -807,9 +833,11 @@ public class MonsterGenerator
 			bossFight = 1;			
 			areaOfBoss = "Doomkeep";
 			}
-		 else if (Fight.numberOfSlainEnemies < 40)
+		 //Intros.startValeIntro();
+		 if (Fight.numberOfSlainEnemies < 40)
 			{
 			 generateMonsterNumber();
+			 valeMonsterArray();
 			}
 		 else if (Fight.numberOfSlainEnemies == 40)
 			{
@@ -826,9 +854,9 @@ public class MonsterGenerator
 			System.out.println();
 			System.out.println("YOU WERE MY HOST, MY PARASITE, NOW I HAVE A TRUE HOST.  I GUIDED YOU TOWARDS MY GOAL.");
 			System.out.println();
-			System.out.println("ALL HAVE FALLEN TO ME, BECAUSE OF YOU.  THANK YOU, BUT I HAVE ONE FOE LEFT... YOU.");
+			System.out.println("ALL HAVE FALLEN TO ME, BECAUSE OF YOU.  I THANK YOU, BUT ONE FOE REMAINS... YOU.");
 			System.out.println();
-			System.out.println("The Shadow draws the Kingblade of THornwir.  'NOW DIE AT THE HANDS OF YOUR OWN KING!'");
+			System.out.println("The Shadow draws the Kingblade of THornwir.  'NOW DIE AT THE HANDS OF YOUR KING!'");
 			System.out.println();
 			monsterName = "The Shadow";
 			monsterHealth = 20;
@@ -836,7 +864,11 @@ public class MonsterGenerator
 			monsterAttackName = " swings the Kingblade at you";
 			bossFight = 1;				
 			areaOfBoss = "Vale";
-			}	
+			}
+		 else if (Fight.numberOfSlainEnemies == 41)
+		 	{	
+			 Intros.startEndgameIntro();
+		 	}
 		return areaChoiceThree;
 		}	
 	
@@ -901,6 +933,326 @@ public class MonsterGenerator
 				System.out.println("The Vale:The magical safe-haven made by Yolvar for protection from The Shadow.  It proved effective, unless The Shadow was given permission to enter in a mortal host.  When " + Hero.nameOfPlayer + " unwittingly acted as that host The Shadow corrupted everyone in the Vale and used King Thornwir as his host.  When the Hero awoke he fought through to The Shadow, and faced him in combat.  Although this Hero came closer than any who came before, all accounts tell that he was slain, and that The Shadow reigned on until the Third Era.  The Age of Redemption.");
 				}
 			}
+		}
+	
+	public static int partokMonsterArray()
+		{
+		Monster.generateMonsterHitPoints();
+		String[] listOfKildarinMonsters = {"Small Ice Elemental", "Ice Elemental", "Massive Ice Elemental", "Ice Mage", "Ice Dragon", "The Really Stupid Fire Mage"};	
+		switch (randomMonsterNumber)
+			{
+			case 0:
+				{
+				monsterName = "Small Ice Elemental";
+				monsterHealth = 3;
+				monsterDamage = 3;
+				monsterAttackName = " launches itself at you";
+				bossFight = 0;
+				break;
+				}
+			case 1:
+				{
+				monsterName = "Ice Elemental";	
+				monsterHealth = 5;
+				monsterDamage = 5;
+				monsterAttackName = " swings its razor sharp hands of ice at you";	
+				bossFight = 0;
+				break;
+				}
+			case 2:
+				{
+				monsterName = "Massive Ice Elemental";	
+				monsterHealth = 7;
+				monsterDamage = 7;
+				monsterAttackName = " tries to crush you with a massive hammer of ice";	
+				bossFight = 0;
+				break;
+				}
+			case 3:
+				{
+				monsterName = "Ice Mage";
+				monsterHealth = 0;
+				monsterDamage = 8;
+				monsterAttackName = " blasts snow and ice at you while singing, 'Let it Go!'";	
+				bossFight = 0;
+				break;
+				}
+			case 4:
+				{
+				monsterName = "Ice Dragon";
+				monsterHealth = 9;
+				monsterDamage = 9;
+				monsterAttackName = " snaps at you and breathes ice";	
+				bossFight = 0;
+				break;
+				}
+			case 5:
+				{
+				monsterName = "The Really Stupid Fire Mage";
+				monsterHealth = 0;
+				monsterDamage = 1;
+				monsterAttackName = " blasts weak fireballs at you";	
+				bossFight = 0;
+				break;
+				}
+			}
+		return randomMonsterNumber;
+		}
+	
+	public static int terikMonsterArray()
+		{
+		Monster.generateMonsterHitPoints();
+		String[] listOfKildarinMonsters = {"Corrupted Tree", "Corruupted Elf", "Barbarian Warrior", "Dark Pyromancer", "Barbarian Hunter", "Panther"};	
+		switch (randomMonsterNumber)
+			{
+			case 0:
+				{
+				monsterName = "Corrupted Tree";
+				monsterHealth = 3;
+				monsterDamage = 3;
+				monsterAttackName = " swings it's withered roots at you";
+				bossFight = 0;
+				break;
+				}
+			case 1:
+				{
+				monsterName = "Corrupted Elf";	
+				monsterHealth = 2;
+				monsterDamage = 2;
+				monsterAttackName = " fires dark arrows at you";	
+				bossFight = 0;
+				break;
+				}
+			case 2:
+				{
+				monsterName = "Barbarian Warrior";	
+				monsterHealth = 5;
+				monsterDamage = 5;
+				monsterAttackName = " slashes at you with a sword";	
+				bossFight = 0;
+				break;
+				}
+			case 3:
+				{
+				monsterName = "Dark Pyromancer";
+				monsterHealth = 0;
+				monsterDamage = 7;
+				monsterAttackName = " blasts shadow fire at you";	
+				bossFight = 0;
+				break;
+				}
+			case 4:
+				{
+				monsterName = "Barbarian Hunter";
+				monsterHealth = 2;
+				monsterDamage = 6;
+				monsterAttackName = " aims and shoots at you with a bow and arrow";	
+				bossFight = 0;
+				break;
+				}
+			case 5:
+				{
+				monsterName = "Panther";
+				monsterHealth = 2;
+				monsterDamage = 2;
+				monsterAttackName = " lunges at you";	
+				bossFight = 0;
+				break;
+				}
+			}
+		return randomMonsterNumber;
+		}
+	
+	public static int sorthusMonsterArray()
+		{
+		Monster.generateMonsterHitPoints();
+		String[] listOfKildarinMonsters = {"Deadly Scorpion", "Giant Scorpion", "Canyon Golem", "Giant Snake", "Rocs", "Man-Eating Cactus"};	
+		switch (randomMonsterNumber)
+			{
+			case 0:
+				{
+				monsterName = "Deadly Scorpion";
+				monsterHealth = -2;
+				monsterDamage = 9;
+				monsterAttackName = " tries to sting you with its small but deadly tail";
+				bossFight = 0;
+				break;
+				}
+			case 1:
+				{
+				monsterName = "Giant Scorpion";	
+				monsterHealth = 4;
+				monsterDamage = 4;
+				monsterAttackName = " tries to sting you";	
+				bossFight = 0;
+				break;
+				}
+			case 2:
+				{
+				monsterName = "Canyon Golem";	
+				monsterHealth = 8;
+				monsterDamage = 0;
+				monsterAttackName = " swings it's massive arm of rock at you";	
+				bossFight = 0;
+				break;
+				}
+			case 3:
+				{
+				monsterName = "Giant Snake";
+				monsterHealth = 2;
+				monsterDamage = 6;
+				monsterAttackName = " unsheathes it's fangs and bites at you";	
+				bossFight = 0;
+				break;
+				}
+			case 4:
+				{
+				monsterName = "Roc";
+				monsterHealth = 0;
+				monsterDamage = 8;
+				monsterAttackName = " trys to claw you with it's talons";	
+				bossFight = 0;
+				break;
+				}
+			case 5:
+				{
+				monsterName = "Man-Eating Cactus";
+				monsterHealth = 9;
+				monsterDamage = 5;
+				monsterAttackName = " opens it's mouth to swallow you";	
+				bossFight = 0;
+				break;
+				}
+			}
+		return randomMonsterNumber;
+		}
+	
+	public static int doomkeepMonsterArray()
+		{
+		Monster.generateMonsterHitPoints();
+		String[] listOfKildarinMonsters = {"Corrupted Human Soldier", "Corrupted Human Archer", "Corrupted Human Royal Guard", "Corrupted Human Knight", "Corrupted Human Mage", "Corrupted Human Servant"};	
+		switch (randomMonsterNumber)
+			{
+			case 0:
+				{
+				monsterName = "Corrupted Human Soldier";
+				monsterHealth = 4;
+				monsterDamage = 4;
+				monsterAttackName = " swings his blade of shadow at you";
+				bossFight = 0;
+				break;
+				}
+			case 1:
+				{
+				monsterName = "Corrupted Human Archer";	
+				monsterHealth = 3;
+				monsterDamage = 6;
+				monsterAttackName = " aims and shoots arrows of shadow at you";	
+				bossFight = 0;
+				break;
+				}
+			case 2:
+				{
+				monsterName = "Corrupted Human Royal Guard";	
+				monsterHealth = 8;
+				monsterDamage = 8;
+				monsterAttackName = " swings his blade of shadow at you";	
+				bossFight = 0;
+				break;
+				}
+			case 3:
+				{
+				monsterName = "Corrupted Human Mage";
+				monsterHealth = 0;
+				monsterDamage = 8;
+				monsterAttackName = " blasts dark magic at you";	
+				bossFight = 0;
+				break;
+				}
+			case 4:
+				{
+				monsterName = "Corrupted Human Knight";
+				monsterHealth = 7;
+				monsterDamage = 7;
+				monsterAttackName = " swings his blade of shadow at you";	
+				bossFight = 0;
+				break;
+				}
+			case 5:
+				{
+				monsterName = "Corrupted Human Servant";
+				monsterHealth = 0;
+				monsterDamage = 0;
+				monsterAttackName = " swings his knife of shadow at you";	
+				bossFight = 0;
+				break;
+				}
+			}
+		return randomMonsterNumber;
+		}
+	
+	public static int valeMonsterArray()
+		{
+		Monster.generateMonsterHitPoints();
+		String[] listOfKildarinMonsters = {"Corrupted Human Soldier", "Corrupted Elf Healer", "Corrupted Thornwir's Bodyguard", "Corrupted Hobbit Archer", "Corrupted Dwarf Mage", "Corrupted Refugee"};	
+		switch (randomMonsterNumber)
+			{
+			case 0:
+				{
+				monsterName = "Corrupted Human Soldier";
+				monsterHealth = 5;
+				monsterDamage = 5;
+				monsterAttackName = " swings his blade of shadow at you";
+				bossFight = 0;
+				break;
+				}
+			case 1:
+				{
+				monsterName = "Corrupted Elf Healer";	
+				monsterHealth = 9;
+				monsterDamage = 2;
+				monsterAttackName = " swings his mace of shadow at you";	
+				bossFight = 0;
+				break;
+				}
+			case 2:
+				{
+				monsterName = "Corrupted Thornwir's Bodyguard";	
+				monsterHealth = 10;
+				monsterDamage = 10;
+				monsterAttackName = " swings his blade of shadow at you";	
+				bossFight = 0;
+				break;
+				}
+			case 3:
+				{
+				monsterName = "Corrupted Hobbit Archer";
+				monsterHealth = 3;
+				monsterDamage = 7;
+				monsterAttackName = " aims and shoots arrows of shadow at you";	
+				bossFight = 0;
+				break;
+				}
+			case 4:
+				{
+				monsterName = "Corrupted Dwarf Mage";
+				monsterHealth = 6;
+				monsterDamage = 8;
+				monsterAttackName = " blasts dark magic at you";	
+				bossFight = 0;
+				break;
+				}
+			case 5:
+				{
+				monsterName = "Corrupted Refugee";
+				monsterHealth = 1;
+				monsterDamage = 1;
+				monsterAttackName = " swings his knife of shadow at you";	
+				bossFight = 0;
+				break;
+				}
+			}
+		return randomMonsterNumber;
 		}
 	}
 

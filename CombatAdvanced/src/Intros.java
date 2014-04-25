@@ -87,7 +87,7 @@ public class Intros
 		System.out.println("");
 		System.out.println("You see a boat on the poison choked river that leads out of this place.");
 		System.out.println("");
-		System.out.println("You know that you must get to it, so you begin to walk there, your boots sqeulching in the mud.");
+		System.out.println("You know that you must get to it, so you begin to walk there, your boots sqeulching in the mud of the poisonous swamp.");
 		System.out.println("");
 		}
 	
@@ -102,4 +102,159 @@ public class Intros
 		System.out.println("Thousands and thousands of webs.  Spider webs.");
 		System.out.println("");
 		}
+	
+	public static void startDarktarnIntro()
+		{
+		System.out.println("You crest a hill to see a massive volcano: Darktarn.");
+		System.out.println("");
+		System.out.println("The air is choked with smoke, and it is hard to see, but you can sense that there are enemies here.");
+		System.out.println("");
+		System.out.println("You hear the sounds of hammer on anvil in the distance. You wonder if this is some type of forge, and whot, or what, owns it?");
+		System.out.println("");
+		}
+	
+	public static void startDeepstainIntro()
+		{
+		System.out.println("As you walk forward you fall into a pit.  You fall through several weak wooden floors untill you hit the ground.");
+		System.out.println("");
+		System.out.println("After you have bandaged your minor wounds from the fall you look around.");
+		System.out.println("");
+		System.out.println("You stand in a grand room, connected to thousands of others.  Gold, Silver, and rubies adourn the walls.");
+		System.out.println("");
+		System.out.println("This city would look grand if it were not shrouded in darkness, and littered with millions of bones.");
+		System.out.println("");
+		System.out.println("Dwarven bones.");
+		System.out.println("");
+		}
+	
+	public static void startVortonsinIntro()
+		{
+		System.out.println("You crest a hill to see a massive icy tundra.");
+		System.out.println("");
+		System.out.println("The land is snowy and empty, but you can sense there is life.");
+		System.out.println("");
+		System.out.println("You know you should tread softly, for any life that survives in this place must be brutal.");
+		System.out.println("");
+		}
+	
+	public static void startTerikIntro()
+		{
+		System.out.println("In front of you stand the great jungle of Terik.");
+		System.out.println("");
+		System.out.println("You can see thousands of trees, and one massive tree looming above them all.");
+		System.out.println("");
+		System.out.println("You sense that this once sacred part of the Elven Realm in now corrupted by The Shadow, and you should tread lightly.");
+		System.out.println("");
+		System.out.println("This forest has turned against those who once mastered it.");
+		System.out.println("");
+		}
+	
+	public static void startPartokIntro()
+		{
+		System.out.println("You crest a hill to see an amazing sight.");
+		System.out.println("");
+		System.out.println("The inland sea of Partok, which is completely frozen over by ice.");
+		System.out.println("");
+		System.out.println("It is freezing cold here, but you know that even this temperature could not freeze an entire sea, magic must be at work.");
+		System.out.println("");
+		System.out.println("The ice does not budge when you put your weight upon it, so you carefully walk forward.");
+		System.out.println("");
+		System.out.println("You see forms moving under the ice, some very large, and you pray that they will not notice your passage through this place on the way to the Vale.");
+		System.out.println("");
+		}
+	
+	public static void startSorthusIntro()
+		{
+		System.out.println("Before you is a grand landmark of this world.");
+		System.out.println("");
+		System.out.println("The canyon Sorthus.");
+		System.out.println("");
+		System.out.println("You can see ramshackle houses and crude pathways all over this area.");
+		System.out.println("");
+		System.out.println("The walls of the canyon look almost red, and are perferated with many holes, large and small.");
+		System.out.println("");
+		System.out.println("You stay wary of those holes, they are perfect ofr creatures to hide from the burning sun in.");
+		System.out.println("");
+		}
+		
+	public static void startDoomkeepIntro()
+		{
+		System.out.println("You see your final obstacle looming in front of you.");
+		System.out.println("");
+		System.out.println("The great castle of the Humans: Doomkeep.");
+		System.out.println("");
+		System.out.println("The walls, once white, are now stained black but suprisingly intact and covered in defensive wards.");
+		System.out.println("");
+		System.out.println("All except one piece of the wall wich is shattered.");
+		System.out.println("");
+		System.out.println("You wonder why The Shadow would choose to destroy this wall, instead of the gate wich is still intact and covered in wards.");
+		System.out.println("");
+		System.out.println("You the remaints of the Human Army patrolling the walls, corrupted in Shadow.");
+		System.out.println("");
+		System.out.println("The final part of your journey is here, you just have to fight your way to the Vale Gate and get to safetey.");
+		System.out.println("");
+		}
+	
+	public static void startValeIntro()
+		{
+		System.out.println("You stand back suprised.");
+		System.out.println("");
+		System.out.println("You killed it, you killed The Shadow!  You need to tell the King!  You need to get to the Vale and report your triumph!");
+		System.out.println("");
+		System.out.println("You run over to the shimmering door to the Vale, and without hesitation jump through.");
+		System.out.println("");
+		System.out.println("You appear in a shimmering white land, infront of you are two guards, a Human and a Dwarf.");
+		System.out.println("");
+		System.out.println("You gaze at the beauty of this place you have tried so hard to get to, but then you suddenly feel weak ");
+		System.out.println("");
+		System.out.println("You collapse to the floor, and the Guards pcik you up and carry you through a mass of white tents to the healer");
+		System.out.println("");
+		System.out.println("They lay you down on a cot, and a healer looks over at you.");
+		System.out.println("");
+		System.out.println("A new arrival?' 'Yea, just popped in and collapsed.'  'Just Vale sickness, every arrival gets it.  He needs rest.'");
+		System.out.println("");
+		System.out.println("Then you fall asleep, safe in the Vale.");
+		System.out.println("");
+		System.out.println("*");
+		System.out.println("*");
+		System.out.println("*");
+		System.out.println("");
+		System.out.println("Thank you for playing Loresh-");
+		System.out.println("");
+		System.out.println("You suddenly awake to the smell of death.");
+		System.out.println("");
+		System.out.println("Around you the tent, the floor is all stain with shadow.");
+		System.out.println("");
+		System.out.println("You stand up, look around to the the corrupted corpses of the healer, and of the two Guards.");
+		System.out.println("");
+		System.out.println("You open the tent to see the whole Vale, corrupted and destroyed.");
+		System.out.println("");
+		System.out.println("But I killed him, you think.  I slew him in the throne room.");
+		System.out.println("");
+		System.out.println("You must find Thornwir and protect him, maybe the King can restore the Vale.");
+		System.out.println("");
+		}
+	
+	public static void startEndgameIntro()
+		{
+		System.out.println("Suddenly Thronwir's armor falls to the ground, empty.");
+		System.out.println("");
+		System.out.println("The Kingblade clatters to the floor.");
+		System.out.println("");
+		System.out.println("You pick up these sacred artifacts in wonder, but you jump as you hear a rumbling.");
+		System.out.println("");
+		System.out.println("You look outside to the the Vale, collapsing.");
+		System.out.println("");
+		System.out.println("You run with all your might for the exit, and just barely make it, clutching Thornwir's armor you your chest.");
+		System.out.println("");
+		System.out.println("You stand up, in the empty Throne Room of Doomkeep, alone, in the dark, the last of this planet.");
+		System.out.println("");
+		System.out.println("In front of you is the world that was ravaged by The Shadow.");
+		System.out.println("");
+		System.out.println("You can not save it, it is over, you sit down on the Throne of Thornwir in despair.");
+		System.out.println("");
+		System.out.println("The Throne entwines around you pullinhg you downward deep into the catacombs of Doomkeep, where you will sleep for thousands of years... untill you are awaken.");
+		System.out.println("");
+		}
+	
 	}

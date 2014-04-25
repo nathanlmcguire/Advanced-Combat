@@ -167,6 +167,7 @@ public class Fight
 	public static int askPlayerIfTheyWantToPlayAgain()//Asks the player if they want to play again or if they want to stop playing.
 		{
 		Hero.playerHitPoints = Hero.playerHitPoints + Monster.playerHealthResetCounter;
+		Monster.playerHealthResetCounter = 0;
 		if (MonsterGenerator.bossFight == 1)
 			{
 			System.out.println();
@@ -174,7 +175,7 @@ public class Fight
 			Hero.levelOfPlayer++;
 			System.out.println();
 			System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
-			Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 10);
+			Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 5);
 			System.out.println();
 			System.out.println("YOU HAVE FOUND A LORE SHARD!");
 			System.out.println();
