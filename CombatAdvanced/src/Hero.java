@@ -125,7 +125,7 @@ public class Hero
 			weaponName = "Staff";
 			classDamage = 4;
 			classHealth = 13;
-			weaponSymbol = "*";
+			weaponSymbol = "*  ";
 			}
 		if ("HEALER".equals(jobOfPlayer))
 			{

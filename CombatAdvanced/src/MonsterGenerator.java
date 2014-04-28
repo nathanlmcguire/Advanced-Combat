@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MonsterGenerator 
 	{
-	static String currentKildarinMonster, monsterAttackName, monsterName, areaOfBoss;
+	static String monsterAttackName, monsterName, areaOfBoss;
 	static int randomMonsterNumber, monsterHealth = 0, monsterDamage = 0, areaChoiceOne, areaChoiceTwo, areaChoiceThree, bossFight = 0;
 		
 	public static int kildarinMonsterArray()
@@ -510,7 +510,7 @@ public class MonsterGenerator
 			 		}
 			 	}
 			}
-		 else if (Fight.numberOfSlainEnemies < 10)
+		 else if (Fight.numberOfSlainEnemies < 10 && Fight.numberOfSlainEnemies > 6)
 		 	{
 			 switch(areaChoiceOne)
 				{
@@ -621,7 +621,7 @@ public class MonsterGenerator
 			 		}
 			 	}
 			}
-		 else if (Fight.numberOfSlainEnemies < 15)
+		 else if (Fight.numberOfSlainEnemies < 15 && Fight.numberOfSlainEnemies > 11)
 		 	{
 			 switch(areaChoiceTwo)
 				{
@@ -729,7 +729,7 @@ public class MonsterGenerator
 			 		}
 			 	}
 			}
-		else if (Fight.numberOfSlainEnemies < 20)
+		else if (Fight.numberOfSlainEnemies < 20 && Fight.numberOfSlainEnemies > 16)
 			{
 			 switch(areaChoiceThree)
 				{
@@ -772,6 +772,7 @@ public class MonsterGenerator
 					monsterAttackName = " swings his mace of bone at you";
 					bossFight = 1;			
 					areaOfBoss = "Terik";	
+					break;
 					}
 				case 2:
 					{
@@ -788,6 +789,7 @@ public class MonsterGenerator
 					monsterAttackName = " claws and bites at you";
 					bossFight = 1;			
 					areaOfBoss = "Sorthus";	
+					break;
 					}
 				case 3:
 					{
@@ -806,11 +808,15 @@ public class MonsterGenerator
 					monsterAttackName = " swings a massive arm of jagged ice at you";
 					bossFight = 1;			
 					areaOfBoss = "Partok";	
+					break;
 					}
 				}
 			}
-		 //Intros.startDoomkeepIntro();
-		 if (Fight.numberOfSlainEnemies < 30)
+		 if (Fight.numberOfSlainEnemies == 21)
+		 	{
+			 Intros.startDoomkeepIntro();
+		 	}
+		 if (Fight.numberOfSlainEnemies < 30 && Fight.numberOfSlainEnemies > 20)
 			{
 			 generateMonsterNumber();
 			 doomkeepMonsterArray();
@@ -833,8 +839,11 @@ public class MonsterGenerator
 			bossFight = 1;			
 			areaOfBoss = "Doomkeep";
 			}
-		 //Intros.startValeIntro();
-		 if (Fight.numberOfSlainEnemies < 40)
+		 if (Fight.numberOfSlainEnemies == 31)
+		 	{
+			 Intros.startValeIntro();
+		 	}
+		 if (Fight.numberOfSlainEnemies < 40 && Fight.numberOfSlainEnemies > 31)
 			{
 			 generateMonsterNumber();
 			 valeMonsterArray();
@@ -938,7 +947,7 @@ public class MonsterGenerator
 	public static int partokMonsterArray()
 		{
 		Monster.generateMonsterHitPoints();
-		String[] listOfKildarinMonsters = {"Small Ice Elemental", "Ice Elemental", "Massive Ice Elemental", "Ice Mage", "Ice Dragon", "The Really Stupid Fire Mage"};	
+		String[] listOfPartokMonsters = {"Small Ice Elemental", "Ice Elemental", "Massive Ice Elemental", "Ice Mage", "Ice Dragon", "The Really Stupid Fire Mage"};	
 		switch (randomMonsterNumber)
 			{
 			case 0:
@@ -1002,7 +1011,7 @@ public class MonsterGenerator
 	public static int terikMonsterArray()
 		{
 		Monster.generateMonsterHitPoints();
-		String[] listOfKildarinMonsters = {"Corrupted Tree", "Corruupted Elf", "Barbarian Warrior", "Dark Pyromancer", "Barbarian Hunter", "Panther"};	
+		String[] listOfTerikMonsters = {"Corrupted Tree", "Corruupted Elf", "Barbarian Warrior", "Dark Pyromancer", "Barbarian Hunter", "Panther"};	
 		switch (randomMonsterNumber)
 			{
 			case 0:
@@ -1066,7 +1075,7 @@ public class MonsterGenerator
 	public static int sorthusMonsterArray()
 		{
 		Monster.generateMonsterHitPoints();
-		String[] listOfKildarinMonsters = {"Deadly Scorpion", "Giant Scorpion", "Canyon Golem", "Giant Snake", "Rocs", "Man-Eating Cactus"};	
+		String[] listOfSorthusMonsters = {"Deadly Scorpion", "Giant Scorpion", "Canyon Golem", "Giant Snake", "Rocs", "Man-Eating Cactus"};	
 		switch (randomMonsterNumber)
 			{
 			case 0:
@@ -1130,7 +1139,7 @@ public class MonsterGenerator
 	public static int doomkeepMonsterArray()
 		{
 		Monster.generateMonsterHitPoints();
-		String[] listOfKildarinMonsters = {"Corrupted Human Soldier", "Corrupted Human Archer", "Corrupted Human Royal Guard", "Corrupted Human Knight", "Corrupted Human Mage", "Corrupted Human Servant"};	
+		String[] listOfDoomkeepMonsters = {"Corrupted Human Soldier", "Corrupted Human Archer", "Corrupted Human Royal Guard", "Corrupted Human Knight", "Corrupted Human Mage", "Corrupted Human Servant"};	
 		switch (randomMonsterNumber)
 			{
 			case 0:
@@ -1194,7 +1203,7 @@ public class MonsterGenerator
 	public static int valeMonsterArray()
 		{
 		Monster.generateMonsterHitPoints();
-		String[] listOfKildarinMonsters = {"Corrupted Human Soldier", "Corrupted Elf Healer", "Corrupted Thornwir's Bodyguard", "Corrupted Hobbit Archer", "Corrupted Dwarf Mage", "Corrupted Refugee"};	
+		String[] listOfValeMonsters = {"Corrupted Human Soldier", "Corrupted Elf Healer", "Corrupted Thornwir's Bodyguard", "Corrupted Hobbit Archer", "Corrupted Dwarf Mage", "Corrupted Refugee"};	
 		switch (randomMonsterNumber)
 			{
 			case 0:
