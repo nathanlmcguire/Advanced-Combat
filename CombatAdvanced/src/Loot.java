@@ -24,6 +24,7 @@ public class Loot
 				System.out.println();
 				armorBonus = armorBonus + 4;
 				System.out.println("Your max HP has now been increased by 4.");
+				System.out.println();
 				break;
 				}
 			case 4:
@@ -37,6 +38,7 @@ public class Loot
 				System.out.println();
 				armorBonus = armorBonus + 2;
 				System.out.println("Your max HP has now been increased by 2.");
+				System.out.println();
 				break;
 				}
 			case 8:
@@ -49,6 +51,7 @@ public class Loot
 				System.out.println();
 				armorBonus = armorBonus + 4;
 				System.out.println("Your max HP has now been increased by 4.");
+				System.out.println();
 				break;
 				}
 			case 11:
@@ -60,6 +63,7 @@ public class Loot
 				System.out.println();
 				armorBonus = armorBonus + 6;
 				System.out.println("Your max HP has now been increased by 6.");
+				System.out.println();
 				break;
 				}
 			case 13:
@@ -73,6 +77,7 @@ public class Loot
 				System.out.println();
 				weaponBonus = weaponBonus + 2;
 				System.out.println("You now do 2 more damage with your " + Hero.weaponName + "!");
+				System.out.println();
 				break;
 				}
 			case 17:
@@ -85,6 +90,7 @@ public class Loot
 				System.out.println();
 				weaponBonus = weaponBonus + 4;
 				System.out.println("You now do 4 more damage with your " + Hero.weaponName + "!");
+				System.out.println();
 				break;
 				}
 			case 20:
@@ -96,6 +102,7 @@ public class Loot
 				System.out.println();
 				weaponBonus = weaponBonus + 6;
 				System.out.println("You now do 6 more damage with your " + Hero.weaponName + "!");
+				System.out.println();
 				break;
 				}
 			case 22:
@@ -108,6 +115,7 @@ public class Loot
 				System.out.println();
 				fireballBonus = fireballBonus + 4;
 				System.out.println("Your Fireball Spell does 4 more damage now.");
+				System.out.println();
 				break;
 				}
 			case 25:
@@ -120,6 +128,7 @@ public class Loot
 				System.out.println();
 				healingSpellBonus = healingSpellBonus + 4;
 				System.out.println("Your Healing Spell/Healing Potions heals you up 4 more now.");
+				System.out.println();
 				break;
 				}	
 			case 28:
@@ -133,6 +142,7 @@ public class Loot
 				System.out.println();
 				dodgeBonus = dodgeBonus + 2;
 				System.out.println("You " + Hero.dodgeTypeName + " 2 more points of damage now!");
+				System.out.println();
 				break;
 				}
 			case 32:
@@ -145,6 +155,7 @@ public class Loot
 				System.out.println();
 				dodgeBonus = dodgeBonus + 4;
 				System.out.println("You " + Hero.dodgeTypeName + " 4 more points of damage now!");
+				System.out.println();
 				break;
 				}
 			case 35:
@@ -156,6 +167,7 @@ public class Loot
 				System.out.println();
 				dodgeBonus = dodgeBonus + 6;
 				System.out.println("You " + Hero.dodgeTypeName + " 6 more points of damage now!");
+				System.out.println();
 				break;
 				}
 			case 37:
@@ -166,6 +178,7 @@ public class Loot
 				System.out.println();
 				weaponBonus = weaponBonus + 8;
 				System.out.println("You do 8 more points of damage with your " + Hero.weaponName + " now!");
+				System.out.println();
 				break;	
 				}
 			case 38:
@@ -176,6 +189,7 @@ public class Loot
 				System.out.println(); 
 				fireballBonus = fireballBonus + 8;
 				System.out.println("Your Fireball Spell now does 8 more points of damage.");
+				System.out.println();
 				break;	
 				}
 			case 39:
@@ -186,6 +200,7 @@ public class Loot
 				System.out.println();
 				healingSpellBonus = healingSpellBonus + 8;
 				System.out.println("You heal yourself 8 more points now!");
+				System.out.println();
 				break;		
 				}
 			case 40:
@@ -196,6 +211,7 @@ public class Loot
 				System.out.println();
 				dodgeBonus = dodgeBonus + 8;
 				System.out.println("You " + Hero.dodgeTypeName + " 8 more points of damage now!");
+				System.out.println();
 				break;		
 				}
 			case 41:
@@ -206,6 +222,8 @@ public class Loot
 				System.out.println();
 				armorBonus = armorBonus + 8;
 				System.out.println("Your max health is 8 more points now!");
+				System.out.println();
+				break;
 				}
 			case 42:
 			case 43:
@@ -218,6 +236,7 @@ public class Loot
 				System.out.println();
 				fireballBonus = fireballBonus + 2;
 				System.out.println("Your Fireball Spell does 2 more damage now.");
+				System.out.println();
 				break;	
 				}
 			case 46:
@@ -229,6 +248,7 @@ public class Loot
 				System.out.println();
 				fireballBonus = fireballBonus + 6;
 				System.out.println("Your Fireball Spell does 6 more damage now.");
+				System.out.println();
 				break;	
 				}
 			case 48:
@@ -239,6 +259,7 @@ public class Loot
 				System.out.println();
 				Hero.numberOfPotions = Hero.numberOfPotions + 20;
 				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
+				System.out.println();
 				break;		
 				}
 			case 49:
@@ -250,6 +271,7 @@ public class Loot
 				System.out.println();
 				Hero.numberOfPotions = Hero.numberOfPotions + 15;
 				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
+				System.out.println();
 				break;
 				}
 			case 51:
@@ -262,6 +284,7 @@ public class Loot
 				System.out.println();
 				Hero.numberOfPotions = Hero.numberOfPotions + 10;
 				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
+				System.out.println();
 				break;
 				}
 			case 54:
@@ -275,6 +298,7 @@ public class Loot
 				System.out.println();
 				Hero.numberOfPotions = Hero.numberOfPotions + 5;
 				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
+				System.out.println();
 				break;
 				}				
 			}

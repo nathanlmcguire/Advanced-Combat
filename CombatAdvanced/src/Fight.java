@@ -27,8 +27,8 @@ public class Fight
 		System.out.println("|                                                A                                               |");
 		System.out.println("|________________________________________________________________________________________________|");
 		System.out.println(MonsterGenerator.monsterName + "'s HP = " + Monster.monsterHitPoints + " 									" + Hero.nameOfPlayer + "'s HP = " + Hero.playerHitPoints + ".");
-		System.out.println("Would you like to use a 1)" + Hero.weaponName + ", 2)Fireball Spell, 3)" + Hero.healingTypeName + ",");
-		System.out.println("4) Lightning Blast?(do not try unless Level 20) or 5)to " + Hero.dodgeTypeName + " the next Atack."); 
+		System.out.println("Would you like to use a 1) " + Hero.weaponName + ", 2) Fireball Spell, 3) " + Hero.healingTypeName + ",");
+		System.out.println("4) Lightning Blast?(do not try unless Level 20) or 5) to use " + Hero.dodgeTypeName + " on the next Atack."); 
 		Scanner userInput1 = new Scanner(System.in);
 		actionChoice = userInput1.nextInt();
 		switch (actionChoice)
@@ -79,18 +79,6 @@ public class Fight
 				}
 			case 4:
 				{
-				if("TGM".equals(Hero.nameOfPlayer))	
-					{
-					dodgeAffect = 0;
-					resetDiceForRoll();
-					Random randomNumber = new Random();
-					diceRollOne = 50 + randomNumber.nextInt(100);
-					diceRollTwo = 50 + randomNumber.nextInt(100);
-					diceRollThree = 50 + randomNumber.nextInt(100);
-					totalDice = diceRollOne + diceRollTwo + diceRollThree;
-					Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);
-					System.out.println("Lightning archs towards the beast doing " + totalDice + " damage");
-					}
 				if(Hero.levelOfPlayer >= 20)
 					{
 					dodgeAffect = 0;
@@ -141,8 +129,8 @@ public class Fight
 			if (Hero.playerHitPoints <= 0)
 				{
 				System.out.println("YOU DIED!");
+				System.out.println();
 				Fight.askPlayerIfTheyWantToPlayAgain();
-				break;
 				}
 			else if (Hero.playerHitPoints != 0)
 				{
@@ -170,18 +158,16 @@ public class Fight
 		Monster.playerHealthResetCounter = 0;
 		if (MonsterGenerator.bossFight == 1)
 			{
-			System.out.println();
 			System.out.println("LEVEL UP!");
 			Hero.levelOfPlayer++;
 			System.out.println();
 			System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
-			Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 5);
+			Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 2);
 			System.out.println();
 			System.out.println("YOU HAVE FOUND A LORE SHARD!");
 			System.out.println();
 			MonsterGenerator.loreShardReveal();
 			}
-		System.out.println();
 		System.out.println("Would you like to play again/continue " + Hero.nameOfPlayer + "?");
 		System.out.println();
 		System.out.println("Or does " + Hero.homeLand + " need you?");
@@ -195,7 +181,7 @@ public class Fight
 			System.out.println();
 			if (numberOfSlainEnemies == 1)
 				{
-				pluralVariable = " 1 deadly beast.  Better one than none.";
+				pluralVariable = "1 deadly beast.  Better one than none.";
 				}
 			else if (numberOfSlainEnemies == 0)
 				{
@@ -204,28 +190,32 @@ public class Fight
 			else 
 				{
 				pluralVariable = "" + numberOfSlainEnemies + " deadly beasts.";
-				if(numberOfSlainEnemies > 5)
+				if(numberOfSlainEnemies < 10)
 					{
 					System.out.println();
 					System.out.println("You are a Warrior of COMBAT.");
+					System.out.println();
 					}
-				else if (numberOfSlainEnemies > 10)
+				else if (numberOfSlainEnemies < 20)
 					{
 					System.out.println();
 					System.out.println("You are a Hero of COMBAT.");
+					System.out.println();
 					}
-				else if (numberOfSlainEnemies > 15)
+				else if (numberOfSlainEnemies < 30)
 					{
 					System.out.println();
 					System.out.println("You are a Legend of COMBAT.");
+					System.out.println();
 					}
-				else if (numberOfSlainEnemies > 20)
+				else if (numberOfSlainEnemies < 40)
 					{
 					System.out.println();
 					System.out.println("You spend too much time on this game.");
+					System.out.println();
 					}
 				}
-			System.out.println("Let Everyone know that you were a Level " + Hero.levelOfPlayer + " " + Hero.raceOfPlayer + " " + Hero.jobOfPlayer + " and you fought "
+			System.out.println("Let everyone know that you were a Level " + Hero.levelOfPlayer + " " + Hero.raceOfPlayer + " " + Hero.jobOfPlayer + " and you fought "
 					+ "valiantly, defeating " + pluralVariable + "");
 			System.out.println();
 			System.out.println("Best of luck to you.");

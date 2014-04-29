@@ -510,7 +510,7 @@ public class MonsterGenerator
 			 		}
 			 	}
 			}
-		 else if (Fight.numberOfSlainEnemies < 10 && Fight.numberOfSlainEnemies > 6)
+		 else if (Fight.numberOfSlainEnemies < 10 && Fight.numberOfSlainEnemies > 5)
 		 	{
 			 switch(areaChoiceOne)
 				{
@@ -518,18 +518,21 @@ public class MonsterGenerator
 					{
 					generateMonsterNumber();
 					gormarMonsterArray();
+					SideQuests.collectionOfQuests();
 					break;
 					}
 				case 2:
 					{
 					generateMonsterNumber();	
 					farstarnMonsterArray();
+					SideQuests.collectionOfQuests();
 					break;
 					}
 				case 3:
 					{
 					generateMonsterNumber();
 					serebisMonsterArray();
+					SideQuests.collectionOfQuests();
 					break;
 					}
 				}
@@ -629,18 +632,21 @@ public class MonsterGenerator
 					{
 					generateMonsterNumber();
 					darktarnMonsterArray();
+					SideQuests.collectionOfQuests();
 					break;
 					}
 				case 2:
 					{
 					generateMonsterNumber();	
 					deepstainMonsterArray();
+					SideQuests.collectionOfQuests();
 					break;	
 					}
 				case 3:
 					{
 					generateMonsterNumber();	
-					vortonsinMonsterArray();	
+					vortonsinMonsterArray();
+					SideQuests.collectionOfQuests();
 					break;	
 					}
 				}
@@ -736,19 +742,22 @@ public class MonsterGenerator
 				case 1:
 					{
 					generateMonsterNumber();	
-					terikMonsterArray();	
+					terikMonsterArray();
+					SideQuests.collectionOfQuests();
 					break;	
 					}
 				case 2:
 					{
 					generateMonsterNumber();	
-					sorthusMonsterArray();	
+					sorthusMonsterArray();
+					SideQuests.collectionOfQuests();
 					break;	
 					}
 				case 3:
 					{
 					generateMonsterNumber();	
-					partokMonsterArray();	
+					partokMonsterArray();
+					SideQuests.collectionOfQuests();
 					break;	
 					}
 				}
@@ -897,49 +906,53 @@ public class MonsterGenerator
 				{
 				System.out.println("Kildarin:The land farthest away from the Vale is mostly comprised of huge cave systems.  These caves were once a rich mining facility owned by the dwarves.  Iron, Steel, and Precious Gems littered these caves, and riches flowed from Kildarin.  Most common materials were mined from this place.  Now it is derelict, barren rock, and overrun by goblins.  Wether the goblins overthrew the few dwarfs who did not retreat to the Vale, or they are what the dwarfs became, is lost in The Shadow.");
 				}
-			if("Gormar".equals (areaOfBoss))
+			else if("Gormar".equals (areaOfBoss))
 				{
 				System.out.println("Gormar:The massive plains were roamed by the quickest Horses in the land.  The Humans tried to tame them for warfare against The Shadow.  But the Horses were quickly corrupted by The Shadow and developed their flaming manes and tails along with their violent attitudes.  Some of the corpses of the dead human soldiers still roam this plain looking for their mounts who forsake them in battle with the Shadow.");
 				}
-			if("Farstarn".equals (areaOfBoss))
+			else if("Farstarn".equals (areaOfBoss))
 				{
 				System.out.println("Farstarn:The swamp was dangerous even before The Shadow came, and travelers paid ferries to guide them through.  Farstarn was a place where adventurers and sailors could make an honest liveing, however, most didn't.  Thieves, conmen, and pirates abounded in this mysterious swamp.  No one knows what they did when The Shadow came, only that now the ghosts of their guilt, and anger still haunt Farstarn looking for a waylaid traveler to take out their anger on.");
 				}
-			if("Serebis".equals (areaOfBoss))
+			else if("Serebis".equals (areaOfBoss))
 				{
 				System.out.println("Serebis:The grand forest where the Elf Queen reigned.  It was infested with spiders and the Queen spent many soldiers to keep them at bay.  But when The Shadow came those soldiers were pulled from their task to fight IT.  Their mistake cost them, and the corpses of their army are still preserved in various webs all over Serebis.");
 				}
-			if("Darktarn".equals (areaOfBoss))
+			else if("Darktarn".equals (areaOfBoss))
 				{
 				System.out.println("Darktarn:The massive volcano was once the great forge of the Dwarves.  They crafted many a Legendary Blade here, but they were not warriors. When The Shadow came they begged for their lives.  The Shadow made a deal with the Dwarves that if they made him a suit of armor worthy of him he would grant them immortality.  The dwarves agreed a began to make it, but a few wished to defeat The Shadow.  They built the armor with a flaw so that a hero could strike The Shadow and slay it.  The flaw went unnoticed and the Shadow let Darktarn in peace.  The Dwarf Rebels sent word to Darnth, a great Dwarven Mage who mounted an assault on Doomkeep with the entire Rebel Dwarf army.  While the army was slaughtered out side the walls, Darnth snuck in and faced The Shadow.  Darnth struck the chink with his full might, and pierced it, but The Shadow was unharmed.  After The Shadow destroyed Darnth and the Rebel Dwarves, he went back to Darktarn, furious with the Dwarven smiths there.  They pleaded for their lives, and The Shadow would have taken them, but immortal beings are bound by their word, so he cursed them.  For ever more the traitorous Dwarves of Darktarn will burn inside skin of stone:  the Trolls of the Dwarf Forge.");
 				}
-			if("Deepstain".equals (areaOfBoss))
+			else if("Deepstain".equals (areaOfBoss))
 				{
 				System.out.println("Deepstain:The pit that carves its way into the earth was the Capital of the Dwarven Empire.  Here the miners found rare Shardium Ore.  They mined so far down that some accounts even say that they got to the core of the planet.  They were masters of metal work, and they made automatons run on magic to act as soldiers.  These automatons made up the finest army in the land, but they crumbled easily against The Shadow.  The Dwarf Emperor thought that if the automatons were more intelligent they could be effective against The Shadow.  But all attempts simulated intelligence failed, so the King began to use the human brains of the dead to give the fighting machines intelligence.  When this failed as well, the King began to steal the brains of those still alive.  When it proved that human organs powered the machines better than magic most of the Emperor's subjects were robbed to create an army to resist The Shadow.  By the time The Shadow arrived, the Dwarven Emperor was the lone Dwarf in Deepstain, and since The Shadow's to corrupt had already occurred in Deepstain, he let it lie in its twisted state.");
 				}
-			if("Vortonsin".equals (areaOfBoss))
+			else if("Vortonsin".equals (areaOfBoss))
 				{
 				System.out.println("Vortonsin:The cold plains of Vortonsin were populated by scattered Human settlements.  The Humans there were tough, hardy people.  When news of The Shadow came, they did not flee to the Vale like all those who were sane.  They thought themselves superior to all who lived in comfort.   They all allied together and met with The Shadow at the borders of Vortonsin.  The survivors of the bloodbath were led by Elder Warthon.  He was a very skilled Druid and he convinced the remaining people that the only way to survive was to live as the wolf did.  Wolves still prowl this icy tundra, and ever since Warthon marred the line between beast and man it is hard to tell if the wolves living there were born as wolf, or as man.");
 				}
-			if("Terik".equals (areaOfBoss))
+			else if("Terik".equals (areaOfBoss))
 				{
 				System.out.println("Terik:The jungle domain of the elves.  Once the home to proud tribes of human barbarians the elves who overthrew them were wild and powerful.  Arguably they had the best change of defeating The Shadow out of all the races.  They rose the whole forest from its slumber, and prepared it for war.  The trees, the plants, the animals, the very grass was ready to fight The Shadow.  The fearsome Elvish warriors amassed themselves and destroyed old feuds. The Great Elvish Resistance stood waiting for The Shadow, but The Shadow knew of their power.  Wisely he did not engage them, but instead he rallied the Barbarians who used to own Terik.  He gave them the gift of Dark Pyromancy and enraged their very essence's.  The Barbarians mounted a surprise attack on the Wild Elves(as they were nicknamed) from the flank and burned them down with Dark Fire.  The elves died, but the jungle lived on, corrupted and twisted.  Not even The Shadow could destroy The Great Tree at the center of Terik, but he could corrupt it, and he did.");
 				}
-			if("Sorthus".equals (areaOfBoss))
+			else if("Sorthus".equals (areaOfBoss))
 				{
 				System.out.println("Sorthus:A canyon that stands just before Doomkeep.  The people there lived in peace, and had little defense against the Shadow.  The merchant Morton, who tamed wild beasts as guards for a living, came up with a plan.  He had recently discovered a species of scorpion that was deadly, resilient, hardy, and not aggressive on sight.  He had caught a few, and with the help of mages quickly bred them larger, faster, and easier to train.  In fear of The Shadow he spent weeks breeding them, never sleeping and barely eating.  But unfortunately the scorpions wouldn't work in a unit, for they were independent creatures and they needed a leader. He began to go insane, and in a last attempt to defend the town before The Shadow came he used magic to meld himself with a scorpion to act as a leader.  But the magic corrupted him, and he was more scorpion and fear, than leadership and reason.  Once again The Shadow's goal of corruption had been achieved without him even entering the area.  He was content to let Morton tear his own town apart trying to prepare defense.  Even today Morton still trains his scorpions to follow his lead, and he will not hesitate to use wandering Humans as rewards for his minions.");
 				}
-			if("Partok".equals (areaOfBoss))
+			else if("Partok".equals (areaOfBoss))
 				{
 				System.out.println("Partok:The unexplored in-land-sea of Partok is shrouded in mystery.  It is so frozen with ice that you can walk upon Partok without fear.  But the area is unmapped, and many wanted to know more of the mysterious place.  The famous explorer Quar, who had journeyed to every land known was sent by the Human King to map this place.  He never came back, but the year after he disappeared The Shadow came forth.  For this reasons many believe that Quar discovered The Shadow's prison here and foolishly opened it.  But no one truly knows.");
 				}
-			if("Doomkeep".equals (areaOfBoss))
+			else if("Doomkeep".equals (areaOfBoss))
 				{
 				System.out.println("Doomkeep:The legendary keep of the Humans.  During the Age of Shadow Thornwir ruled as King and he was a strong one.  He sent scouts to The Shadow, but none came back.  He was offered advice, and sent reports of destroyed villages, and asked for help.  He sent his quickest cavalry to help defend the forest of Serebis, where the Elf Queen resided.  He was quite close with the Elf Queen and mourned for days when he heard of her death.  This changed him, and he pulled all his soldiers back to the castle, along with all refugees, of any race.  as The Shadow descended on Doomkeep he consulted his old friend, the great mage Yolvar.  Yolvar knew what he needed to do, and began to build the Vale, a refuge for those pursued by The Shadow.  Thornwir gathered every wizard he could to help Yolvar but when The Shadow arrived at the walls of Doomkeep he was not finished. The walls of Doomkeep, however, were heavily enchanted and The Shadow would have to spend months unraveling those wards.  But Thornwir was betrayed by his Steward, Wherem.  Wherem made a bargain with The Shadow and then marred the magic protection of DoomKeep.  The Shadow entered the castle, and Yolvar, knowing that he must buy time, challenged The Shadow to combat.  The Shadow agreed, and Yolvar gave battle, the most difficult battle ever fought by The Shadow, it went on for three hours.  But still Yolvar was mortal, and The Shadow smote him down.  By then, The Vale was complete and all the refugees and soldiers fell back into The Vale.  The Shadow pursued but was unable to follow.  No one knows what happened to Wherem, or what his bargain was, but it must have been fulfilled, for immortal beings must keep their word.");
 				}
-			if("Vale".equals (areaOfBoss))
+			else if("Vale".equals (areaOfBoss))
 				{
 				System.out.println("The Vale:The magical safe-haven made by Yolvar for protection from The Shadow.  It proved effective, unless The Shadow was given permission to enter in a mortal host.  When " + Hero.nameOfPlayer + " unwittingly acted as that host The Shadow corrupted everyone in the Vale and used King Thornwir as his host.  When the Hero awoke he fought through to The Shadow, and faced him in combat.  Although this Hero came closer than any who came before, all accounts tell that he was slain, and that The Shadow reigned on until the Third Era.  The Age of Redemption.");
+				}
+			else if("Pathway".equals (areaOfBoss))
+				{
+				System.out.println("This old Pathway Gaurdian is one of many magically summoned beings.  These things were made by the great wizard Yolvar, and charged with holding stalling The Shadow and all his minions when they marched on Doomkeep.  But The Shadow must have corrupted them, for now they seem to fight everything that crosses the path that they are charged with protecting.");
 				}
 			}
 		}

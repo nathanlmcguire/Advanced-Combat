@@ -18,13 +18,14 @@ public class Monster
 		diceRollOne = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
 		diceRollTwo = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
 		diceRollThree = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
-		totalDice = diceRollOne + diceRollTwo + diceRollThree;
+		totalDice = diceRollOne + diceRollTwo + diceRollThree + (Hero.levelOfPlayer * 5);
 		for (Fight.dodgeAffect = Fight.dodgeAffect; Fight.dodgeAffect > totalDice; Fight.dodgeAffect++)
 			{
 			
 			}
 		totalDice = totalDice - Hero.dodgeAffect;	
 		System.out.println("The " + MonsterGenerator.monsterName + " does " + totalDice + " damage!");
+		System.out.println();
 		Hero.playerHitPoints = (Hero.playerHitPoints - totalDice);
 		playerHealthResetCounter = playerHealthResetCounter + totalDice;
 		return totalDice;

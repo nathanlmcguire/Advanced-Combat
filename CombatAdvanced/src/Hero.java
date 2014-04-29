@@ -31,7 +31,8 @@ public class Hero
 	    System.out.println("You recall your name.  It is " + nameOfPlayer + ".");
 	    if ("TGM".equals(nameOfPlayer))
 	    	{
-	    	godHealth = 300;
+	    	godHealth = 300000;
+	    	levelOfPlayer = 20;
 	    	}
 	    else
 	    	{
@@ -64,37 +65,38 @@ public class Hero
 		System.out.println(" ");
 		System.out.println("Choose the difficulty level.");
 		System.out.println(" ");
-		System.out.println("1)Trainee, 2)Adept, 3)Journyman(Recommended), 4)Master, or 5)DEATH.");
+		System.out.println("1) Trainee, 2) Adept, 3) Journyman(Recommended), 4) Master, or 5) DEATH.");
 		Scanner userInput2 = new Scanner(System.in);
 		difficultyLevel = userInput2.nextInt();
 			if (1 == difficultyLevel)
 				{
-				difficultyHealth = 20;
+				difficultyHealth = 10;
 				difficultyDamage = 2;
 				}
 			if (2 == difficultyLevel)
 				{
-				difficultyHealth = 40;
+				difficultyHealth = 20;
 				difficultyDamage = 4;
 				}
 			if (3 == difficultyLevel)
 				{	
-				difficultyHealth = 80;
+				difficultyHealth = 30;
 				difficultyDamage = 6;
 				}
 			if (4 == difficultyLevel)
 				{
-				difficultyHealth = 100;
+				difficultyHealth = 50;
 				difficultyDamage = 8;
 				}
 			if (5 == difficultyLevel)
 				{
-				difficultyHealth = 1000;
+				difficultyHealth = 100;
 				difficultyDamage = 15;
 				}
 		System.out.println("You remember your fighting style.");	
 		System.out.println(" ");
-		System.out.println("Fighter, Healer, Thief,Mage.");
+		System.out.println("Fighter, Healer, Thief, Mage.");
+		System.out.println();
 		System.out.println("Paladin(Healer+Fighter), Battlemage(Fighter+Mage), Nightblade(Thief+Mage) or Swordsman(Fighter+Thief).");
 		System.out.println();
 		System.out.println("Type what you remember your stlye to be in all caps.");
@@ -195,7 +197,21 @@ public class Hero
 			weaponName = "Battle Staff";
 			classDamage = 6;
 			classHealth = 14;
-			weaponSymbol = "I";
+			weaponSymbol = "I  ";
+			}
+		if ("SWORDSMAN".equals(jobOfPlayer))
+			{
+			classWeaponBonus = 2;
+			classFireballBonus = -10;
+			classHealingBonus = -2;
+			classDodgeBonus = 2;
+			dodgeTypeName = "Dodge";
+			healingTypeName = "Healing Potion";
+			healingName = 3;
+			weaponName = "Katana";
+			classDamage = 5;
+			classHealth = 14;
+			weaponSymbol = ")";
 			}
 		System.out.println("You see your reflection in a pool of water and realize your race. (Type in all caps: Elf, Human, Dwarf, or Hobbit)");
 		raceOfPlayer = userInput1.nextLine();
