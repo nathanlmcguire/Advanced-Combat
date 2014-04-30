@@ -132,7 +132,7 @@ public class Fight
 				System.out.println();
 				Fight.askPlayerIfTheyWantToPlayAgain();
 				}
-			else if (Hero.playerHitPoints != 0)
+			if (Hero.playerHitPoints != 0)
 				{
 				Fight.chooseAction();
 				}
@@ -167,6 +167,7 @@ public class Fight
 			System.out.println("YOU HAVE FOUND A LORE SHARD!");
 			System.out.println();
 			MonsterGenerator.loreShardReveal();
+			System.out.println();
 			}
 		System.out.println("Would you like to play again/continue " + Hero.nameOfPlayer + "?");
 		System.out.println();

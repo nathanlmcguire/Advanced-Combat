@@ -494,18 +494,21 @@ public class MonsterGenerator
 			 	case 1:
 			 		{
 			 		Intros.startGormarIntro();	
+			 		gormarMonsterArray();
 			 		break;
 			 		}
 				 
 			 	case 2:
 			 		{
 			 		Intros.startFarstarnIntro();	
+			 		farstarnMonsterArray();
 			 		break;
 			 		}
 				 
 			 	case 3:	
 			 		{
 			 		Intros.startSerebisIntro();	
+			 		serebisMonsterArray();
 			 		break;
 			 		}
 			 	}
@@ -610,16 +613,19 @@ public class MonsterGenerator
 			 	case 1:
 			 		{
 			 		Intros.startDarktarnIntro();	
+			 		darktarnMonsterArray();
 			 		break;
 			 		}
 			 	case 2:
 			 		{
-			 		Intros.startDeepstainIntro();	
+			 		Intros.startDeepstainIntro();
+			 		deepstainMonsterArray();
 			 		break;	
 			 		}
 			 	case 3:
 			 		{
-			 		Intros.startVortonsinIntro();	
+			 		Intros.startVortonsinIntro();
+			 		vortonsinMonsterArray();
 			 		break;
 			 		}
 			 	}
@@ -721,16 +727,19 @@ public class MonsterGenerator
 			 	case 1:
 			 		{
 			 		Intros.startTerikIntro();
+			 		terikMonsterArray();
 			 		break;	
 			 		}
 			 	case 2:
 			 		{
-			 		Intros.startPartokIntro();
+			 		Intros.startSorthusIntro();
+			 		sorthusMonsterArray();
 			 		break;	
 			 		}
 			 	case 3:
 			 		{
-			 		Intros.startSorthusIntro();
+			 		Intros.startPartokIntro();
+			 		partokMonsterArray();
 			 		break;	
 			 		}
 			 	}
@@ -824,6 +833,7 @@ public class MonsterGenerator
 		 if (Fight.numberOfSlainEnemies == 21)
 		 	{
 			 Intros.startDoomkeepIntro();
+			 doomkeepMonsterArray();
 		 	}
 		 if (Fight.numberOfSlainEnemies < 30 && Fight.numberOfSlainEnemies > 20)
 			{
@@ -851,6 +861,7 @@ public class MonsterGenerator
 		 if (Fight.numberOfSlainEnemies == 31)
 		 	{
 			 Intros.startValeIntro();
+			 valeMonsterArray();
 		 	}
 		 if (Fight.numberOfSlainEnemies < 40 && Fight.numberOfSlainEnemies > 31)
 			{

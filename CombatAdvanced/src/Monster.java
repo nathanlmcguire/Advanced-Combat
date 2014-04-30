@@ -4,7 +4,6 @@ import java.util.Random;
 public class Monster 
 	{
 	static int monsterHitPoints, playerHealthResetCounter = 0;
-	static int diceRollOne, diceRollTwo, diceRollThree, totalDice;
 	
 	
 	public static int monsterAttackRoll()//Rolls dice for the damage done by the monster's claws.
@@ -15,20 +14,20 @@ public class Monster
 		System.out.println();
 		Fight.resetDiceForRoll();
 		Random randomNumber = new Random();
-		diceRollOne = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
-		diceRollTwo = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
-		diceRollThree = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
-		totalDice = diceRollOne + diceRollTwo + diceRollThree + (Hero.levelOfPlayer * 5);
-		for (Fight.dodgeAffect = Fight.dodgeAffect; Fight.dodgeAffect > totalDice; Fight.dodgeAffect++)
+		Fight.diceRollOne = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
+		Fight.diceRollTwo = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
+		Fight.diceRollThree = 1 + randomNumber.nextInt(Hero.difficultyDamage + MonsterGenerator.monsterDamage);
+		Fight.totalDice = Fight.diceRollOne + Fight.diceRollTwo + Fight.diceRollThree + (Hero.levelOfPlayer * 5);
+		for (Fight.dodgeAffect = Fight.dodgeAffect; Fight.dodgeAffect > Fight.totalDice; Fight.dodgeAffect++)
 			{
 			
 			}
-		totalDice = totalDice - Hero.dodgeAffect;	
-		System.out.println("The " + MonsterGenerator.monsterName + " does " + totalDice + " damage!");
+		Fight.totalDice = Fight.totalDice - Fight.dodgeAffect;	
+		System.out.println("The " + MonsterGenerator.monsterName + " does " + Fight.totalDice + " damage!");
 		System.out.println();
-		Hero.playerHitPoints = (Hero.playerHitPoints - totalDice);
-		playerHealthResetCounter = playerHealthResetCounter + totalDice;
-		return totalDice;
+		Hero.playerHitPoints = (Hero.playerHitPoints - Fight.totalDice);
+		playerHealthResetCounter = playerHealthResetCounter + Fight.totalDice;
+		return Fight.totalDice;
 		}	
 	
 	public static int generateMonsterHitPoints()//Generates the player's hit points and tell you what they are.

@@ -31,7 +31,7 @@ public class Hero
 	    System.out.println("You recall your name.  It is " + nameOfPlayer + ".");
 	    if ("TGM".equals(nameOfPlayer))
 	    	{
-	    	godHealth = 300000;
+	    	godHealth = 1000;
 	    	levelOfPlayer = 20;
 	    	}
 	    else
@@ -99,9 +99,9 @@ public class Hero
 		System.out.println();
 		System.out.println("Paladin(Healer+Fighter), Battlemage(Fighter+Mage), Nightblade(Thief+Mage) or Swordsman(Fighter+Thief).");
 		System.out.println();
-		System.out.println("Type what you remember your stlye to be in all caps.");
+		System.out.println("Type what you remember your stlye to be.");
 		jobOfPlayer = userInput1.nextLine();
-		if ("FIGHTER".equals(jobOfPlayer))
+		if ("FIGHTER".equals(jobOfPlayer) || "fighter".equals(jobOfPlayer) || "Fighter".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 3;
 			classFireballBonus = -10;
@@ -113,9 +113,9 @@ public class Hero
 			healingName = 3;
 			classDamage = 8;
 			classHealth = 16;
-			weaponSymbol = "t";
+			weaponSymbol = "t  ";
 			}
-		if ("MAGE".equals(jobOfPlayer))
+		if ("MAGE".equals(jobOfPlayer) || "mage".equals(jobOfPlayer) || "Mage".equals(jobOfPlayer))
 			{
 			classWeaponBonus = -10;
 			classFireballBonus = 3;
@@ -129,7 +129,7 @@ public class Hero
 			classHealth = 13;
 			weaponSymbol = "*  ";
 			}
-		if ("HEALER".equals(jobOfPlayer))
+		if ("HEALER".equals(jobOfPlayer) || "healer".equals(jobOfPlayer) || "Healer".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = -2;
@@ -143,7 +143,7 @@ public class Hero
 			classHealth = 15;
 			weaponSymbol = "i";
 			}
-		if ("THIEF".equals(jobOfPlayer))
+		if ("THIEF".equals(jobOfPlayer) || "thief".equals(jobOfPlayer) || "Thief".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 1;
 			classFireballBonus = -10;
@@ -157,7 +157,7 @@ public class Hero
 			classHealth = 14;
 			weaponSymbol = "-";
 			}
-		if ("PALADIN".equals(jobOfPlayer))
+		if ("PALADIN".equals(jobOfPlayer) || "paladin".equals(jobOfPlayer) || "Paladin".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = -10;
@@ -171,7 +171,7 @@ public class Hero
 			classHealth = 15;
 			weaponSymbol = "--#";
 			}
-		if ("NIGHTBLADE".equals(jobOfPlayer))
+		if ("NIGHTBLADE".equals(jobOfPlayer) || "Nightblade".equals(jobOfPlayer) || "nightblade".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 0;
 			classFireballBonus = 3;
@@ -185,7 +185,7 @@ public class Hero
 			classHealth = 13;
 			weaponSymbol = "-";
 			}
-		if ("BATTLEMAGE".equals(jobOfPlayer))
+		if ("BATTLEMAGE".equals(jobOfPlayer) || "Battlemage".equals(jobOfPlayer) || "battlemage".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 1;
 			classFireballBonus = 3;
@@ -199,7 +199,7 @@ public class Hero
 			classHealth = 14;
 			weaponSymbol = "I  ";
 			}
-		if ("SWORDSMAN".equals(jobOfPlayer))
+		if ("SWORDSMAN".equals(jobOfPlayer) || "swordsman".equals(jobOfPlayer) || "Swordsman".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = -10;
@@ -213,31 +213,31 @@ public class Hero
 			classHealth = 14;
 			weaponSymbol = ")";
 			}
-		System.out.println("You see your reflection in a pool of water and realize your race. (Type in all caps: Elf, Human, Dwarf, or Hobbit)");
+		System.out.println("You see your reflection in a pool of water and realize your race. (Type: Elf, Human, Dwarf, or Hobbit)");
 		raceOfPlayer = userInput1.nextLine();
 		
-			if("HUMAN".equals(raceOfPlayer))
+			if("HUMAN".equals(raceOfPlayer) || "Human".equals(raceOfPlayer) || "human".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 2; 
 				raceFireballBonus = 0;
 				raceHealingBonus = 0;
 				raceDodgeBonus = 0;	
 				}
-			if("ELF".equals(raceOfPlayer))
+			if("ELF".equals(raceOfPlayer) || "Elf".equals(raceOfPlayer) || "elf".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
 				raceFireballBonus = 0;
 				raceHealingBonus = 2;
 				raceDodgeBonus = 0;		
 				}
-			if("DWARF".equals(raceOfPlayer))
+			if("DWARF".equals(raceOfPlayer) || "Dwarf".equals(raceOfPlayer) || "dwarf".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
 				raceFireballBonus = 2;
 				raceHealingBonus = 0;
 				raceDodgeBonus = 0;		
 				}
-			if("HOBBIT".equals(raceOfPlayer))
+			if("HOBBIT".equals(raceOfPlayer) || "Hobbit".equals(raceOfPlayer) || "hobbit".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
 				raceFireballBonus = 0;
