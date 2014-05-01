@@ -17,11 +17,6 @@ public class Fight
 		System.out.println("|                                                                                                |");
 		System.out.println("|                                                                                                |");
 		System.out.println("|                                                                                                |");
-		System.out.println("|                                                                                                |");
-		System.out.println("|                                                                                                |");
-		System.out.println("|                                                                                                |");
-		System.out.println("|                                                                                                |");
-		System.out.println("|                                                                                                |");
 		System.out.println("|                                                o                                               |");
 		System.out.println("|                                               ~0~" + Hero.weaponSymbol + "                                           |");
 		System.out.println("|                                                A                                               |");
@@ -51,6 +46,7 @@ public class Fight
 				totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.fireballBonus + Hero.classFireballBonus + Hero.raceFireballBonus);
 				Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);				
 				System.out.println("You blast the enemy with flames and do " + totalDice + " damage!");
+				Intros.delayOneSecond();
 				break;
 				}
 			case 3:	
@@ -64,16 +60,19 @@ public class Fight
 					totalDice = diceRollOne + diceRollTwo + diceRollThree + Loot.healingSpellBonus + Hero.classHealingBonus + Hero.raceHealingBonus;
 					Hero.playerHitPoints = (Hero.playerHitPoints + totalDice);
 					System.out.println("You heal yourself " + totalDice + " points of health with your " + Hero.healingTypeName + "!");
+					Intros.delayOneSecond();
 					Monster.playerHealthResetCounter = Monster.playerHealthResetCounter - totalDice;
 					if (Hero.healingName == 3)
 						{
 						Hero.numberOfPotions--;
 						System.out.println();
 						System.out.println(Hero.numberOfPotions + " potions left.");
+						Intros.delayOneSecond();
 						}
 				else if (Hero.numberOfPotions == 0)
 					{
 					System.out.println("You have no potions left.");
+					Intros.delayOneSecond();
 					}
 				break;	
 				}
@@ -90,6 +89,7 @@ public class Fight
 					totalDice = diceRollOne + diceRollTwo + diceRollThree;
 					Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);
 					System.out.println("Lightning archs towards the beast doing " + totalDice + " damage");
+					Intros.delayOneSecond();
 					}
 				else
 					{
@@ -102,6 +102,7 @@ public class Fight
 					totalDice = diceRollOne + diceRollTwo + diceRollThree;
 					Hero.playerHitPoints = (Hero.playerHitPoints - totalDice);
 					System.out.println("The spell backfires doing " + totalDice + " damage to yourself.");
+					Intros.delayOneSecond();
 					}
 				break;
 				}
@@ -114,7 +115,9 @@ public class Fight
 				dodgeAffect = diceRollOne + Hero.classDodgeBonus + Loot.dodgeBonus + Hero.raceDodgeBonus;
 				System.out.println("You prepare to " + Hero.dodgeTypeName + " the enemie's next blow.");
 				System.out.println();
+				Intros.delayOneSecond();
 				System.out.println("You will " + Hero.dodgeTypeName + " " + dodgeAffect + " points of damage.");
+				Intros.delayOneSecond();
 				break;
 				}
 			}
@@ -130,6 +133,7 @@ public class Fight
 				{
 				System.out.println("YOU DIED!");
 				System.out.println();
+				Intros.delayOneSecond();
 				Fight.askPlayerIfTheyWantToPlayAgain();
 				}
 			if (Hero.playerHitPoints != 0)
@@ -143,9 +147,11 @@ public class Fight
 			System.out.println();
 			System.out.println("YOU HAVE SLAIN THE CREATURE!");
 			System.out.println();
+			Intros.delayOneSecond();
 			System.out.println("You find some treasure on the body of the beast.");
 			System.out.println();
 			numberOfSlainEnemies++;
+			Intros.delayOneSecond();
 			Loot.lootBeast();
 			Fight.askPlayerIfTheyWantToPlayAgain();
 			}	
@@ -161,16 +167,21 @@ public class Fight
 			System.out.println("LEVEL UP!");
 			Hero.levelOfPlayer++;
 			System.out.println();
+			Intros.delayOneSecond();
 			System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
 			Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 2);
 			System.out.println();
+			Intros.delayOneSecond();
 			System.out.println("YOU HAVE FOUND A LORE SHARD!");
 			System.out.println();
+			Intros.delayOneSecond();
 			MonsterGenerator.loreShardReveal();
 			System.out.println();
+			Intros.delayOneSecond();
 			}
 		System.out.println("Would you like to play again/continue " + Hero.nameOfPlayer + "?");
 		System.out.println();
+		Intros.delayOneSecond();
 		System.out.println("Or does " + Hero.homeLand + " need you?");
 		System.out.println();
 		System.out.println("Press 1 to play again/continue and press 2 to exit the game.");
@@ -180,6 +191,7 @@ public class Fight
 			{
 			System.out.println("Farewell " + Hero.nameOfPlayer + " of " + Hero.homeLand + ".");
 			System.out.println();
+			Intros.delayOneSecond();
 			if (numberOfSlainEnemies == 1)
 				{
 				pluralVariable = "1 deadly beast.  Better one than none.";
@@ -216,9 +228,11 @@ public class Fight
 					System.out.println();
 					}
 				}
+			Intros.delayOneSecond();
 			System.out.println("Let everyone know that you were a Level " + Hero.levelOfPlayer + " " + Hero.raceOfPlayer + " " + Hero.jobOfPlayer + " and you fought "
 					+ "valiantly, defeating " + pluralVariable + "");
 			System.out.println();
+			Intros.delayOneSecond();
 			System.out.println("Best of luck to you.");
 			System.exit(0);
 			}

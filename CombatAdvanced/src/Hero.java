@@ -1,7 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
 
-
 public class Hero 
 	{
 	static int playerHitPoints, godHealth, levelOfPlayer = 1;
@@ -39,6 +38,7 @@ public class Hero
 	    	godHealth = 0;
 	    	}	
 	    System.out.println();
+	    Intros.delayOneSecond();
 	    return nameOfPlayer;
 		}
 	
@@ -53,6 +53,7 @@ public class Hero
 		totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.weaponBonus + classWeaponBonus + raceWeaponBonus);
 		Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);
 		System.out.println("You swing your " + weaponName + " and do " + totalDice + " damage!");
+		Intros.delayOneSecond();
 		return totalDice;
 		}
 	
@@ -63,8 +64,10 @@ public class Hero
 		homeLand = userInput1.nextLine();
 		System.out.println("You think back and remember that you are from " + homeLand + ".");
 		System.out.println(" ");
+		Intros.delayOneSecond();
 		System.out.println("Choose the difficulty level.");
 		System.out.println(" ");
+		Intros.delayOneSecond();
 		System.out.println("1) Trainee, 2) Adept, 3) Journyman(Recommended), 4) Master, or 5) DEATH.");
 		Scanner userInput2 = new Scanner(System.in);
 		difficultyLevel = userInput2.nextInt();
@@ -95,10 +98,13 @@ public class Hero
 				}
 		System.out.println("You remember your fighting style.");	
 		System.out.println(" ");
-		System.out.println("Fighter, Healer, Thief, Mage.");
+		Intros.delayOneSecond();
+		System.out.println("Base Classes: Fighter, Healer, Thief, or Mage.");
 		System.out.println();
-		System.out.println("Paladin(Healer+Fighter), Battlemage(Fighter+Mage), Nightblade(Thief+Mage) or Swordsman(Fighter+Thief).");
+		Intros.delayOneSecond();
+		System.out.println("Advanced Classes: Paladin(Healer+Fighter), Battlemage(Fighter+Mage), Nightblade(Thief+Mage) or Swordsman(Fighter+Thief).");
 		System.out.println();
+		Intros.delayOneSecond();
 		System.out.println("Type what you remember your stlye to be.");
 		jobOfPlayer = userInput1.nextLine();
 		if ("FIGHTER".equals(jobOfPlayer) || "fighter".equals(jobOfPlayer) || "Fighter".equals(jobOfPlayer))
@@ -155,7 +161,7 @@ public class Hero
 			weaponName = "Dagger";
 			classDamage = 5;
 			classHealth = 14;
-			weaponSymbol = "-";
+			weaponSymbol = "-  ";
 			}
 		if ("PALADIN".equals(jobOfPlayer) || "paladin".equals(jobOfPlayer) || "Paladin".equals(jobOfPlayer))
 			{
@@ -183,7 +189,7 @@ public class Hero
 			weaponName = "Spear";
 			classDamage = 5;
 			classHealth = 13;
-			weaponSymbol = "-";
+			weaponSymbol = "-  ";
 			}
 		if ("BATTLEMAGE".equals(jobOfPlayer) || "Battlemage".equals(jobOfPlayer) || "battlemage".equals(jobOfPlayer))
 			{
@@ -246,8 +252,10 @@ public class Hero
 				}	
 		System.out.println("You try hard, but you can't remember anything else about yourself.");
 		System.out.println(" ");
+		Intros.delayOneSecond();
 		System.out.println("You raise up a torch to see your surroundings");
 		System.out.println();
+		Intros.delayOneSecond();
 		Intros.startKildarinIntro();
 		return difficultyLevel;	
 		}
