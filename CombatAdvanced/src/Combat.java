@@ -3,7 +3,7 @@ public class Combat
 	
 	public static void main(String[] args) 
 		{
-		Intros.startGameIntro();
+		//Intros.startGameIntro();
 		Hero.askName();
 		Hero.generateCharacter();
 		Hero.generatePlayerHitPoints();

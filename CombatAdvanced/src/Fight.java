@@ -153,6 +153,8 @@ public class Fight
 			numberOfSlainEnemies++;
 			Intros.delayOneSecond();
 			Loot.lootBeast();
+			Intros.delayOneSecond();
+			Inventory.showInventory();
 			Fight.askPlayerIfTheyWantToPlayAgain();
 			}	
 		return Monster.monsterHitPoints;

@@ -5,7 +5,8 @@ public class Loot
 	{
 	static int lootNumber, findingLuck, playerLuck, dodgeAffect = 0; 
 	static int armorBonus = 0, weaponBonus = 0, fireballBonus = 0, healingSpellBonus = 0, dodgeBonus = 0;
-	static int numberOfPotions = 3;
+	static int numberOfPotions = 3, weight, goldOfPlayer, itemID;
+	static String armorName = "Leather Armor", fireItemName = "Training Fire Scroll", healingItemName = "Training Healing Scroll", bootOrCloakName = "Training Boots";
 	
 	public static int lootBeast()//Randomly generates loot from the dead beast.(Only if you killed it.) 30 different items!
 		{
@@ -23,11 +24,13 @@ public class Loot
 				{
 				System.out.println("You have found some Stone Armor!");
 				System.out.println();
+				armorName = "Stone Armor";
 				System.out.println("Level 1 Item.");
 				System.out.println();
-				armorBonus = armorBonus + 1;
+				armorBonus = 1;
 				System.out.println("Your max HP has now been increased by 1.");
 				System.out.println();
+				itemID = 1;
 				break;
 				}
 			case 6:
@@ -37,11 +40,13 @@ public class Loot
 				{
 				System.out.println("You have found some Iron Armor!");
 				System.out.println();
+				armorName = "Iron Armor";
 				System.out.println("Level 2 Item.");
 				System.out.println();
-				armorBonus = armorBonus + 2;
+				armorBonus = 2;
 				System.out.println("Your max HP has now been increased by 2.");
 				System.out.println();
+				itemID = 2;
 				break;
 				}
 			case 10:
@@ -50,11 +55,13 @@ public class Loot
 				{
 				System.out.println("You have found some Steel Armor!");
 				System.out.println();
+				armorName = "Steel Armor";
 				System.out.println("Level 3 Item.");
 				System.out.println();
-				armorBonus = armorBonus + 4;
+				armorBonus = 4;
 				System.out.println("Your max HP has now been increased by 4.");
 				System.out.println();
+				itemID = 4;
 				break;
 				}
 			case 13:
@@ -62,22 +69,26 @@ public class Loot
 				{
 				System.out.println("You have found some Titanium Armor!");
 				System.out.println();
+				armorName = "Titanium Armor";
 				System.out.println("Level 4 Item.");
 				System.out.println();
-				armorBonus = armorBonus + 6;
 				System.out.println("Your max HP has now been increased by 6.");
 				System.out.println();
+				itemID = 6;
+				armorBonus = 6;
 				break;
 				}
 			case 15:
 				{
-				System.out.println("YOu have found some Platinum Armor!");
+				System.out.println("You have found some Platinum Armor!");
 				System.out.println();
+				armorName = "Platinum Armor";
 				System.out.println("Level 5 Item.");
 				System.out.println();
-				armorBonus = armorBonus + 8;
+				armorBonus = 8;
 				System.out.println("Your max health is 8 more points now!");
 				System.out.println();
+				itemID = 8;
 				break;	
 				}
 			case 16:
@@ -88,11 +99,13 @@ public class Loot
 				{
 				System.out.println("You have found a Stone " + Hero.weaponName + "!");
 				System.out.println();
+				Hero.weaponName = "Stone " + Hero.weaponName + "";
 				System.out.println("Level 1 Item.");
 				System.out.println();
-				weaponBonus = weaponBonus + 1;
+				weaponBonus = 1;
 				System.out.println("You now do 1 more damage with your " + Hero.weaponName + "!");
 				System.out.println();
+				itemID = 1;
 				break;
 				}
 			case 21:
@@ -102,11 +115,13 @@ public class Loot
 				{
 				System.out.println("You have found an Iron " + Hero.weaponName + "!");
 				System.out.println();
+				Hero.weaponName = "Iron " + Hero.weaponName + "";
 				System.out.println("Level 2 Item.");
 				System.out.println();
-				weaponBonus = weaponBonus + 2;
+				weaponBonus = 2;
 				System.out.println("You now do 2 more damage with your " + Hero.weaponName + "!");
 				System.out.println();
+				itemID = 2;
 				break;	
 				}
 			case 25:
@@ -115,11 +130,13 @@ public class Loot
 				{
 				System.out.println("You have found a Steel " + Hero.weaponName + "!");
 				System.out.println();
+				Hero.weaponName = "Steel " + Hero.weaponName + "";
 				System.out.println("Level 3 Item.");
 				System.out.println();
-				weaponBonus = weaponBonus + 4;
+				weaponBonus = 4;
 				System.out.println("You now do 4 more damage with your " + Hero.weaponName + "!");
 				System.out.println();
+				itemID = 4;
 				break;	
 				}
 			case 28:
@@ -127,22 +144,26 @@ public class Loot
 				{
 				System.out.println("You have found a Titanium " + Hero.weaponName + "!");
 				System.out.println();
+				Hero.weaponName = "Titanium " + Hero.weaponName + "";
 				System.out.println("Level 4 Item.");
 				System.out.println();
-				weaponBonus = weaponBonus + 6;
+				weaponBonus = 6;
 				System.out.println("You now do 6 more damage with your " + Hero.weaponName + "!");
 				System.out.println();
+				itemID = 6;
 				break;
 				}
 			case 30:
 				{
 				System.out.println("You have found a Platinum " + Hero.weaponName + "!");
 				System.out.println();
+				Hero.weaponName = "Platinum " + Hero.weaponName + "";
 				System.out.println("Level 5 Item.");
 				System.out.println();
-				weaponBonus = weaponBonus + 8;
+				weaponBonus = 8;
 				System.out.println("You do 8 more points of damage with your " + Hero.weaponName + " now!");
 				System.out.println();
+				itemID = 8;
 				break;		
 				}
 			case 31:
@@ -153,11 +174,13 @@ public class Loot
 				{
 				System.out.println("You have found a Weak Fireball Scroll!");
 				System.out.println();
+				fireItemName = "Weak Fireball Scroll";
 				System.out.println("Level 1 Item.");
 				System.out.println();
-				fireballBonus = fireballBonus + 1;
+				fireballBonus = 1;
 				System.out.println("Your Fireball Spell does 1 more damage now.");
 				System.out.println();
+				itemID = 1;
 				break;	
 				}
 			case 36:
@@ -167,11 +190,13 @@ public class Loot
 				{
 				System.out.println("You have found a Moderate Fireball Scroll!");
 				System.out.println();
+				fireItemName = "Moderate Fireball Scroll";
 				System.out.println("Level 2 Item.");
 				System.out.println();
-				fireballBonus = fireballBonus + 2;
+				fireballBonus = 2;
 				System.out.println("Your Fireball Spell does 2 more damage now.");
 				System.out.println();
+				itemID = 2;
 				break;	
 				}
 			case 40:
@@ -180,11 +205,13 @@ public class Loot
 				{
 				System.out.println("You have found an Advanced Fireball Scroll!");
 				System.out.println();
+				fireItemName = "Advanced Fireball Scroll";
 				System.out.println("Level 3 Item.");
 				System.out.println();
-				fireballBonus = fireballBonus + 4;
+				fireballBonus = 4;
 				System.out.println("Your Fireball Spell does 4 more damage now.");
 				System.out.println();
+				itemID = 4;
 				break;	
 				}
 			case 43:
@@ -192,22 +219,26 @@ public class Loot
 				{
 				System.out.println("You have found an Apprentice Ring of Fire!");
 				System.out.println();
+				fireItemName = "Apprentice Ring of Fire";
 				System.out.println("Level 4 Item.");
 				System.out.println();
-				fireballBonus = fireballBonus + 6;
+				fireballBonus = 6;
 				System.out.println("Your Fireball Spell does 6 more damage now.");
 				System.out.println();
+				itemID = 6;
 				break;			
 				}
 			case 45:
 				{
 				System.out.println("You have found a Master Ring of Fire!");
 				System.out.println();
+				fireItemName = "Master Ring of Fire";
 				System.out.println("Level 5 Item.");
 				System.out.println();
-				fireballBonus = fireballBonus + 8;
+				fireballBonus = 8;
 				System.out.println("Your Fireball Spell does 8 more damage now.");
 				System.out.println();
+				itemID = 8;
 				break;			
 				}
 			case 46:
@@ -218,11 +249,13 @@ public class Loot
 				{				
 				System.out.println("You have found a Weak Healing Scroll!");
 				System.out.println();
+				healingItemName = "Weak Healing Scroll";
 				System.out.println("Level 1 Item.");
 				System.out.println();
-				healingSpellBonus = healingSpellBonus + 1;
+				healingSpellBonus = 1;
 				System.out.println("Your Healing Spell/Healing Potions heals you up 1 more now.");
 				System.out.println();
+				itemID = 1;
 				break;
 				}	
 			case 51:
@@ -232,11 +265,13 @@ public class Loot
 				{
 				System.out.println("You have found a Moderate Healing Scroll!");
 				System.out.println();
+				healingItemName = "Moderate Healing Scroll";
 				System.out.println("Level 2 Item.");
 				System.out.println();
-				healingSpellBonus = healingSpellBonus + 2;
+				healingSpellBonus = 2;
 				System.out.println("Your Healing Spell/Healing Potions heals you up 2 more now.");
 				System.out.println();
+				itemID = 2;
 				break;	
 				}
 			case 55:
@@ -245,11 +280,13 @@ public class Loot
 				{
 				System.out.println("You have found an Advanced Healing Scroll!");
 				System.out.println();
+				healingItemName = "Advanced Healing Scroll";
 				System.out.println("Level 3 Item.");
 				System.out.println();
-				healingSpellBonus = healingSpellBonus + 4;
+				healingSpellBonus = 4;
 				System.out.println("Your Healing Spell/Healing Potions heals you up 4 more now.");
 				System.out.println();
+				itemID = 4;
 				break;
 				}	
 			case 58:
@@ -257,22 +294,26 @@ public class Loot
 				{
 				System.out.println("You have found an Apprentice Ring of Healing!");
 				System.out.println();
+				healingItemName = "Apprentice Ring of Healing";
 				System.out.println("Level 4 Item.");
 				System.out.println();
-				healingSpellBonus = healingSpellBonus + 6;
+				healingSpellBonus = 6;
 				System.out.println("Your Healing Spell/Healing Potions heals you up 6 more now.");
 				System.out.println();
+				itemID = 6;
 				break;
 				}
 			case 60:
 				{
 				System.out.println("You have found a Master Ring of Healing!");
 				System.out.println();
+				healingItemName = "Master Ring of Healing";
 				System.out.println("Level 5 Item.");
 				System.out.println();
-				healingSpellBonus = healingSpellBonus + 8;
+				healingSpellBonus = 8;
 				System.out.println("Your Healing Spell/Healing Potions heals you up 8 more now.");
 				System.out.println();
+				itemID = 8;
 				break;
 				}
 			case 61:
@@ -283,11 +324,13 @@ public class Loot
 				{
 				System.out.println("You have found Weak Boots of " + Hero.dodgeTypeName + "ing!");
 				System.out.println();
+				bootOrCloakName = "Weak Boots of " + Hero.dodgeTypeName + "ing";
 				System.out.println("Level 1 Item.");
 				System.out.println();
-				dodgeBonus = dodgeBonus + 1;
+				dodgeBonus = 1;
 				System.out.println("You " + Hero.dodgeTypeName + " 1 more point of damage now!");
 				System.out.println();
+				itemID = 1;
 				break;
 				}
 			case 66:
@@ -297,11 +340,13 @@ public class Loot
 				{
 				System.out.println("You have found Moderate Boots of " + Hero.dodgeTypeName + "ing!");
 				System.out.println();
+				bootOrCloakName = "Moderate Boots of " + Hero.dodgeTypeName + "ing";
 				System.out.println("Level 2 Item.");
 				System.out.println();
-				dodgeBonus = dodgeBonus + 2;
+				dodgeBonus = 2;
 				System.out.println("You " + Hero.dodgeTypeName + " 2 more points of damage now!");
 				System.out.println();
+				itemID = 2;
 				break;
 				}
 			case 70:
@@ -310,11 +355,13 @@ public class Loot
 				{
 				System.out.println("You have found Advanced Boots of " + Hero.dodgeTypeName + "ing!");
 				System.out.println();
+				bootOrCloakName = "Advanced Boots of " + Hero.dodgeTypeName + "ing";
 				System.out.println("Level 3 Item.");
 				System.out.println();
-				dodgeBonus = dodgeBonus + 4;
+				dodgeBonus = 4;
 				System.out.println("You " + Hero.dodgeTypeName + " 6 more points of damage now!");
 				System.out.println();
+				itemID = 4;
 				break;
 				}
 			case 73:
@@ -322,22 +369,26 @@ public class Loot
 				{
 				System.out.println("You have found an Apprentice Cloak of " + Hero.dodgeTypeName + "ing!");
 				System.out.println();
+				bootOrCloakName = "Apprentice Cloak of " + Hero.dodgeTypeName + "ing";
 				System.out.println("Level 4 Item.");
 				System.out.println();
-				dodgeBonus = dodgeBonus + 6;
+				dodgeBonus = 6;
 				System.out.println("You " + Hero.dodgeTypeName + " 6 more points of damage now!");
 				System.out.println();
+				itemID = 6;
 				break;
 				}
 			case 75:
 				{
 				System.out.println("You have found a Master Cloak of " + Hero.dodgeTypeName + "ing!");
 				System.out.println();
+				bootOrCloakName = "Master Cloak of " + Hero.dodgeTypeName + "ing";
 				System.out.println("Level 5 Item.");
 				System.out.println();
-				dodgeBonus = dodgeBonus + 8;
+				dodgeBonus = 8;
 				System.out.println("You " + Hero.dodgeTypeName + " 8 more points of damage now!");
 				System.out.println();
+				itemID = 8;
 				break;
 				}
 			case 76:
@@ -404,7 +455,31 @@ public class Loot
 				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
 				System.out.println();
 				break;
-				}				
+				}
+			case 91:
+				{
+				System.out.println("You have found an Essence!");
+				System.out.println();
+				System.out.println("Level 5 Item.");
+				System.out.println();
+				weaponBonus = weaponBonus * 2;
+				System.out.println("Your " + Hero.weaponName + " does 2x damage now!");
+				System.out.println();
+				break;	
+				}
+			case 92:
+			case 93:
+			case 94:
+				{
+				System.out.println("You have found 20 Gold!");
+				System.out.println();
+				System.out.println("Level 3 Item.");
+				System.out.println();
+				goldOfPlayer = goldOfPlayer + 20;
+				System.out.println("You have " + goldOfPlayer + " healing potions now.");
+				System.out.println();
+				break;
+				}
 			}
 		return lootNumber;
 		}
@@ -412,7 +487,7 @@ public class Loot
 	public static int generateNumber()//Generates the random number for the lootBeast method.
 		{
 		Random randomNumber = new Random();
-		lootNumber = 1 + randomNumber.nextInt(90);
+		lootNumber = 1 + randomNumber.nextInt(94);
 		return lootNumber;
 		}	
 	
