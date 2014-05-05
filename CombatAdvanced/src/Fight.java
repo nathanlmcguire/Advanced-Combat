@@ -23,7 +23,7 @@ public class Fight
 		System.out.println("|________________________________________________________________________________________________|");
 		System.out.println(MonsterGenerator.monsterName + "'s HP = " + Monster.monsterHitPoints + " 									" + Hero.nameOfPlayer + "'s HP = " + Hero.playerHitPoints + ".");
 		System.out.println("Would you like to use a 1) " + Hero.weaponName + ", 2) Fireball Spell, 3) " + Hero.healingTypeName + ",");
-		System.out.println("4) Lightning Blast?(do not try unless Level 20) or 5) to use " + Hero.dodgeTypeName + " on the next Atack."); 
+		System.out.println("4) Lightning Blast(do not try unless Level 20), or 5) to use " + Hero.dodgeTypeName + " on the next Atack."); 
 		Scanner userInput1 = new Scanner(System.in);
 		actionChoice = userInput1.nextInt();
 		switch (actionChoice)
@@ -155,7 +155,27 @@ public class Fight
 			Loot.lootBeast();
 			Intros.delayOneSecond();
 			Inventory.showInventory();
-			Fight.askPlayerIfTheyWantToPlayAgain();
+			Intros.delayThreeSeconds();
+			
+			Hero.playerHitPoints = Hero.playerHitPoints + Monster.playerHealthResetCounter;
+			Monster.playerHealthResetCounter = 0;
+			if (MonsterGenerator.bossFight == 1)
+				{
+				System.out.println("LEVEL UP!");
+				Hero.levelOfPlayer++;
+				System.out.println();
+				Intros.delayOneSecond();
+				System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
+				Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 2);
+				System.out.println();
+				Intros.delayOneSecond();
+				System.out.println("YOU HAVE FOUND A LORE SHARD!");
+				System.out.println();
+				Intros.delayOneSecond();
+				MonsterGenerator.loreShardReveal();
+				System.out.println();
+				Intros.delayOneSecond();
+				}
 			}	
 		return Monster.monsterHitPoints;
 		}
@@ -164,23 +184,6 @@ public class Fight
 		{
 		Hero.playerHitPoints = Hero.playerHitPoints + Monster.playerHealthResetCounter;
 		Monster.playerHealthResetCounter = 0;
-		if (MonsterGenerator.bossFight == 1)
-			{
-			System.out.println("LEVEL UP!");
-			Hero.levelOfPlayer++;
-			System.out.println();
-			Intros.delayOneSecond();
-			System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
-			Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 2);
-			System.out.println();
-			Intros.delayOneSecond();
-			System.out.println("YOU HAVE FOUND A LORE SHARD!");
-			System.out.println();
-			Intros.delayOneSecond();
-			MonsterGenerator.loreShardReveal();
-			System.out.println();
-			Intros.delayOneSecond();
-			}
 		System.out.println("Would you like to play again/continue " + Hero.nameOfPlayer + "?");
 		System.out.println();
 		Intros.delayOneSecond();

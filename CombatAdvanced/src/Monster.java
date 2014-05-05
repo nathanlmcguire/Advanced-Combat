@@ -34,7 +34,7 @@ public class Monster
 	public static int generateMonsterHitPoints()//Generates the player's hit points and tell you what they are.
 		{
 		Random randomNumber = new Random(); 
-		monsterHitPoints = (10 * Hero.levelOfPlayer) + randomNumber.nextInt(Hero.difficultyHealth + MonsterGenerator.monsterHealth);
+		monsterHitPoints = (5 * Hero.levelOfPlayer + 10) + randomNumber.nextInt(Hero.difficultyHealth + MonsterGenerator.monsterHealth);
 		return monsterHitPoints;
 		}
 	}

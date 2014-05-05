@@ -5,7 +5,7 @@ public class Loot
 	{
 	static int lootNumber, findingLuck, playerLuck, dodgeAffect = 0; 
 	static int armorBonus = 0, weaponBonus = 0, fireballBonus = 0, healingSpellBonus = 0, dodgeBonus = 0;
-	static int numberOfPotions = 3, weight, goldOfPlayer, itemID;
+	static int weight, goldOfPlayer = 10, itemID;
 	static String armorName = "Leather Armor", fireItemName = "Training Fire Scroll", healingItemName = "Training Healing Scroll", bootOrCloakName = "Training Boots";
 	
 	public static int lootBeast()//Randomly generates loot from the dead beast.(Only if you killed it.) 30 different items!
@@ -99,6 +99,7 @@ public class Loot
 				{
 				System.out.println("You have found a Stone " + Hero.weaponName + "!");
 				System.out.println();
+				Hero.weaponName = Hero.weaponName;
 				Hero.weaponName = "Stone " + Hero.weaponName + "";
 				System.out.println("Level 1 Item.");
 				System.out.println();
@@ -115,6 +116,7 @@ public class Loot
 				{
 				System.out.println("You have found an Iron " + Hero.weaponName + "!");
 				System.out.println();
+				Hero.weaponName = Hero.weaponName;
 				Hero.weaponName = "Iron " + Hero.weaponName + "";
 				System.out.println("Level 2 Item.");
 				System.out.println();
@@ -130,6 +132,7 @@ public class Loot
 				{
 				System.out.println("You have found a Steel " + Hero.weaponName + "!");
 				System.out.println();
+				Hero.weaponName = Hero.weaponName;
 				Hero.weaponName = "Steel " + Hero.weaponName + "";
 				System.out.println("Level 3 Item.");
 				System.out.println();
@@ -144,6 +147,7 @@ public class Loot
 				{
 				System.out.println("You have found a Titanium " + Hero.weaponName + "!");
 				System.out.println();
+				Hero.weaponName = Hero.weaponName;
 				Hero.weaponName = "Titanium " + Hero.weaponName + "";
 				System.out.println("Level 4 Item.");
 				System.out.println();
@@ -253,7 +257,7 @@ public class Loot
 				System.out.println("Level 1 Item.");
 				System.out.println();
 				healingSpellBonus = 1;
-				System.out.println("Your Healing Spell/Healing Potions heals you up 1 more now.");
+				System.out.println("Your Healing Spell/Healing Potions heal you up 1 more now.");
 				System.out.println();
 				itemID = 1;
 				break;
@@ -269,7 +273,7 @@ public class Loot
 				System.out.println("Level 2 Item.");
 				System.out.println();
 				healingSpellBonus = 2;
-				System.out.println("Your Healing Spell/Healing Potions heals you up 2 more now.");
+				System.out.println("Your Healing Spell/Healing Potions heal you up 2 more now.");
 				System.out.println();
 				itemID = 2;
 				break;	
@@ -284,7 +288,7 @@ public class Loot
 				System.out.println("Level 3 Item.");
 				System.out.println();
 				healingSpellBonus = 4;
-				System.out.println("Your Healing Spell/Healing Potions heals you up 4 more now.");
+				System.out.println("Your Healing Spell/Healing Potions heal you up 4 more now.");
 				System.out.println();
 				itemID = 4;
 				break;
@@ -298,7 +302,7 @@ public class Loot
 				System.out.println("Level 4 Item.");
 				System.out.println();
 				healingSpellBonus = 6;
-				System.out.println("Your Healing Spell/Healing Potions heals you up 6 more now.");
+				System.out.println("Your Healing Spell/Healing Potions heal you up 6 more now.");
 				System.out.println();
 				itemID = 6;
 				break;
@@ -311,7 +315,7 @@ public class Loot
 				System.out.println("Level 5 Item.");
 				System.out.println();
 				healingSpellBonus = 8;
-				System.out.println("Your Healing Spell/Healing Potions heals you up 8 more now.");
+				System.out.println("Your Healing Spell/Healing Potions heal you up 8 more now.");
 				System.out.println();
 				itemID = 8;
 				break;
@@ -476,7 +480,7 @@ public class Loot
 				System.out.println("Level 3 Item.");
 				System.out.println();
 				goldOfPlayer = goldOfPlayer + 20;
-				System.out.println("You have " + goldOfPlayer + " healing potions now.");
+				System.out.println("You have " + goldOfPlayer + " gold now.");
 				System.out.println();
 				break;
 				}

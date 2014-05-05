@@ -5,7 +5,7 @@ public class Hero
 	{
 	static int playerHitPoints, godHealth, levelOfPlayer = 1;
 	static int diceRollOne, diceRollTwo, diceRollThree, totalDice;
-	static int difficultyHealth, difficultyDamage, difficultyLevel;
+	static int difficultyHealth, difficultyDamage, difficultyLevel, nameNumber;
 	static int actionChoice;
 	static int dodgeAffect = 0; 
 	static int classWeaponBonus = 0, classFireballBonus = 0, classHealingBonus = 0, classDodgeBonus = 0, raceWeaponBonus = 0, raceFireballBonus = 0, raceHealingBonus = 0, raceDodgeBonus = 0;
@@ -28,6 +28,10 @@ public class Hero
 		Scanner userInput1 = new Scanner(System.in);        
 	    nameOfPlayer = userInput1.nextLine();        
 	    System.out.println("You recall your name.  It is " + nameOfPlayer + ".");
+	    System.out.println();
+	    Intros.delayOneSecond();
+	    generateNameComment();
+	    
 	    if ("TGM".equals(nameOfPlayer))
 	    	{
 	    	godHealth = 1000;
@@ -68,12 +72,12 @@ public class Hero
 		System.out.println("Choose the difficulty level.");
 		System.out.println(" ");
 		Intros.delayOneSecond();
-		System.out.println("1) Trainee, 2) Adept, 3) Journyman(Recommended), 4) Master, or 5) DEATH.");
+		System.out.println("1) Trainee, 2) Adept(Recommended), 3) Journyman, 4) Master, or 5) DEATH.");
 		Scanner userInput2 = new Scanner(System.in);
 		difficultyLevel = userInput2.nextInt();
 			if (1 == difficultyLevel)
 				{
-				difficultyHealth = 10;
+				difficultyHealth = 15;
 				difficultyDamage = 2;
 				}
 			if (2 == difficultyLevel)
@@ -93,7 +97,7 @@ public class Hero
 				}
 			if (5 == difficultyLevel)
 				{
-				difficultyHealth = 100;
+				difficultyHealth = 10;
 				difficultyDamage = 15;
 				}
 		System.out.println("You remember your fighting style.");	
@@ -226,28 +230,28 @@ public class Hero
 				{
 				raceWeaponBonus = 2; 
 				raceFireballBonus = 0;
-				raceHealingBonus = 0;
-				raceDodgeBonus = 0;	
+				raceHealingBonus = -1;
+				raceDodgeBonus = 1;	
 				}
 			if("ELF".equals(raceOfPlayer) || "Elf".equals(raceOfPlayer) || "elf".equals(raceOfPlayer))
 				{
-				raceWeaponBonus = 0; 
-				raceFireballBonus = 0;
+				raceWeaponBonus = -1; 
+				raceFireballBonus = 1;
 				raceHealingBonus = 2;
 				raceDodgeBonus = 0;		
 				}
 			if("DWARF".equals(raceOfPlayer) || "Dwarf".equals(raceOfPlayer) || "dwarf".equals(raceOfPlayer))
 				{
-				raceWeaponBonus = 0; 
+				raceWeaponBonus = 1; 
 				raceFireballBonus = 2;
 				raceHealingBonus = 0;
-				raceDodgeBonus = 0;		
+				raceDodgeBonus = -1;		
 				}
 			if("HOBBIT".equals(raceOfPlayer) || "Hobbit".equals(raceOfPlayer) || "hobbit".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
-				raceFireballBonus = 0;
-				raceHealingBonus = 0;
+				raceFireballBonus = -1;
+				raceHealingBonus = 1;
 				raceDodgeBonus = 2;		
 				}	
 		System.out.println("You try hard, but you can't remember anything else about yourself.");
@@ -259,4 +263,13 @@ public class Hero
 		Intros.startKildarinIntro();
 		return difficultyLevel;	
 		}
+	
+	public static int generateNameComment()//Generates the random number for the lootBeast method.
+		{
+		Random randomNumber = new Random();
+		nameNumber = randomNumber.nextInt(2);		
+		String [] nameNumberArray = {"What a lovely name.", "What a horrid name! Did your parents dislike you as a child?"};
+	    System.out.println(nameNumberArray[nameNumber]);
+	    return nameNumber;
+		}	
 	}

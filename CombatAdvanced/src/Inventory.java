@@ -13,7 +13,10 @@ public class Inventory
 		System.out.println("Spell: " + Loot.fireItemName + " (" + Loot.fireballBonus + ")");
 		System.out.println("Healing Spell: " + Loot.healingItemName + " (" + Loot.healingSpellBonus + ")");
 		System.out.println("Apparel: " + Loot.bootOrCloakName + " (" + Loot.dodgeBonus + ")");
-		System.out.println("Potions: " + Loot.numberOfPotions + "");
+		System.out.println("Potions: " + Hero.numberOfPotions + "");
 		System.out.println("Gold: " + Loot.goldOfPlayer +"");
+		System.out.println("Level: "+ Hero.levelOfPlayer + "");
+		System.out.println();
+		Intros.delayThreeSeconds();
 		}
 	}

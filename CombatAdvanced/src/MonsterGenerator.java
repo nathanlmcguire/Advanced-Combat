@@ -155,7 +155,7 @@ public class MonsterGenerator
 				monsterName = "Vengful Ghost";	
 				monsterHealth = 4;
 				monsterDamage = 3;
-				monsterAttackName = " glares at you with its red eys and attacks";	
+				monsterAttackName = " glares at you with its red eyes and attacks";	
 				bossFight = 0;
 				break;
 				}
@@ -436,7 +436,7 @@ public class MonsterGenerator
 				}
 			case 4:
 				{
-				monsterName = "Wherewolf";
+				monsterName = "Werewolf";
 				monsterHealth = 6;
 				monsterDamage = 5;
 				monsterAttackName = " growls and lunges at you";	
@@ -474,7 +474,7 @@ public class MonsterGenerator
 			System.out.println("You can see that his throne is made up of bones, but you can't tell what or who they are from.");
 			System.out.println();
 			Intros.delayThreeSeconds();
-			System.out.println("This Chief screams a challenge to you, and you know that he will not let you pass from these cave to journey on to the Vale.");
+			System.out.println("This Chief screams a challenge to you, and you know that he will not let you pass from this cave to journey on to the Vale.");
 			System.out.println();
 			Intros.delayThreeSeconds();
 			System.out.println("You must slay him.");
@@ -599,10 +599,10 @@ public class MonsterGenerator
 					System.out.println("You walk into a large clearing where overhanging trees block out the moon.");
 					System.out.println();
 					Intros.delayThreeSeconds();
-					System.out.println("A throne of silver stands before, it would have been beutiful if not for the thousands of webs covering it.");
+					System.out.println("A throne of silver stands before you, it would have been beautiful if not for the thousands of webs covering it.");
 					System.out.println();
 					Intros.delayThreeSeconds();
-					System.out.println("You hear a sound a look up to see a massive spider attached to the trees.  She leaps down in front of the exit to Serebis");
+					System.out.println("You hear a sound and look up to see a massive spider attached to the trees.  She leaps down in front of the exit to Serebis");
 					System.out.println();
 					Intros.delayThreeSeconds();
 					System.out.println("You must slay her to leave the forest.");
@@ -726,10 +726,10 @@ public class MonsterGenerator
 					System.out.println("You see a wolf coming towards you.  Or is it a man?");
 					System.out.println();
 					Intros.delayThreeSeconds();
-					System.out.println("The being morphs continously between a hideous beast and a rabid man.");
+					System.out.println("The being morphs continuously between a hideous beast and a rabid man.");
 					System.out.println();
 					Intros.delayThreeSeconds();
-					System.out.println("This creature will not let you trespass its territory on your quest to get to the Vale.  Slay it.");
+					System.out.println("This creature will not let you leave its territory on your quest to get to the Vale.  Slay it.");
 					System.out.println();
 					Intros.delayOneSecond();
 					monsterName = "Mutant Elder";
@@ -966,7 +966,7 @@ public class MonsterGenerator
 			{
 			if("Kildarin".equals (areaOfBoss))
 				{
-				System.out.println("Kildarin:The land farthest away from the Vale is mostly comprised of huge cave systems.  These caves were once a rich mining facility owned by the dwarves.  Iron, Steel, and Precious Gems littered these caves, and riches flowed from Kildarin.  Most common materials were mined from this place.  Now it is derelict, barren rock, and overrun by goblins.  Wether the goblins overthrew the few dwarfs who did not retreat to the Vale, or they are what the dwarfs became, is lost in The Shadow.");
+				System.out.println("Kildarin:The land farthest away from the Vale is mostly comprised of huge cave systems.  These caves were once a rich mining facility owned by the dwarves.  Iron, Steel, and Precious Gems littered these caves, and riches flowed from Kildarin.  Most common materials were mined from this place.  Now it is derelict, barren, and overrun by goblins.  Wether the goblins overthrew the few dwarfs who did not retreat to the Vale, or they are what the dwarfs became, is lost in The Shadow.");
 				}
 			else if("Gormar".equals (areaOfBoss))
 				{

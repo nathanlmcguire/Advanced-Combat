@@ -5,7 +5,7 @@ public class Intros
 	{
 	public static void startGameIntro()
 		{
-		System.out.println("The moon shines bright in the sky as you sit on your porch.");
+		System.out.println("The moon shines brightly in the sky as you sit on your porch.");
 		System.out.println("");
 		delayThreeSeconds();
 		System.out.println("Your neighborhood stands silent all around you, lights off, cars asleep, everyone is dreaming.");
@@ -129,7 +129,7 @@ public class Intros
 		System.out.println("The outermost trees are entwined together to act as a wall against foes.");
 		System.out.println("");
 		delayThreeSeconds();
-		System.out.println("You can imagine the forest would look beutiful in its prime, but the forest is old, withered, abd covered in webs.");
+		System.out.println("You can imagine the forest would look beautiful in its prime, but the forest is old, withered, and covered in webs.");
 		System.out.println("");
 		delayThreeSeconds();
 		System.out.println("Thousands and thousands of webs.  Spider webs.");
@@ -145,7 +145,7 @@ public class Intros
 		System.out.println("The air is choked with smoke, and it is hard to see, but you can sense that there are enemies here.");
 		System.out.println("");
 		delayThreeSeconds();
-		System.out.println("You hear the sounds of hammer on anvil in the distance. You wonder if this is some type of forge, and whot, or what, owns it?");
+		System.out.println("You hear the sounds of hammer on anvil in the distance. You wonder if this is some type of forge, and who, or what, owns it?");
 		System.out.println("");
 		delayThreeSeconds();
 		}

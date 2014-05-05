@@ -21,6 +21,7 @@ public class SideQuests
 		String [] thirdPartOfName= {" of Deepstain", " of Serebis", " of Doomkeep", " of Terik", " of Kildarin", " of Vortonsin", " of Sorthus", " of the Unknown"};
 		generateNameNumber();
 		System.out.println("I am " + firstPartOfName[randomNameNumber] + secondPartOfName[randomNameNumber] + thirdPartOfName[randomNameNumber] + ".");
+		System.out.println();
 		}
 	
 	public static int generateNameNumber()//Generates the random number for the lootBeast method.
@@ -52,42 +53,52 @@ public class SideQuests
 			case 1:
 				{
 				moralChoice();
+				break;
 				}
 			case 2:
 				{
-				savePerson();	
+				savePerson();
+				break;
 				}
 			case 3:
 				{
-				fightBeast();	
+				fightBeast();
+				break;
 				}
 			case 4:
 				{
-				System.out.print("");	
+				System.out.print("");
+				break;
 				}
 			case 5:
 				{
-				System.out.print("");	
+				System.out.print("");
+				break;
 				}
 			case 6:
 				{
 				System.out.print("");	
+				break;
 				}
 			case 7:
 				{
-				System.out.print("");	
+				System.out.print("");
+				break;
 				}
 			case 8:
 				{
 				System.out.print("");	
+				break;
 				}
 			case 9:
 				{
-				System.out.print("");	
+				System.out.print("");
+				break;
 				}
 			case 10:
 				{
 				System.out.print("");	
+				break;
 				}	
 			}
 		}
@@ -114,14 +125,13 @@ public class SideQuests
 			System.out.println("Correct you may pass.");
 			System.out.println();
 			Intros.delayThreeSeconds();
-			System.out.println("The stone releases it's captive and disapears.");
+			System.out.println("The stone releases its captive and disapears.");
 			System.out.println();
 			Intros.delayThreeSeconds();
 			System.out.println("The man you saved looks at you in wonder.");
 			System.out.println();
 			Intros.delayThreeSeconds();
 			generateName();
-			System.out.println();
 			Intros.delayThreeSeconds();
 			System.out.println("Here take this, it didn't help me much, but it might help you.");
 			System.out.println();
@@ -178,7 +188,6 @@ public class SideQuests
 				Intros.delayThreeSeconds();
 				generateName();
 				Intros.delayThreeSeconds();
-				System.out.println();
 				Intros.delayThreeSeconds();
 				System.out.println("Here take this, it didn't help me much, but it might help you.");
 				System.out.println();
@@ -221,7 +230,6 @@ public class SideQuests
 				Intros.delayThreeSeconds();
 				generateName();
 				Intros.delayThreeSeconds();
-				System.out.println();
 				System.out.println("Here let me teach you what I know.");
 				System.out.println();
 				Intros.delayThreeSeconds();
@@ -274,7 +282,7 @@ public class SideQuests
 		helpChoice = userInput3.nextInt();
 		if (helpChoice == 1)
 			{
-			System.out.println("'You will?  Oh thank you so much!  Ut's jsut that, there is a deadly creature blocking my way to the Vale.  I am no warrior, could you kill it?'");
+			System.out.println("'You will?  Oh thank you so much!  It's jsut that, there is a deadly creature blocking my way to the Vale.  I am no warrior, could you kill it?'");
 			System.out.println();
 			Intros.delayThreeSeconds();
 			generateName();
