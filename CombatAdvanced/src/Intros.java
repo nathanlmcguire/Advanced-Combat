@@ -379,7 +379,7 @@ public class Intros
 	{
 	try
 		{
-		TimeUnit.SECONDS.sleep((long) .5);	
+		TimeUnit.SECONDS.sleep((long) .9);	
 		}
 	catch (InterruptedException e)
 		{

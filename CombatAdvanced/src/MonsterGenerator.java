@@ -458,14 +458,13 @@ public class MonsterGenerator
 	
 	public static int areaChange()
 		{
-		if (Fight.numberOfSlainEnemies < 5)
+		if (Fight.numberOfSlainEnemies < 2)//HERE!
 			{
 			generateMonsterNumber();
 			kildarinMonsterArray();
-			System.out.println("You here a sound, something is coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision.");
-			Intros.delayThreeSeconds();
+			//SideQuests.collectionOfQuests();
 			}
-		 else if (Fight.numberOfSlainEnemies == 5)
+		 else if (Fight.numberOfSlainEnemies == 2)//HERE!
 			{
 			Monster.generateMonsterHitPoints();
 			System.out.println("You walk into a large cavern where the Goblin Chief awaits you.");
@@ -1015,6 +1014,10 @@ public class MonsterGenerator
 			else if("Pathway".equals (areaOfBoss))
 				{
 				System.out.println("This old Pathway Gaurdian is one of many magically summoned beings.  These things were made by the great wizard Yolvar, and charged with holding stalling The Shadow and all his minions when they marched on Doomkeep.  But The Shadow must have corrupted them, for now they seem to fight everything that crosses the path that they are charged with protecting.");
+				}
+			else if("Pit".equals(areaOfBoss))
+				{
+				System.out.println("This Pit Demon is the last of its kind.  These creatures used to be numerous all over the land, they were used by the Elves as traps for enemies.  When The Shadow came he turned them to evil, and now they steal from and kill travelers, who pass their homes in ignorance.");
 				}
 			}
 		}

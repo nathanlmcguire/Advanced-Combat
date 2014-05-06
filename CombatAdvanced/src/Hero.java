@@ -12,7 +12,7 @@ public class Hero
 	static String nameOfPlayer, jobOfPlayer, homeLand, raceOfPlayer;
 	static String weaponName, healingTypeName, dodgeTypeName; 
 	static String weaponSymbol;	
-	static int classDamage, classHealth, healingName, numberOfPotions = 3;
+	static int classDamage, classHealth, healingName, numberOfPotions = 3, lockDifficulty;
 	
 	public static int generatePlayerHitPoints()//Generates the monster's hit points and tell you what they are.
 		{
@@ -124,6 +124,7 @@ public class Hero
 			classDamage = 8;
 			classHealth = 16;
 			weaponSymbol = "t  ";
+			lockDifficulty = 10000000;
 			}
 		if ("MAGE".equals(jobOfPlayer) || "mage".equals(jobOfPlayer) || "Mage".equals(jobOfPlayer))
 			{
@@ -138,6 +139,7 @@ public class Hero
 			classDamage = 4;
 			classHealth = 13;
 			weaponSymbol = "*  ";
+			lockDifficulty = 10000000;
 			}
 		if ("HEALER".equals(jobOfPlayer) || "healer".equals(jobOfPlayer) || "Healer".equals(jobOfPlayer))
 			{
@@ -152,6 +154,7 @@ public class Hero
 			classDamage = 7;
 			classHealth = 15;
 			weaponSymbol = "i";
+			lockDifficulty = 10000000;
 			}
 		if ("THIEF".equals(jobOfPlayer) || "thief".equals(jobOfPlayer) || "Thief".equals(jobOfPlayer))
 			{
@@ -166,6 +169,7 @@ public class Hero
 			classDamage = 5;
 			classHealth = 14;
 			weaponSymbol = "-  ";
+			lockDifficulty = 100000;
 			}
 		if ("PALADIN".equals(jobOfPlayer) || "paladin".equals(jobOfPlayer) || "Paladin".equals(jobOfPlayer))
 			{
@@ -180,6 +184,7 @@ public class Hero
 			classDamage = 7;
 			classHealth = 15;
 			weaponSymbol = "--#";
+			lockDifficulty = 10000000;
 			}
 		if ("NIGHTBLADE".equals(jobOfPlayer) || "Nightblade".equals(jobOfPlayer) || "nightblade".equals(jobOfPlayer))
 			{
@@ -194,6 +199,7 @@ public class Hero
 			classDamage = 5;
 			classHealth = 13;
 			weaponSymbol = "-  ";
+			lockDifficulty = 1000000;
 			}
 		if ("BATTLEMAGE".equals(jobOfPlayer) || "Battlemage".equals(jobOfPlayer) || "battlemage".equals(jobOfPlayer))
 			{
@@ -208,6 +214,7 @@ public class Hero
 			classDamage = 6;
 			classHealth = 14;
 			weaponSymbol = "I  ";
+			lockDifficulty = 10000000;
 			}
 		if ("SWORDSMAN".equals(jobOfPlayer) || "swordsman".equals(jobOfPlayer) || "Swordsman".equals(jobOfPlayer))
 			{
@@ -222,6 +229,7 @@ public class Hero
 			classDamage = 5;
 			classHealth = 14;
 			weaponSymbol = ")";
+			lockDifficulty = 1000000;
 			}
 		System.out.println("You see your reflection in a pool of water and realize your race. (Type: Elf, Human, Dwarf, or Hobbit)");
 		raceOfPlayer = userInput1.nextLine();
@@ -260,7 +268,9 @@ public class Hero
 		System.out.println("You raise up a torch to see your surroundings");
 		System.out.println();
 		Intros.delayOneSecond();
-		Intros.startKildarinIntro();
+		SideQuests.pickLock(); //HERE!
+		SideQuests.moralChoice();
+		//Intros.startKildarinIntro();
 		return difficultyLevel;	
 		}
 	

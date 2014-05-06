@@ -4,16 +4,17 @@ import java.util.Scanner;
 
 public class SideQuests 
 	{
-	static int randomQuestNumber, randomNameNumber, randomCallNumber, moralLeftOrRightChoice, randomOutcomeNumber, helpChoice;
+	static int randomQuestNumber, randomNameNumber, randomCallNumber, moralLeftOrRightChoice, randomOutcomeNumber, helpChoiceOne, helpChoiceTwo;
+	static int tryDoorChoice, lockNumberOne, lockNumberTwo, lockNumberThree, i, lockChoice;
 	static String riddleGuess;
 	
-	public static int generateQuest()//Generates the random number for the lootBeast method.
+	public static int generateQuest()//HERE!
 		{
 		Random randomNumber = new Random();
 		randomQuestNumber = 1 + randomNumber.nextInt(10);
 		return randomQuestNumber;
 		}
-	
+
 	public static void generateName()
 		{
 		String [] firstPartOfName= {"Yorgund", "Seth", "Saird", "Martin", "Quarth", "Fend", "Tark", "Nor"};
@@ -57,7 +58,7 @@ public class SideQuests
 				}
 			case 2:
 				{
-				savePerson();
+				pickLock();
 				break;
 				}
 			case 3:
@@ -67,27 +68,27 @@ public class SideQuests
 				}
 			case 4:
 				{
-				System.out.print("");
+				getItem();
 				break;
 				}
 			case 5:
 				{
-				System.out.print("");
+				savePerson();
 				break;
 				}
 			case 6:
 				{
-				System.out.print("");	
+				pickLock();	
 				break;
 				}
 			case 7:
 				{
-				System.out.print("");
+				healChoice();
 				break;
 				}
 			case 8:
 				{
-				System.out.print("");	
+				pickLock();		
 				break;
 				}
 			case 9:
@@ -211,7 +212,7 @@ public class SideQuests
 				System.out.println("He runs off far faster than you and soon he has lost you.");
 				System.out.println();
 				Intros.delayThreeSeconds();
-				System.out.println("Now your weapon does -5 damage.");
+				System.out.println("Now you do -5 damage.");
 				System.out.println();
 				Intros.delayOneSecond();
 				Loot.weaponBonus = Loot.weaponBonus - 5;
@@ -279,10 +280,10 @@ public class SideQuests
 		Intros.delayThreeSeconds();
 		System.out.println("Type 1 for yes, and 2 for no.");
 		Scanner userInput3 = new Scanner(System.in);
-		helpChoice = userInput3.nextInt();
-		if (helpChoice == 1)
+		helpChoiceOne = userInput3.nextInt();
+		if (helpChoiceOne == 1)
 			{
-			System.out.println("'You will?  Oh thank you so much!  It's jsut that, there is a deadly creature blocking my way to the Vale.  I am no warrior, could you kill it?'");
+			System.out.println("'You will?  Oh thank you so much!  It's just that, there is a deadly creature blocking my way to the Vale.  I am no warrior, could you kill it?'");
 			System.out.println();
 			Intros.delayThreeSeconds();
 			generateName();
@@ -302,14 +303,162 @@ public class SideQuests
 			MonsterGenerator.bossFight = 1;
 			MonsterGenerator.areaOfBoss = "Pathway";
 			}
-		if (helpChoice == 2)
+		if (helpChoiceOne == 2)
 			{
 			System.out.println("'Well, thanks anyway.'  Says the traveler and slumps down at his fire.");
 			System.out.println();
 			Intros.delayOneSecond();
 			}
 		
-		return helpChoice;
+		return helpChoiceOne;
+		}
+	
+	public static int getItem()
+		{
+		System.out.println("As you walk along you come to a traveler standing over a pit.");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("He looks up at you, 'Oh, a mighty adventurer!  Will you help me?'");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("Type 1 for yes, and 2 for no.");
+		Scanner userInput3 = new Scanner(System.in);
+		helpChoiceTwo = userInput3.nextInt();
+		if (helpChoiceTwo == 1)
+			{
+			System.out.println("'You will?  Oh thank you so much!  It's just that, I dropped my family ring into a pit! It is an ancient relic and I would like to retrieve it before I go to the Vale.  Please get it for me?'");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			generateName();
+			Intros.delayThreeSeconds();
+			System.out.println("You have already agreed to help so you say yes.");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			System.out.println("Thank you!  Here take this to help you.  You can keep it when you are done.");
+			System.out.println();
+			Intros.delayOneSecond();
+			Loot.lootBeast();
+			Intros.delayOneSecond();
+			MonsterGenerator.monsterName = "Pit Demon";
+			MonsterGenerator.monsterHealth = 9;
+			MonsterGenerator.monsterDamage = 9;
+			MonsterGenerator.monsterAttackName = " snarls and bites at you";
+			MonsterGenerator.bossFight = 1;
+			MonsterGenerator.areaOfBoss = "Pit";
+			}
+		if (helpChoiceTwo == 2)
+			{
+			System.out.println("'Well, thanks anyway.'  Says the traveler as you walk away.");
+			System.out.println();
+			Intros.delayOneSecond();
+			}
+	
+		return helpChoiceTwo;
+		}
+	
+	public static int pickLock()
+		{
+		System.out.println("In front of you is an ancient wooden door, covered in moss.");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("You try the handle, but it is locked.  There must be treasure behind it.");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("Do you want to try to pick the lock? Type 1 for yes, and 2 for no.");
+		Scanner userInput3 = new Scanner(System.in);
+		tryDoorChoice = userInput3.nextInt();
+		if (tryDoorChoice == 1)
+			{
+			System.out.println("You put your tools into the lock, and begin to pick it.  (Type the numbers you see to open the door)");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			generateLockNubmers();
+			System.out.println("Type the number exactly as you saw it.");
+			Scanner userInput2 = new Scanner(System.in);
+			lockChoice = userInput2.nextInt();
+			if(lockChoice == lockNumberOne)
+				{
+				System.out.println("You open the door, and behind it is treasure!");
+				System.out.println();
+				Intros.delayOneSecond();
+				Loot.lootBeast();
+				Intros.delayOneSecond();
+				}
+			if(lockChoice != lockNumberOne)
+				{
+				System.out.println("You fail to open the door, and you spring a trap!");
+				System.out.println();
+				Intros.delayOneSecond();
+				Hero.playerHitPoints = Hero.playerHitPoints - 3;
+				System.out.println("Arrows fly out of the door and take away 3 of your hit points!");
+				System.out.println();
+				Intros.delayOneSecond();
+				System.out.println("You limp away from the door, and continue on your journey.");
+				System.out.println();
+				Intros.delayOneSecond();
+				}
+			}
+		if (tryDoorChoice == 2)
+			{
+			System.out.println("You walk away from the door.  There could be traps behind it.");
+			System.out.println();
+			Intros.delayOneSecond();
+			}
+		return tryDoorChoice;
+		}
+	
+	public static int generateLockNubmers()
+		{
+		Random randomNumber = new Random();
+		lockNumberOne = 1739 + randomNumber.nextInt(Hero.lockDifficulty);
+		System.out.println(lockNumberOne);
+		Intros.delayOneSecond();
+		for(i = 0; i < 1001; i++)
+			{
+			System.out.println();
+			}
+		return lockNumberOne;
+		}
+	
+	public static void healChoice()
+		{
+		System.out.println("As you are walking, you smell blood.");	
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("You turn a corner to find a man dying from blood loss.");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		generateName();
+		Intros.delayThreeSeconds();
+		if("HEALER".equals(Hero.jobOfPlayer) || "healer".equals(Hero.jobOfPlayer) || "Healer".equals(Hero.jobOfPlayer) || "PALADIN".equals(Hero.jobOfPlayer) || "paladin".equals(Hero.jobOfPlayer) || "Paladin".equals(Hero.jobOfPlayer))
+			{
+			System.out.println("Oh, a " + Hero.jobOfPlayer + "!  Please help me, I am dying.");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			System.out.println("You use your magic, and heal the man.");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			System.out.println("Thank you so much!  I can't stay, I need to get to my family in the Vale.  But take this.");
+			System.out.println();
+			Intros.delayOneSecond();
+			Loot.lootBeast();
+			Intros.delayOneSecond();
+			System.out.println("You are about to thank him, but he has already left.");
+			System.out.println();
+			Intros.delayOneSecond();
+			}
+		else
+			{
+			System.out.println("As you can see, I'm dying.  But you aren't a healer or a pladin, and therefore no help to me.");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			System.out.println("Go on, tell my family at the Vale of my demise.");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			System.out.println("There is nothing to do, so you move on.");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			}
 		}
 	
 	}

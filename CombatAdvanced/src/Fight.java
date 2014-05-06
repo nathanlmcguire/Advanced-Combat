@@ -12,6 +12,9 @@ public class Fight
 	
 	public static int chooseAction()//Lets the player choose their action.
 		{
+		System.out.println("You hear something comeing.  You raise your " + Hero.weaponName + " jsut as a " + MonsterGenerator.monsterName + " walks into your field of vision."); 
+		System.out.println();
+		Intros.delayOneSecond();
 		System.out.println("_________________________________________________________________________________________________");
 		System.out.println("|                                                                                                |");
 		System.out.println("|                                                                                                |");
