@@ -27,7 +27,7 @@ public class MonsterGenerator
 				monsterName = "Warrior Goblin";	
 				monsterHealth = 3;
 				monsterDamage = 3;
-				monsterAttackName = " swings his sword of bone at you";	
+				monsterAttackName = " swings his sword at you";	
 				bossFight = 0;
 				break;
 				}
@@ -458,13 +458,13 @@ public class MonsterGenerator
 	
 	public static int areaChange()
 		{
-		if (Fight.numberOfSlainEnemies < 2)//HERE!
+		if (Fight.numberOfSlainEnemies < 5)
 			{
 			generateMonsterNumber();
 			kildarinMonsterArray();
-			//SideQuests.collectionOfQuests();
+			SideQuests.collectionOfQuests();
 			}
-		 else if (Fight.numberOfSlainEnemies == 2)//HERE!
+		 else if (Fight.numberOfSlainEnemies == 5)
 			{
 			Monster.generateMonsterHitPoints();
 			System.out.println("You walk into a large cavern where the Goblin Chief awaits you.");
@@ -688,7 +688,7 @@ public class MonsterGenerator
 					System.out.println("Without anyone wearing it, it begins to move, and with a massive gauntlet it attacks you.");
 					System.out.println();
 					Intros.delayThreeSeconds();
-					System.out.println("You must sdestroy it before you proceed to the Vale.");
+					System.out.println("You must destroy it before you proceed to the Vale.");
 					System.out.println();
 					Intros.delayOneSecond();
 					monsterName = "Ancient Pierced Armor";
@@ -1014,10 +1014,14 @@ public class MonsterGenerator
 			else if("Pathway".equals (areaOfBoss))
 				{
 				System.out.println("This old Pathway Gaurdian is one of many magically summoned beings.  These things were made by the great wizard Yolvar, and charged with holding stalling The Shadow and all his minions when they marched on Doomkeep.  But The Shadow must have corrupted them, for now they seem to fight everything that crosses the path that they are charged with protecting.");
+				Intros.delayThreeSeconds();	
+				Intros.delayThreeSeconds();	
 				}
 			else if("Pit".equals(areaOfBoss))
 				{
 				System.out.println("This Pit Demon is the last of its kind.  These creatures used to be numerous all over the land, they were used by the Elves as traps for enemies.  When The Shadow came he turned them to evil, and now they steal from and kill travelers, who pass their homes in ignorance.");
+				Intros.delayThreeSeconds();	
+				Intros.delayThreeSeconds();	
 				}
 			}
 		}

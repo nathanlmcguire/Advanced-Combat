@@ -11,7 +11,7 @@ public class SideQuests
 	public static int generateQuest()//HERE!
 		{
 		Random randomNumber = new Random();
-		randomQuestNumber = 1 + randomNumber.nextInt(10);
+		randomQuestNumber = 1 + randomNumber.nextInt(12);
 		return randomQuestNumber;
 		}
 
@@ -93,14 +93,31 @@ public class SideQuests
 				}
 			case 9:
 				{
-				System.out.print("");
+				Market.sellOrBuy();
 				break;
 				}
 			case 10:
 				{
-				System.out.print("");	
+				System.out.println("You hear something coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision."); 
+				System.out.println();
+				Intros.delayThreeSeconds();	
 				break;
 				}	
+			case 11:
+				{
+				System.out.println("You hear something coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision."); 
+				System.out.println();
+				Intros.delayThreeSeconds();		
+				break;
+				}	
+			case 12:
+				{
+				System.out.println("You hear something coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision."); 
+				System.out.println();
+				Intros.delayThreeSeconds();		
+				break;
+				}	
+				
 			}
 		}
 			
@@ -410,7 +427,7 @@ public class SideQuests
 	public static int generateLockNubmers()
 		{
 		Random randomNumber = new Random();
-		lockNumberOne = 1739 + randomNumber.nextInt(Hero.lockDifficulty);
+		lockNumberOne = 10000 + randomNumber.nextInt(Hero.lockDifficulty);
 		System.out.println(lockNumberOne);
 		Intros.delayOneSecond();
 		for(i = 0; i < 1001; i++)

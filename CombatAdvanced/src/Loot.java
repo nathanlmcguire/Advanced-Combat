@@ -401,11 +401,11 @@ public class Loot
 			case 79:
 			case 80:
 				{
-				System.out.println("You have found 1 Healing Potion!");
+				System.out.println("You have found 2 Healing Potions!");
 				System.out.println();
 				System.out.println("Level 1 Item.");
 				System.out.println();
-				Hero.numberOfPotions = Hero.numberOfPotions + 1;
+				Hero.numberOfPotions = Hero.numberOfPotions + 2;
 				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
 				System.out.println();
 				break;	
@@ -415,11 +415,11 @@ public class Loot
 			case 83:
 			case 84:
 				{
-				System.out.println("You have found 2 Healing Potions!");
+				System.out.println("You have found 3 Healing Potions!");
 				System.out.println();
 				System.out.println("Level 2 Item.");
 				System.out.println();
-				Hero.numberOfPotions = Hero.numberOfPotions + 2;
+				Hero.numberOfPotions = Hero.numberOfPotions + 3;
 				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
 				System.out.println();
 				break;		
@@ -428,11 +428,11 @@ public class Loot
 			case 86:
 			case 87:
 				{
-				System.out.println("You have found 3 Healing Potions!");
+				System.out.println("You have found 4 Healing Potions!");
 				System.out.println();
 				System.out.println("Level 3 Item.");
 				System.out.println();
-				Hero.numberOfPotions = Hero.numberOfPotions + 3;
+				Hero.numberOfPotions = Hero.numberOfPotions + 4;
 				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
 				System.out.println();
 				break;
@@ -440,22 +440,22 @@ public class Loot
 			case 88:
 			case 89:
 				{
-				System.out.println("You have found 4 Healing Potions!");
+				System.out.println("You have found 5 Healing Potions!");
 				System.out.println();
 				System.out.println("Level 4 Item.");
 				System.out.println();
-				Hero.numberOfPotions = Hero.numberOfPotions + 4;
+				Hero.numberOfPotions = Hero.numberOfPotions + 5;
 				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
 				System.out.println();
 				break;
 				}
 			case 90:
 				{
-				System.out.println("You have found 5 Healing Potions!");
+				System.out.println("You have found 6 Healing Potions!");
 				System.out.println();
 				System.out.println("Level 5 Item.");
 				System.out.println();
-				Hero.numberOfPotions = Hero.numberOfPotions + 5;
+				Hero.numberOfPotions = Hero.numberOfPotions + 6;
 				System.out.println("You have " + Hero.numberOfPotions + " healing potions now.");
 				System.out.println();
 				break;
@@ -474,15 +474,52 @@ public class Loot
 			case 92:
 			case 93:
 			case 94:
+			case 95:
 				{
 				System.out.println("You have found 20 Gold!");
 				System.out.println();
-				System.out.println("Level 3 Item.");
+				System.out.println("Level 2 Item.");
 				System.out.println();
 				goldOfPlayer = goldOfPlayer + 20;
 				System.out.println("You have " + goldOfPlayer + " gold now.");
 				System.out.println();
 				break;
+				}
+			case 96:
+			case 97:
+			case 98:
+				{
+				System.out.println("You have found 30 Gold!");
+				System.out.println();
+				System.out.println("Level 3 Item.");
+				System.out.println();
+				goldOfPlayer = goldOfPlayer + 30;
+				System.out.println("You have " + goldOfPlayer + " gold now.");
+				System.out.println();
+				break;	
+				}
+			case 99:
+			case 100:
+				{
+				System.out.println("You have found 40 Gold!");
+				System.out.println();
+				System.out.println("Level 4 Item.");
+				System.out.println();
+				goldOfPlayer = goldOfPlayer + 40;
+				System.out.println("You have " + goldOfPlayer + " gold now.");
+				System.out.println();
+				break;		
+				}
+			case 101:
+				{
+				System.out.println("You have found 50 Gold!");
+				System.out.println();
+				System.out.println("Level 5 Item.");
+				System.out.println();
+				goldOfPlayer = goldOfPlayer + 50;
+				System.out.println("You have " + goldOfPlayer + " gold now.");
+				System.out.println();
+				break;		
 				}
 			}
 		return lootNumber;
