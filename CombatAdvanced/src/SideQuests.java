@@ -543,6 +543,19 @@ public class SideQuests
 			System.out.println("You shudder at what you were thinking.  How could you have harmed an innocent man?  You continue on your journey.");
 			System.out.println();
 			Intros.delayOneSecond();
+			System.out.println("Before you can go, the man awakens!");
+			System.out.println();
+			Intros.delayOneSecond();
+			System.out.println("'Thank you for not stealing from me.  Take this as a token of my gratitude.'");
+			System.out.println();
+			Intros.delayOneSecond();
+			System.out.println("He gives you some sort of amulet and goes back to sleep.");
+			System.out.println();
+			Intros.delayOneSecond();
+			System.out.println("You have joined the Knight's Guild! You now get a plus 2 to all weapons!");
+			Loot.weaponBonus = Loot.weaponBonus + 2;
+			System.out.println();
+			Intros.delayOneSecond();
 			}		
 		return slayChoiceKnight;
 		}
@@ -585,6 +598,19 @@ public class SideQuests
 			System.out.println("You shudder at what you were thinking.  How could you have harmed an innocent man?  You continue on your journey.");
 			System.out.println();
 			Intros.delayOneSecond();
+			System.out.println("Before you can go, the man awakens!");
+			System.out.println();
+			Intros.delayOneSecond();
+			System.out.println("'Thank you for not stealing from me.  Take this as a token of my gratitude.'");
+			System.out.println();
+			Intros.delayOneSecond();
+			System.out.println("He gives you some sort of amulet and goes back to sleep.");
+			System.out.println();
+			Intros.delayOneSecond();
+			System.out.println("You have joined the Mages Guild! You now get a plus 2 to all fireball scrolls and rings!");
+			Loot.fireballBonus = Loot.fireballBonus + 2;
+			System.out.println();
+			Intros.delayOneSecond();
 			}		
 		return slayChoiceMage;
 		}
@@ -624,6 +650,19 @@ public class SideQuests
 		if (slayChoiceThief == 2)
 			{
 			System.out.println("You shudder at what you were thinking.  How could you have harmed an innocent man?  You continue on your journey.");
+			System.out.println();
+			Intros.delayOneSecond();
+			System.out.println("Before you can go, the man awakens!");
+			System.out.println();
+			Intros.delayOneSecond();
+			System.out.println("'Thank you for not stealing from me.  Take this as a token of my gratitude.'");
+			System.out.println();
+			Intros.delayOneSecond();
+			System.out.println("He gives you some sort of amulet and goes back to sleep.");
+			System.out.println();
+			Intros.delayOneSecond();
+			System.out.println("You have joined the Thieves Guild! You now get a plus 2 to all dodging equipment!");
+			Loot.dodgeBonus = Loot.dodgeBonus + 2;
 			System.out.println();
 			Intros.delayOneSecond();
 			}		
