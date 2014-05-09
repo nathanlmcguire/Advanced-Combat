@@ -112,7 +112,7 @@ public class Hero
 			{
 			classWeaponBonus = 3;
 			classFireballBonus = -10;
-			classHealingBonus = -1;
+			classHealingBonus = 0;
 			classDodgeBonus = -3;
 			weaponName = "Sword";
 			dodgeTypeName = "Block";
@@ -127,11 +127,11 @@ public class Hero
 			{
 			classWeaponBonus = -10;
 			classFireballBonus = 3;
-			classHealingBonus = 2;
+			classHealingBonus = 0;
 			classDodgeBonus = -1;
 			dodgeTypeName = "Shield Spell";
-			healingTypeName = "Healing Spell";
-			healingName = 6;
+			healingTypeName = "Healing Potion";
+			healingName = 3;
 			weaponName = "Staff";
 			classDamage = 4;
 			classHealth = 13;
@@ -142,7 +142,7 @@ public class Hero
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = -2;
-			classHealingBonus = 3;
+			classHealingBonus = 10;
 			classDodgeBonus = -2;
 			dodgeTypeName = "Block";
 			healingTypeName = "Healing Spell";
@@ -157,7 +157,7 @@ public class Hero
 			{
 			classWeaponBonus = 1;
 			classFireballBonus = -10;
-			classHealingBonus = -2;
+			classHealingBonus = 0;
 			classDodgeBonus = 3;
 			dodgeTypeName = "Dodge";
 			healingTypeName = "Healing Potion";
@@ -172,7 +172,7 @@ public class Hero
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = -10;
-			classHealingBonus = 2;
+			classHealingBonus = 7;
 			classDodgeBonus = -3;
 			dodgeTypeName = "Block";
 			healingTypeName = "Healing Spell";
@@ -187,11 +187,11 @@ public class Hero
 			{
 			classWeaponBonus = 0;
 			classFireballBonus = 3;
-			classHealingBonus = -5;
+			classHealingBonus = 0;
 			classDodgeBonus = 3;
 			dodgeTypeName = "Dodge";
-			healingTypeName = "Healing Spell";
-			healingName = 6;
+			healingTypeName = "Healing Potion";
+			healingName = 3;
 			weaponName = "Spear";
 			classDamage = 5;
 			classHealth = 13;
@@ -202,11 +202,11 @@ public class Hero
 			{
 			classWeaponBonus = 1;
 			classFireballBonus = 3;
-			classHealingBonus = 1;
+			classHealingBonus = 0;
 			classDodgeBonus = -3;
 			dodgeTypeName = "Shield Spell";
-			healingTypeName = "Healing Spell";
-			healingName = 6;
+			healingTypeName = "Healing Potion";
+			healingName = 3;
 			weaponName = "Battle Staff";
 			classDamage = 6;
 			classHealth = 14;
@@ -217,7 +217,7 @@ public class Hero
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = -10;
-			classHealingBonus = -2;
+			classHealingBonus = 0;
 			classDodgeBonus = 2;
 			dodgeTypeName = "Dodge";
 			healingTypeName = "Healing Potion";

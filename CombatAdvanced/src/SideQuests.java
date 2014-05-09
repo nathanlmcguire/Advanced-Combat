@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class SideQuests 
 	{
 	static int randomQuestNumber, randomNameNumber, randomCallNumber, moralLeftOrRightChoice, randomOutcomeNumber, helpChoiceOne, helpChoiceTwo;
-	static int tryDoorChoice, lockNumberOne, lockNumberTwo, lockNumberThree, i, lockChoice;
+	static int tryDoorChoice, lockNumberOne, lockNumberTwo, lockNumberThree, i, lockChoice, slayChoiceKnight, slayChoiceMage, slayChoiceThief;
 	static String riddleGuess;
 	
-	public static int generateQuest()//HERE!
+	public static int generateQuest()
 		{
 		Random randomNumber = new Random();
-		randomQuestNumber = 1 + randomNumber.nextInt(12);
+		randomQuestNumber = 1 + randomNumber.nextInt(16);
 		return randomQuestNumber;
 		}
 
@@ -98,9 +98,7 @@ public class SideQuests
 				}
 			case 10:
 				{
-				System.out.println("You hear something coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision."); 
-				System.out.println();
-				Intros.delayThreeSeconds();	
+				Market.sellOrBuy();	
 				break;
 				}	
 			case 11:
@@ -114,10 +112,38 @@ public class SideQuests
 				{
 				System.out.println("You hear something coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision."); 
 				System.out.println();
-				Intros.delayThreeSeconds();		
+				Intros.delayThreeSeconds();
 				break;
+				}
+			case 13:
+				{
+				System.out.println("You hear something coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision."); 
+				System.out.println();
+				Intros.delayThreeSeconds();		
+				break;	
 				}	
-				
+			case 14:
+				{
+				knightFarm();
+				break;	
+				}
+			case 15:
+				{
+				mageFarm();
+				break;	
+				}
+			case 16:
+				{
+				thiefFarm();
+				break;	
+				}
+			case 17:
+				{
+				System.out.println("You hear something coming.  You raise your " + Hero.weaponName + " just as a " + MonsterGenerator.monsterName + " walks into your field of vision."); 
+				System.out.println();
+				Intros.delayThreeSeconds();		
+				break;		
+				}
 			}
 		}
 			
@@ -478,4 +504,129 @@ public class SideQuests
 			}
 		}
 	
+	public static int knightFarm()
+		{
+		System.out.println("As you walk along you come to a man sleeping in a tent.");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("Next to him is a titanium weapon and a full suit of titanium armor.  You could attack him for this equipment.");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("Type 1 to attack, or 2 to not attack.");
+		Scanner userInput3 = new Scanner(System.in);
+		slayChoiceKnight = userInput3.nextInt();
+		if (slayChoiceKnight == 1)
+			{
+			System.out.println("You sneak up and grab the man's weapon and armor.");
+			System.out.println();
+			Hero.weaponName = Hero.weaponName;
+			Hero.weaponName = "Titanium " + Hero.weaponName + "";
+			Loot.weaponBonus = 6;
+			Loot.armorName = "Titanium Armor";
+			Loot.armorBonus = 6;
+			Intros.delayThreeSeconds();
+			System.out.println("He awakes and conjures a sword from thin air with magic.");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			System.out.println("'Die thief!'");
+			System.out.println();
+			Intros.delayOneSecond();
+			MonsterGenerator.monsterName = "Knight";
+			MonsterGenerator.monsterHealth = 15;
+			MonsterGenerator.monsterDamage = 15;
+			MonsterGenerator.monsterAttackName = " swings his conjured sword at you";
+			MonsterGenerator.bossFight = 1;
+			MonsterGenerator.areaOfBoss = "Knight";
+			}
+		if (slayChoiceKnight == 2)
+			{
+			System.out.println("You shudder at what you were thinking.  How could you have harmed an innocent man?  You continue on your journey.");
+			System.out.println();
+			Intros.delayOneSecond();
+			}		
+		return slayChoiceKnight;
+		}
+	
+	public static int mageFarm()
+		{
+		System.out.println("As you walk along you come to a man sleeping in a tent.");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("Next to him is an Apprentice Ring of Fire and an Apprentice Ring of Healing.  You could attack him for this equipment.");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("Type 1 to attack, or 2 to not attack.");
+		Scanner userInput3 = new Scanner(System.in);
+		slayChoiceMage = userInput3.nextInt();
+		if (slayChoiceMage == 1)
+			{
+			System.out.println("You sneak up and grab the man's rings of magic.");
+			System.out.println();
+			Loot.healingItemName = "Apprentice Ring of Healing";
+			Loot.healingSpellBonus = 6;
+			Loot.fireItemName = "Apprentice Ring of Fire";
+			Loot.fireballBonus = 6;
+			Intros.delayThreeSeconds();
+			System.out.println("He awakes and conjures a sword from thin air with magic.");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			System.out.println("'Die thief!'");
+			System.out.println();
+			Intros.delayOneSecond();
+			MonsterGenerator.monsterName = "Mage";
+			MonsterGenerator.monsterHealth = 15;
+			MonsterGenerator.monsterDamage = 15;
+			MonsterGenerator.monsterAttackName = " swings his conjured sword at you";
+			MonsterGenerator.bossFight = 1;
+			MonsterGenerator.areaOfBoss = "Mage";
+			}
+		if (slayChoiceMage == 2)
+			{
+			System.out.println("You shudder at what you were thinking.  How could you have harmed an innocent man?  You continue on your journey.");
+			System.out.println();
+			Intros.delayOneSecond();
+			}		
+		return slayChoiceMage;
+		}
+	
+	public static int thiefFarm()
+		{
+		System.out.println("As you walk along you come to a man sleeping in a tent.");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("Next to him is an Apprentice Cloak of " + Hero.dodgeTypeName + "ing and 50 gold.  You could attack him for this equipment.");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("Type 1 to attack, or 2 to not attack.");
+		Scanner userInput3 = new Scanner(System.in);
+		slayChoiceThief = userInput3.nextInt();
+		if (slayChoiceThief == 1)
+			{
+			System.out.println("You sneak up and grab the man's gold and cloak.");
+			System.out.println();
+			Loot.bootOrCloakName = "Apprentice Cloak of " + Hero.dodgeTypeName + "ing";
+			Loot.dodgeBonus = 6;
+			Loot.goldOfPlayer = Loot.goldOfPlayer + 50;
+			Intros.delayThreeSeconds();
+			System.out.println("He awakes and conjures a sword from thin air with magic.");
+			System.out.println();
+			Intros.delayThreeSeconds();
+			System.out.println("'Die thief!'");
+			System.out.println();
+			Intros.delayOneSecond();
+			MonsterGenerator.monsterName = "Mage";
+			MonsterGenerator.monsterHealth = 15;
+			MonsterGenerator.monsterDamage = 15;
+			MonsterGenerator.monsterAttackName = " swings his conjured sword at you";
+			MonsterGenerator.bossFight = 1;
+			MonsterGenerator.areaOfBoss = "Mage";
+			}
+		if (slayChoiceThief == 2)
+			{
+			System.out.println("You shudder at what you were thinking.  How could you have harmed an innocent man?  You continue on your journey.");
+			System.out.println();
+			Intros.delayOneSecond();
+			}		
+		return slayChoiceThief;
+		}
 	}

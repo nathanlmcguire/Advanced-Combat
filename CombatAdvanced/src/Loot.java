@@ -5,7 +5,7 @@ public class Loot
 	{
 	static int lootNumber, findingLuck, playerLuck, dodgeAffect = 0; 
 	static int armorBonus = 0, weaponBonus = 0, fireballBonus = 0, healingSpellBonus = 0, dodgeBonus = 0;
-	static int weight, goldOfPlayer = 10, itemID;
+	static int weight, goldOfPlayer = 30, itemID;
 	static String armorName = "Leather Armor", fireItemName = "Training Fire Scroll", healingItemName = "Training Healing Scroll", bootOrCloakName = "Training Boots";
 	
 	public static int lootBeast()//Randomly generates loot from the dead beast.(Only if you killed it.) 30 different items!
@@ -462,7 +462,7 @@ public class Loot
 				}
 			case 91:
 				{
-				System.out.println("You have found an Essence!");
+				System.out.println("You have found an Essence!  This ancient soul of a forgotten hero will make your weapon magical!");
 				System.out.println();
 				System.out.println("Level 5 Item.");
 				System.out.println();
@@ -476,11 +476,11 @@ public class Loot
 			case 94:
 			case 95:
 				{
-				System.out.println("You have found 20 Gold!");
+				System.out.println("You have found 30 Gold!");
 				System.out.println();
 				System.out.println("Level 2 Item.");
 				System.out.println();
-				goldOfPlayer = goldOfPlayer + 20;
+				goldOfPlayer = goldOfPlayer + 30;
 				System.out.println("You have " + goldOfPlayer + " gold now.");
 				System.out.println();
 				break;
@@ -489,11 +489,11 @@ public class Loot
 			case 97:
 			case 98:
 				{
-				System.out.println("You have found 30 Gold!");
+				System.out.println("You have found 40 Gold!");
 				System.out.println();
 				System.out.println("Level 3 Item.");
 				System.out.println();
-				goldOfPlayer = goldOfPlayer + 30;
+				goldOfPlayer = goldOfPlayer + 40;
 				System.out.println("You have " + goldOfPlayer + " gold now.");
 				System.out.println();
 				break;	
@@ -501,22 +501,22 @@ public class Loot
 			case 99:
 			case 100:
 				{
-				System.out.println("You have found 40 Gold!");
+				System.out.println("You have found 50 Gold!");
 				System.out.println();
 				System.out.println("Level 4 Item.");
 				System.out.println();
-				goldOfPlayer = goldOfPlayer + 40;
+				goldOfPlayer = goldOfPlayer + 50;
 				System.out.println("You have " + goldOfPlayer + " gold now.");
 				System.out.println();
 				break;		
 				}
 			case 101:
 				{
-				System.out.println("You have found 50 Gold!");
+				System.out.println("You have found 60 Gold!");
 				System.out.println();
 				System.out.println("Level 5 Item.");
 				System.out.println();
-				goldOfPlayer = goldOfPlayer + 50;
+				goldOfPlayer = goldOfPlayer + 60;
 				System.out.println("You have " + goldOfPlayer + " gold now.");
 				System.out.println();
 				break;		

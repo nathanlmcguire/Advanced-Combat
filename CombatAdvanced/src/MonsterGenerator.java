@@ -1005,7 +1005,7 @@ public class MonsterGenerator
 				}
 			else if("Doomkeep".equals (areaOfBoss))
 				{
-				System.out.println("Doomkeep:The legendary keep of the Humans.  During the Age of Shadow Thornwir ruled as King and he was a strong one.  He sent scouts to The Shadow, but none came back.  He was offered advice, and sent reports of destroyed villages, and asked for help.  He sent his quickest cavalry to help defend the forest of Serebis, where the Elf Queen resided.  He was quite close with the Elf Queen and mourned for days when he heard of her death.  This changed him, and he pulled all his soldiers back to the castle, along with all refugees, of any race.  as The Shadow descended on Doomkeep he consulted his old friend, the great mage Yolvar.  Yolvar knew what he needed to do, and began to build the Vale, a refuge for those pursued by The Shadow.  Thornwir gathered every wizard he could to help Yolvar but when The Shadow arrived at the walls of Doomkeep he was not finished. The walls of Doomkeep, however, were heavily enchanted and The Shadow would have to spend months unraveling those wards.  But Thornwir was betrayed by his Steward, Wherem.  Wherem made a bargain with The Shadow and then marred the magic protection of DoomKeep.  The Shadow entered the castle, and Yolvar, knowing that he must buy time, challenged The Shadow to combat.  The Shadow agreed, and Yolvar gave battle, the most difficult battle ever fought by The Shadow, it went on for three hours.  But still Yolvar was mortal, and The Shadow smote him down.  By then, The Vale was complete and all the refugees and soldiers fell back into The Vale.  The Shadow pursued but was unable to follow.  No one knows what happened to Wherem, or what his bargain was, but it must have been fulfilled, for immortal beings must keep their word.");
+				System.out.println("Doomkeep:The legendary keep of the Humans.  During the Age of Shadow Thornwir ruled as King and he was a strong one.  He sent scouts to The Shadow, but none came back.  He was offered advice, and sent reports of destroyed villages, and asked for help.  He sent his quickest cavalry to help defend the forest of Serebis, where the Elf Queen resided.  He was quite close with the Elf Queen and mourned for days when he heard of her death.  This changed him, and he pulled all his soldiers back to the castle, along with all refugees, of any race.  as The Shadow descended on Doomkeep he consulted his old friend, the great mage Yolvar.  Yolvar knew what he needed to do, and began to build the Vale, a refuge for those pursued by The Shadow, with the help of the Mages Guild.  Thornwir gathered every wizard he could to help Yolvar and the Guild, but when The Shadow arrived at the walls of Doomkeep he was not finished. The walls of Doomkeep, however, were heavily enchanted and The Shadow would have to spend months unraveling those wards.  But Thornwir was betrayed by his Steward, Wherem.  Wherem made a bargain with The Shadow and then marred the magic protection of DoomKeep.  The Shadow entered the castle, and Yolvar, knowing that he must buy time, challenged The Shadow to combat.  The Shadow agreed, and Yolvar gave battle, the most difficult battle ever fought by The Shadow, it went on for three hours.  But still Yolvar was mortal, and The Shadow smote him down.  By then, The Vale was complete and all the refugees and soldiers fell back into The Vale.  The Shadow pursued but was unable to follow.  No one knows what happened to Wherem, or what his bargain was, but it must have been fulfilled, for immortal beings must keep their word.");
 				}
 			else if("Vale".equals (areaOfBoss))
 				{
@@ -1019,7 +1019,25 @@ public class MonsterGenerator
 				}
 			else if("Pit".equals(areaOfBoss))
 				{
-				System.out.println("This Pit Demon is the last of its kind.  These creatures used to be numerous all over the land, they were used by the Elves as traps for enemies.  When The Shadow came he turned them to evil, and now they steal from and kill travelers, who pass their homes in ignorance.");
+				System.out.println("This Pit Demon is one of the last of its kind.  These creatures used to be numerous all over the land, they were used by the Elves as traps for enemies.  When The Shadow came he turned them to evil, and now they steal from and kill travelers, who pass their homes in ignorance.");
+				Intros.delayThreeSeconds();	
+				Intros.delayThreeSeconds();	
+				}
+			else if("Knight".equals(areaOfBoss))
+				{
+				System.out.println("This Knight was one of the last members of the Knight's Guild.  They were vicious mercenaries for many years until the Elven Sword Master Prince: Jason, reformed them into a gathering for Knights to defend the weak.  Their moral system still stood when they, allianced with the Thieves Guild, were anhialated by The Shadow in the Battle of Manor Hill.");
+				Intros.delayThreeSeconds();	
+				Intros.delayThreeSeconds();	
+				}
+			else if("Mage".equals(areaOfBoss))
+				{
+				System.out.println("This Mage was one of the last members of the Mages Guild.  They were cruel necromancers who abducted the innocent for experiments, untill they were reformed by Yolvar.  He made them into a society of brilliant people, who used magic to learn, and not to destroy.  This Guild, under Yolvar, were the prime creators of the Vale.");
+				Intros.delayThreeSeconds();	
+				Intros.delayThreeSeconds();	
+				}
+			else if("Thief".equals(areaOfBoss))
+				{
+				System.out.println("This Thief was one of the last members of the Thieves Guild.  They were once a scattered and untrustworthy group of cuthroats.  Then the Hobbit Forthright entered their ranks.  He oranized them and shaped them from bandits to liberators who stole from the rich to give to the poor.  The Thieves Guild allied with the Knight's Guild in the Battle of Manor Hill, their first and last battle.");
 				Intros.delayThreeSeconds();	
 				Intros.delayThreeSeconds();	
 				}
