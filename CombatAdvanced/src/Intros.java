@@ -364,16 +364,16 @@ public class Intros
 		}	
 	
 	public static void delayThreeSeconds()
-	{
-	try
 		{
-		TimeUnit.SECONDS.sleep(3);	
-		}
-	catch (InterruptedException e)
-		{
-		
-		}
-	}	
+		try
+			{
+			TimeUnit.SECONDS.sleep(3);	
+			}
+		catch (InterruptedException e)
+			{
+			
+			}
+		}	
 	
 	public static void delayHalfSecond()
 	{

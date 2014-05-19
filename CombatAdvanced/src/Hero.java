@@ -25,10 +25,7 @@ public class Hero
 		System.out.println("Name:");
 		Scanner userInput1 = new Scanner(System.in);        
 	    nameOfPlayer = userInput1.nextLine();        
-	    System.out.println("You recall your name.  It is " + nameOfPlayer + ".");
-	    System.out.println();
-	    Intros.delayOneSecond();
-	    
+	    System.out.println("You recall your name.  It is " + nameOfPlayer + ".");   
 	    if ("TGM".equals(nameOfPlayer))
 	    	{
 	    	godHealth = 1000;
@@ -108,7 +105,7 @@ public class Hero
 		Intros.delayOneSecond();
 		System.out.println("Type what you remember your stlye to be.");
 		jobOfPlayer = userInput1.nextLine();
-		if ("FIGHTER".equals(jobOfPlayer) || "fighter".equals(jobOfPlayer) || "Fighter".equals(jobOfPlayer))
+		if ("FIGHTER".equals(jobOfPlayer) || "fighter".equals(jobOfPlayer) || "Fighter".equals(jobOfPlayer) || " FIGHTER".equals(jobOfPlayer) || " fighter".equals(jobOfPlayer) || " Fighter".equals(jobOfPlayer) || "FIGHTER ".equals(jobOfPlayer) || "fighter ".equals(jobOfPlayer) || "Fighter ".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 3;
 			classFireballBonus = -10;
@@ -122,8 +119,11 @@ public class Hero
 			classHealth = 16;
 			weaponSymbol = "t  ";
 			lockDifficulty = 100000000;
+			System.out.println("You remember that you were once a hardy fighter.");
+			Intros.delayOneSecond();
+			System.out.println();
 			}
-		if ("MAGE".equals(jobOfPlayer) || "mage".equals(jobOfPlayer) || "Mage".equals(jobOfPlayer))
+		if ("MAGE".equals(jobOfPlayer) || "mage".equals(jobOfPlayer) || "Mage".equals(jobOfPlayer) || " MAGE".equals(jobOfPlayer) || " mage".equals(jobOfPlayer) || " Mage".equals(jobOfPlayer) || "MAGE ".equals(jobOfPlayer) || "mage ".equals(jobOfPlayer) || "Mage ".equals(jobOfPlayer))
 			{
 			classWeaponBonus = -10;
 			classFireballBonus = 3;
@@ -137,8 +137,11 @@ public class Hero
 			classHealth = 13;
 			weaponSymbol = "*  ";
 			lockDifficulty = 100000000;
+			System.out.println("You remember that you were once a wise mage.");
+			Intros.delayOneSecond();
+			System.out.println();
 			}
-		if ("HEALER".equals(jobOfPlayer) || "healer".equals(jobOfPlayer) || "Healer".equals(jobOfPlayer))
+		if ("HEALER".equals(jobOfPlayer) || "healer".equals(jobOfPlayer) || "Healer".equals(jobOfPlayer) || " HEALER".equals(jobOfPlayer) || " healer".equals(jobOfPlayer) || " Healer".equals(jobOfPlayer) || "HEALER ".equals(jobOfPlayer) || "healer ".equals(jobOfPlayer) || "Healer ".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = -2;
@@ -152,8 +155,11 @@ public class Hero
 			classHealth = 15;
 			weaponSymbol = "i";
 			lockDifficulty = 100000000;
+			System.out.println("You remember that you were once a holy healer");
+			Intros.delayOneSecond();
+			System.out.println();
 			}
-		if ("THIEF".equals(jobOfPlayer) || "thief".equals(jobOfPlayer) || "Thief".equals(jobOfPlayer))
+		if ("THIEF".equals(jobOfPlayer) || "thief".equals(jobOfPlayer) || "Thief".equals(jobOfPlayer) || " THIEF".equals(jobOfPlayer) || " thief".equals(jobOfPlayer) || " Thief".equals(jobOfPlayer) || "THIEF ".equals(jobOfPlayer) || "thief ".equals(jobOfPlayer) || "Thief ".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 1;
 			classFireballBonus = -10;
@@ -167,8 +173,11 @@ public class Hero
 			classHealth = 14;
 			weaponSymbol = "-  ";
 			lockDifficulty = 1000000;
+			System.out.println("You remember that you were once a crafty thief.");
+			Intros.delayOneSecond();
+			System.out.println();
 			}
-		if ("PALADIN".equals(jobOfPlayer) || "paladin".equals(jobOfPlayer) || "Paladin".equals(jobOfPlayer))
+		if ("PALADIN".equals(jobOfPlayer) || "paladin".equals(jobOfPlayer) || "Paladin".equals(jobOfPlayer) || " PALADIN".equals(jobOfPlayer) || " paladin".equals(jobOfPlayer) || " Paladin".equals(jobOfPlayer) || "PALADIN ".equals(jobOfPlayer) || "paladin ".equals(jobOfPlayer) || "Paladin ".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = -10;
@@ -182,8 +191,11 @@ public class Hero
 			classHealth = 15;
 			weaponSymbol = "--#";
 			lockDifficulty = 100000000;
+			System.out.println("You remember that you were once a noble paladin.");
+			Intros.delayOneSecond();
+			System.out.println();
 			}
-		if ("NIGHTBLADE".equals(jobOfPlayer) || "Nightblade".equals(jobOfPlayer) || "nightblade".equals(jobOfPlayer))
+		if ("NIGHTBLADE".equals(jobOfPlayer) || "Nightblade".equals(jobOfPlayer) || "nightblade".equals(jobOfPlayer) || " NIGHTBLADE".equals(jobOfPlayer) || " Nightblade".equals(jobOfPlayer) || " nightblade".equals(jobOfPlayer) || "NIGHTBLADE ".equals(jobOfPlayer) || "Nightblade ".equals(jobOfPlayer) || "nightblade ".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 0;
 			classFireballBonus = 3;
@@ -197,8 +209,11 @@ public class Hero
 			classHealth = 13;
 			weaponSymbol = "-  ";
 			lockDifficulty = 10000000;
+			System.out.println("You remember that you were once a stealthy nightblade.");
+			Intros.delayOneSecond();
+			System.out.println();
 			}
-		if ("BATTLEMAGE".equals(jobOfPlayer) || "Battlemage".equals(jobOfPlayer) || "battlemage".equals(jobOfPlayer))
+		if ("BATTLEMAGE".equals(jobOfPlayer) || "Battlemage".equals(jobOfPlayer) || "battlemage".equals(jobOfPlayer) || " BATTLEMAGE".equals(jobOfPlayer) || " Battlemage".equals(jobOfPlayer) || " battlemage".equals(jobOfPlayer) || "BATTLEMAGE ".equals(jobOfPlayer) || "Battlemage ".equals(jobOfPlayer) || "battlemage ".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 1;
 			classFireballBonus = 3;
@@ -212,8 +227,11 @@ public class Hero
 			classHealth = 14;
 			weaponSymbol = "I  ";
 			lockDifficulty = 100000000;
+			System.out.println("You remember that you were once a powerful battlemage.");
+			Intros.delayOneSecond();
+			System.out.println();
 			}
-		if ("SWORDSMAN".equals(jobOfPlayer) || "swordsman".equals(jobOfPlayer) || "Swordsman".equals(jobOfPlayer))
+		if ("SWORDSMAN".equals(jobOfPlayer) || "swordsman".equals(jobOfPlayer) || "Swordsman".equals(jobOfPlayer) || " SWORDSMAN".equals(jobOfPlayer) || " swordsman".equals(jobOfPlayer) || " Swordsman".equals(jobOfPlayer) || "SWORDSMAN ".equals(jobOfPlayer) || "swordsman ".equals(jobOfPlayer) || "Swordsman ".equals(jobOfPlayer))
 			{
 			classWeaponBonus = 2;
 			classFireballBonus = -10;
@@ -227,37 +245,52 @@ public class Hero
 			classHealth = 14;
 			weaponSymbol = ")";
 			lockDifficulty = 10000000;
+			System.out.println("You remember that you were once a skilled swordsman.");
+			Intros.delayOneSecond();
+			System.out.println();
 			}
 		System.out.println("You see your reflection in a pool of water and realize your race. (Type: Elf, Human, Dwarf, or Hobbit)");
 		raceOfPlayer = userInput1.nextLine();
 		
-			if("HUMAN".equals(raceOfPlayer) || "Human".equals(raceOfPlayer) || "human".equals(raceOfPlayer))
+			if("HUMAN".equals(raceOfPlayer) || "Human".equals(raceOfPlayer) || "human".equals(raceOfPlayer) || " HUMAN".equals(raceOfPlayer) || " Human".equals(raceOfPlayer) || " human".equals(raceOfPlayer) || "HUMAN ".equals(raceOfPlayer) || "Human ".equals(raceOfPlayer) || "human ".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 2; 
 				raceFireballBonus = 0;
 				raceHealingBonus = -1;
 				raceDodgeBonus = 1;	
+				System.out.println("You see in the pool that you are a tough human.");
+				Intros.delayOneSecond();
+				System.out.println();
 				}
-			if("ELF".equals(raceOfPlayer) || "Elf".equals(raceOfPlayer) || "elf".equals(raceOfPlayer))
+			if("ELF".equals(raceOfPlayer) || "Elf".equals(raceOfPlayer) || "elf".equals(raceOfPlayer) || " ELF".equals(raceOfPlayer) || " Elf".equals(raceOfPlayer) || " elf".equals(raceOfPlayer) || "ELF ".equals(raceOfPlayer) || "Elf ".equals(raceOfPlayer) || "elf ".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = -1; 
 				raceFireballBonus = 1;
 				raceHealingBonus = 2;
-				raceDodgeBonus = 0;		
+				raceDodgeBonus = 0;	
+				System.out.println("You see in the pool that you are a lithe elf.");
+				Intros.delayOneSecond();
+				System.out.println();
 				}
-			if("DWARF".equals(raceOfPlayer) || "Dwarf".equals(raceOfPlayer) || "dwarf".equals(raceOfPlayer))
+			if("DWARF".equals(raceOfPlayer) || "Dwarf".equals(raceOfPlayer) || "dwarf".equals(raceOfPlayer) || " DWARF".equals(raceOfPlayer) || " Dwarf".equals(raceOfPlayer) || " dwarf".equals(raceOfPlayer) || "DWARF ".equals(raceOfPlayer) || "Dwarf ".equals(raceOfPlayer) || "dwarf ".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 1; 
 				raceFireballBonus = 2;
 				raceHealingBonus = 0;
-				raceDodgeBonus = -1;		
+				raceDodgeBonus = -1;
+				System.out.println("You see in the pool that you are weather beaten dwarf.");
+				Intros.delayOneSecond();
+				System.out.println();
 				}
-			if("HOBBIT".equals(raceOfPlayer) || "Hobbit".equals(raceOfPlayer) || "hobbit".equals(raceOfPlayer))
+			if("HOBBIT".equals(raceOfPlayer) || "Hobbit".equals(raceOfPlayer) || "hobbit".equals(raceOfPlayer) || " HOBBIT".equals(raceOfPlayer) || " Hobbit".equals(raceOfPlayer) || " hobbit".equals(raceOfPlayer) || "HOBBIT ".equals(raceOfPlayer) || "Hobbit ".equals(raceOfPlayer) || "hobbit ".equals(raceOfPlayer))
 				{
 				raceWeaponBonus = 0; 
 				raceFireballBonus = -1;
 				raceHealingBonus = 1;
 				raceDodgeBonus = 2;		
+				System.out.println("You see in the pool that you are a young hobbit.");
+				Intros.delayOneSecond();
+				System.out.println();
 				}	
 		System.out.println("You try hard, but you can't remember anything else about yourself.");
 		System.out.println(" ");
@@ -265,6 +298,7 @@ public class Hero
 		System.out.println("You raise up a torch to see your surroundings");
 		System.out.println();
 		Intros.delayOneSecond();
+		SideQuests.pickLock();
 		Intros.startKildarinIntro();
 		return difficultyLevel;	
 		}
