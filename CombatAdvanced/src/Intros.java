@@ -26,11 +26,11 @@ public class Intros
 		System.out.println("A dying alien planet.  A planet calling out for help, a planet being devoured, devoured by Shadow.");
 		System.out.println("");
 		delayThreeSeconds();
-		System.out.println("Coded by Nathan McGuire");
+		System.out.println("Coded by AMDG");
 		delayThreeSeconds();
-		System.out.println("With help from Michael McGuire");
+		System.out.println("With help from various people");
 		delayThreeSeconds();
-		System.out.println("Steelax Productions(tm) brings you...");
+		System.out.println("AMDG Productions(tm) brings you...");
 		delayThreeSeconds();
 		System.out.println("--}LORESHARD!{--");
 		delayThreeSeconds();

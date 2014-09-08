@@ -43,7 +43,7 @@ public class Fight
 				diceRollOne = 1 + randomNumber.nextInt(3);
 				diceRollTwo = 1 + randomNumber.nextInt(3);
 				diceRollThree = 1 + randomNumber.nextInt(15);
-				totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.fireballBonus + Hero.classFireballBonus + Hero.raceFireballBonus);
+				totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.fireballBonus + Hero.classFireballBonus + Hero.raceFireballBonus + (Hero.magic * 2));
 				Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);				
 				System.out.println("You blast the enemy with flames and do " + totalDice + " damage!");
 				Intros.delayOneSecond();
@@ -57,7 +57,7 @@ public class Fight
 					diceRollOne = 1 + randomNumber.nextInt(Hero.healingName);
 					diceRollTwo = 1 + randomNumber.nextInt(Hero.healingName);
 					diceRollThree = 1 + randomNumber.nextInt(Hero.healingName);
-					totalDice = diceRollOne + diceRollTwo + diceRollThree + Loot.healingSpellBonus + Hero.classHealingBonus + Hero.raceHealingBonus;
+					totalDice = diceRollOne + diceRollTwo + diceRollThree + Loot.healingSpellBonus + Hero.classHealingBonus + Hero.raceHealingBonus + (Hero.magic * 2);
 					Hero.playerHitPoints = (Hero.playerHitPoints + totalDice);
 					System.out.println("You heal yourself " + totalDice + " points of health with your " + Hero.healingTypeName + "!");
 					Intros.delayOneSecond();
@@ -86,7 +86,7 @@ public class Fight
 					diceRollOne = 50 + randomNumber.nextInt(100);
 					diceRollTwo = 50 + randomNumber.nextInt(100);
 					diceRollThree = 50 + randomNumber.nextInt(100);
-					totalDice = diceRollOne + diceRollTwo + diceRollThree;
+					totalDice = diceRollOne + diceRollTwo + diceRollThree + (Hero.magic * 2);
 					Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);
 					System.out.println("Lightning archs towards the beast doing " + totalDice + " damage");
 					Intros.delayOneSecond();
@@ -112,7 +112,7 @@ public class Fight
 				resetDiceForRoll();
 				Random randomNumber = new Random();
 				diceRollOne = 1 + randomNumber.nextInt(10);
-				dodgeAffect = diceRollOne + Hero.classDodgeBonus + Loot.dodgeBonus + Hero.raceDodgeBonus;
+				dodgeAffect = diceRollOne + Hero.classDodgeBonus + Loot.dodgeBonus + Hero.raceDodgeBonus + (Hero.agility * 2);
 				System.out.println("You prepare to " + Hero.dodgeTypeName + " the enemie's next blow.");
 				System.out.println();
 				Intros.delayOneSecond();
@@ -161,14 +161,7 @@ public class Fight
 			Monster.playerHealthResetCounter = 0;
 			if (MonsterGenerator.bossFight == 1)
 				{
-				System.out.println("LEVEL UP!");
-				Hero.levelOfPlayer++;
-				System.out.println();
-				Intros.delayOneSecond();
-				System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
-				Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 2);
-				System.out.println();
-				Intros.delayOneSecond();
+				Hero.levelUp();
 				System.out.println("YOU HAVE FOUND A LORE SHARD!");
 				System.out.println();
 				Intros.delayOneSecond();

@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Hero 
 	{
-	static int playerHitPoints, godHealth, levelOfPlayer = 1;
+	static int playerHitPoints, godHealth, levelOfPlayer = 1, playerStamina;
 	static int diceRollOne, diceRollTwo, diceRollThree, totalDice;
 	static int difficultyHealth, difficultyDamage, difficultyLevel, nameNumber;
 	static int classWeaponBonus = 0, classFireballBonus = 0, classHealingBonus = 0, classDodgeBonus = 0, raceWeaponBonus = 0, raceFireballBonus = 0, raceHealingBonus = 0, raceDodgeBonus = 0;
@@ -11,6 +11,7 @@ public class Hero
 	static String weaponName, healingTypeName, dodgeTypeName; 
 	static String weaponSymbol;	
 	static int classDamage, classHealth, healingName, numberOfPotions = 3, lockDifficulty;
+	static int endurance = 0, strength = 0, magic = 0, charisma = 0, agility = 0, skillChoice;
 	
 	public static int generatePlayerHitPoints()//Generates the monster's hit points and tell you what they are.
 		{
@@ -48,7 +49,7 @@ public class Hero
 		diceRollOne = 2 + randomNumber.nextInt(classDamage);
 		diceRollTwo = 2 + randomNumber.nextInt(classDamage);
 		diceRollThree = 2 + randomNumber.nextInt(classDamage);
-		totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.weaponBonus + classWeaponBonus + raceWeaponBonus);
+		totalDice = (diceRollOne + diceRollTwo + diceRollThree + Loot.weaponBonus + classWeaponBonus + raceWeaponBonus + (strength * 2));
 		Monster.monsterHitPoints = (Monster.monsterHitPoints - totalDice);
 		System.out.println("You swing your " + weaponName + " and do " + totalDice + " damage!");
 		Intros.delayOneSecond();
@@ -298,9 +299,79 @@ public class Hero
 		System.out.println("You raise up a torch to see your surroundings");
 		System.out.println();
 		Intros.delayOneSecond();
-		SideQuests.pickLock();
 		Intros.startKildarinIntro();
 		return difficultyLevel;	
 		}
-		
+	
+	public static int levelUp()
+		{
+		System.out.println("LEVEL UP!");
+		Hero.levelOfPlayer++;
+		System.out.println();
+		Intros.delayOneSecond();
+		System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
+		System.out.println();
+		Intros.delayOneSecond();
+		System.out.println("[1]Endurance: " + endurance + "");
+		System.out.println("[2]Strength: " + strength + "");
+		System.out.println("[3]Magic: " + magic + "");
+		System.out.println("[4]Charisma: " + charisma + "");
+		System.out.println("[5]Agility: " + agility + "");
+		System.out.println();
+		Intros.delayThreeSeconds();
+		System.out.println("Type in the number of the skill you want to increase in.");
+		Scanner userInput1 = new Scanner(System.in);        
+	    skillChoice = userInput1.nextInt();
+	    switch(skillChoice)
+	    	{
+	    	case 1:
+	    		{
+	    		endurance = endurance + 1;
+	    		System.out.println("Over the past weeks you have become hardier.");
+	    		Intros.delayThreeSeconds();
+	    		System.out.println();	 
+	    		break;
+	    		}
+	    	case 2:
+	    		{
+	    		strength = strength + 1;
+	    		System.out.println("Over the past weeks your attacks have become more precise.");
+	    		Intros.delayThreeSeconds();
+	    		System.out.println();
+	    		break;
+	    		}
+	    	case 3:
+	    		{
+	    		magic = magic + 1;
+	    		System.out.println("Over the past weeks your magic has grown in strength.");
+	    		Intros.delayThreeSeconds();
+	    		System.out.println();
+	    		break;
+	    		}
+	    	case 4:
+	    		{
+	    		charisma = charisma + 1;
+	    		System.out.println("Over the past weeks you have become more fluent in the language of persuasion.");
+	    		Intros.delayThreeSeconds();
+	    		System.out.println();
+	    		break;
+	    		}
+	    	case 5:
+	    		{
+	    		agility = agility + 1;
+	    		System.out.println("Over the past weeks you have become lighter and quicker on your feet.");
+	    		Intros.delayThreeSeconds();
+	    		System.out.println();
+	    		break;
+	    		}
+	    	default:
+	    		{
+	    		System.out.println("YOU FOOL! THAT IS NOT A SKILL NUMBER!!!! NO SKILLPOINT FOR YOU!!!!!!");
+	    		break;
+	    		}
+	    	}
+	    Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 2) + (endurance * 2);	
+	    Hero.playerStamina = Hero.playerStamina + (Hero.levelOfPlayer * 2) + (endurance * 2);
+		return skillChoice;
+		}
 	}

@@ -277,14 +277,7 @@ public class SideQuests
 				System.out.println("Here let me teach you what I know.");
 				System.out.println();
 				Intros.delayThreeSeconds();
-				System.out.println("LEVEL UP!");
-				Hero.levelOfPlayer++;
-				System.out.println();
-				Intros.delayOneSecond();
-				System.out.println("You are now a Level " + Hero.levelOfPlayer + "!");
-				Hero.playerHitPoints = Hero.playerHitPoints + (Hero.levelOfPlayer * 5);
-				System.out.println();
-				Intros.delayOneSecond();
+				Hero.levelUp();
 				}
 			if (randomOutcomeNumber == 2)
 				{
